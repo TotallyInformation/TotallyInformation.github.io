@@ -18,5 +18,7 @@
 ## TEST
 
 {% for item in site.nr_qa %}
+    ```json
     {{ item | first | jsonify }}
+    ```
 {% endfor %}
