@@ -1,6 +1,10 @@
 # Totally Information: Development Hub
 
-I'm hosted with GitHub Pages.
+This site is used to publish development-related information.
+
+## Node-RED
+
+Node-RED is a flow-based programming tool.
 
 {% for item in site.nr_qa %}
   <h2>{{ item.title }}</h2>
