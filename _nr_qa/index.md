@@ -5,7 +5,7 @@
 <ul>
 {% for item in site.nr_qa %}
   <li>
-    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a> ({{ item.date | default: site.time }})
+    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a> ({{ item.date | default: site.time | date: "%Y-%m-%d %H:%M" }})
     <p>{% if item.description %}
         {{ item.excerpt }}
     {% else %}
