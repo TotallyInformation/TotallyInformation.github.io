@@ -17,8 +17,8 @@ Node-RED is a flow-based programming tool.
 
 ## Collections List
 
-{% for item in site.collections | where_exp: "label", "label <> pages" | first  %}
-  <h2><a href="{{ item.relative_directory }}">{{ item.label }}</a></h2>
+{% for item in site.collections | where_exp: "label", "label <> posts" | first  %}
+  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
 {% endfor %}
 
 ## Pages List
@@ -31,3 +31,5 @@ Node-RED is a flow-based programming tool.
   </li>
 {% endfor %}
 </ul>
+
+Last Update: {{ site.time }}
