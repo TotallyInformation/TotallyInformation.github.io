@@ -16,4 +16,4 @@ defaults:
       path: ""
       type: nr_qa
     values:
-      layout: page
+      layout: default

@@ -22,3 +22,6 @@
     {{ item | first | jsonify }}
     </code></pre>
 {% endfor %}
+
+Last Update: {{ item.date | default: site.time }}
+Page Layout: {{ page.layout }}
