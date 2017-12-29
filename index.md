@@ -34,9 +34,9 @@ Node-RED is a flow-based programming tool.
 ## TEST
 
 {% for item in site.nr_qa %}
-    <pre><code>
+    ```
     {{ item | first | jsonify }}
-    </code></pre>
+    ```
 {% endfor %}
 
 Last Update: {{ site.time }}
