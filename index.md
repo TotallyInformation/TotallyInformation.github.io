@@ -15,15 +15,4 @@ Node-RED is a flow-based programming tool.
 {% endfor %}
 </ul>
 
-## Pages List
-
-<ul>
-{% for item in site.pages %}
-  <li>
-    <a href="{{ item.url }}">{{ item.title }}</a>
-    <p>{{ item.description }}</p>
-  </li>
-{% endfor %}
-</ul>
-
 Last Update: {{ site.time }}
