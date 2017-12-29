@@ -2,8 +2,11 @@
 ---
 # Node-RED Questions and Answers
 
+<ul>
 {% for item in site.nr_qa %}
-  <h2>{{ item.title }}</h2>
-  <p>{{ item.description }}</p>
-  <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+  <li>
+    <a href="{{ item.url }}">{{ item.title }}</a> {% if item.date %}({{ item.date }}){% endif %}
+    <p>{% if item.description %}{{ item.excerpt }}{% else %}{{ item.excerpt }}{% endif %}</p>
+  </li>
 {% endfor %}
+</ul>
