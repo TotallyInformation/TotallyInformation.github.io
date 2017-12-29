@@ -8,3 +8,4 @@ plugins:
 collections:
   nr_qa:
     output: true
+    permalink: /:collection/:name
