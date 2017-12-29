@@ -1,3 +1,7 @@
 theme: jekyll-theme-cayman
 title: ['Totally Information: Development Hub']
 description: [Development Information website for Totally Information]
+
+collections:
+  nr_qa:
+    output: true
