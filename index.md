@@ -11,9 +11,9 @@ Node-RED is a flow-based programming tool.
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a> {% if item.date %}({{ item.date }}){% endif %}
     <p>{% if item.description %}
-        {{ item.excerpt }}
+        {{ item.description }}
     {% else %}
-        {{ item.excerpt }}
+        {{ item.excerpt | strip_html }}
     {% endif %}</p>
   </li>
 {% endfor %}
