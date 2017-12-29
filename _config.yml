@@ -10,3 +10,10 @@ collections:
     output: true
     permalink: /:collection/:name
     title: 'Node-RED Questions and Answers'
+
+defaults:
+  - scope:
+      path: ""
+      type: nr_qa
+    values:
+      layout: page
