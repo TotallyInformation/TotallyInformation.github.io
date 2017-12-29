@@ -7,9 +7,9 @@
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a> ({{ item.date | default: site.time | date: "%Y-%m-%d %H:%M" }})
     <p>{% if item.description %}
-        {{ item.excerpt }}
+        {{ item.description }}
     {% else %}
-        {{ item.excerpt }}
+        {{ item.excerpt | strip_html }}
     {% endif %}</p>
   </li>
 {% endfor %}
