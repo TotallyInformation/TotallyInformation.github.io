@@ -1,3 +1,5 @@
+---
+---
 By default, Node-RED tries to stay as efficient as possible when "passing"
 messages from one node to the next.
 
