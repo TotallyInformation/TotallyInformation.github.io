@@ -1,3 +1,5 @@
+---
+---
 These are the default attributes (variables) that you get with each part of the Jekyll domain.
 
 {{ site.collections.github_pages.title }}
