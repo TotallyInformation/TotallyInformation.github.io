@@ -22,3 +22,5 @@ which would, for example:
 - Continue processing warnings & errors up to 1,000 lines instead of the default 50.
 
 See the [JSHint documentation](http://jshint.com/docs/options/) for more information.
+
+{% include footer.md date=page.date %}
