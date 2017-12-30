@@ -10,7 +10,7 @@ comments: false
 <hr>
 <script>
     (function() {
-        var jk = {{page | jsonify }};
+        var jk = {{ page | jsonify | strip_html }};
         console.log(jk);
     })();
 </script>
