@@ -57,4 +57,7 @@ Notes:
 
 - Note the odd spelling of `elsif` (e.g. no second `e`)
 - Conditional tests support `and` and `or` to link conditions together
+  e.g. {% raw %}`{% if line_item.grams > 20000 and customer_address.city == 'Ottawa' %}`{% endraw %}
 
+
+{% include footer.html %}
