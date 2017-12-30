@@ -1,8 +1,8 @@
 ---
+title: 'Totally Information: Development Hub'
+description: 'This site is used to publish development-related reference information curated by Totally Information.'
 ---
-# Totally Information: Development Hub
-
-This site is used to publish development-related information.
+{% include header.html %}
 
 ## Node-RED Questions and Answers
 

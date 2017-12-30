@@ -1,8 +1,9 @@
 ---
+title: 'GitHub Pages and Jekyll/Liquid'
+description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
+comments: true
 ---
-# GitHub Pages and Jekyll/Liquid
-
-Hints and tips on using Jekyll for publishing to GitHub Pages.
+{% include header.html %}
 
 <ul>
 {% for item in site.github_pages %}

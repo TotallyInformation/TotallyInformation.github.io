@@ -1,6 +1,11 @@
 ---
+title: 'Jekyll/Liquid Tags'
+description: 'This is a list of `tags` that can be used in Jekyll.'
+comments: true
 ---
-This is a list of `tags` that can be used in Jekyll. Tags appear within {% raw %}`{% tagname %}`{% endraw %} markup.
+{% include header.html %}
+
+Tags appear within {% raw %}`{% tagname %}`{% endraw %} markup.
 Matching end-tags are shown in brackets.
 
 GitHub pages use Jekyll which in turn uses [Liquid](https://help.shopify.com/themes/liquid).
