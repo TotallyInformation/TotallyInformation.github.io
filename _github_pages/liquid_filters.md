@@ -52,36 +52,36 @@ This is a more comprehensive list than you will find in most places, it is combi
 - escape_once - returns an escaped version of html without affecting existing escaped entities
 - first - get the first element of the passed in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
-- group_by - group elements from array by given property: `{{ site.posts | group_by:"category" }}`
+- group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
 - join - join elements of the array with certain character between them
-- jsonify -- convert data to JSON: `{{ site.data.dinosaurs | jsonify }}`
+- jsonify -- convert data to JSON: {% raw %}`{{ site.data.dinosaurs | jsonify }}`{% endraw %}
 - last - get the last element of the passed in array
 - lstrip - strips all whitespace from the beginning of a string
 - map - map/collect an array on a given property
 - markdownify - convert markdown to HTML
-- minus - subtraction e.g. `{{ 4 | minus:2 }} #=> 2`
-- modulo - remainder, e.g. `{{ 3 | modulo:2 }} #=> 1`
+- minus - subtraction e.g. {% raw %}`{{ 4 | minus:2 }} #=> 2`{% endraw %}
+- modulo - remainder, e.g. {% raw %}`{{ 3 | modulo:2 }} #=> 1`{% endraw %}
 - newline_to_br - replace each newline (`\n`) with html break
-- plus - addition e.g. `{{ '1' | plus:'1' }} #=> 2, {{ 1 | plus:1 }} #=> 2`
-- prepend - prepend a string e.g. `{{ 'bar' | prepend:'foo' }} #=> 'foobar'`
-- remove - remove each occurrence e.g. `{{ 'foobarfoobar' | remove:'foo' }} #=> 'barbar'`
-- remove_first - remove the first occurrence e.g. `{{ 'barbar' | remove_first:'bar' }} #=> 'bar'`
-- replace - replace each occurrence e.g. `{{ 'foofoo' | replace:'foo','bar' }} #=> 'barbar'`
-- replace_first - replace the first occurrence e.g. `{{ 'barbar' | replace_first:'bar','foo' }} #=> 'foobar'`
+- plus - addition e.g. {% raw %}`{{ '1' | plus:'1' }} #=> 2, {{ 1 | plus:1 }} #=> 2`{% endraw %}
+- prepend - prepend a string e.g. {% raw %}`{{ 'bar' | prepend:'foo' }} #=> 'foobar'`{% endraw %}
+- remove - remove each occurrence e.g. {% raw %}`{{ 'foobarfoobar' | remove:'foo' }} #=> 'barbar'`{% endraw %}
+- remove_first - remove the first occurrence e.g. {% raw %}`{{ 'barbar' | remove_first:'bar' }} #=> 'bar'`{% endraw %}
+- replace - replace each occurrence e.g. {% raw %}`{{ 'foofoo' | replace:'foo','bar' }} #=> 'barbar'`{% endraw %}
+- replace_first - replace the first occurrence e.g. {% raw %}`{{ 'barbar' | replace_first:'bar','foo' }} #=> 'foobar'`{% endraw %}
 - reverse - reverses the passed in array
-- round - rounds input to the nearest integer or specified number of decimals e.g. `{{ 4.5612 | round: 2 }} #=> 4.56`
+- round - rounds input to the nearest integer or specified number of decimals e.g. `{{ 4.5612 | round: 2 }} #=> 4.56`{% endraw %}
 - rstrip - strips all whitespace from the end of a string
 - size - return the size of an array or string
-- slice - slice a string. Takes an offset and length, e.g. {{ "hello" | slice: -3, 3 }} #=> llo
+- slice - slice a string. Takes an offset and length, e.g. {% raw %}`{{ "hello" | slice: -3, 3 }} #=> llo`{% endraw %}
 - sort - sort elements of the array
 - sort_natural - Sort elements of an array ignoring case if strings provide optional property with which to sort an array of hashes or drops.
-- split - split a string on a matching pattern e.g. {{ "a~b" | split:"~" }} #=> ['a','b']
+- split - split a string on a matching pattern e.g. {% raw %}`{{ "a~b" | split:"~" }} #=> ['a','b']`{% endraw %}
 - strip - strips all whitespace from both ends of the string
 - strip_html - strip html from string
 - strip_newlines - strip all newlines (`\n`) from string
-- times - multiplication e.g `{{ 5 | times:4 }} #=> 20`
+- times - multiplication e.g {% raw %}`{{ 5 | times:4 }} #=> 20`{% endraw %}
 - truncate - truncate a string down to x characters. It also accepts a second parameter that will append to the string
-  e.g. `{{ 'foobarfoobar' | truncate: 5, '.' }} #=> 'foob.'`
+  e.g. {% raw %}`{{ 'foobarfoobar' | truncate: 5, '.' }} #=> 'foob.'`{% endraw %}
 - truncate - truncate a string down to x characters
 - truncatewords - truncate a string down to x words
 - uniq - remove duplicate elements from an array, optionally using a given property to test for uniqueness
@@ -91,4 +91,4 @@ This is a more comprehensive list than you will find in most places, it is combi
 - where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
 
 
-{% include footer.md %}
+{% include footer.html %}

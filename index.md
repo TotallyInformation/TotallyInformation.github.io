@@ -4,9 +4,9 @@
 
 This site is used to publish development-related information.
 
-## Node-RED QA
+## Node-RED Questions and Answers
 
-Node-RED is a flow-based programming tool.
+Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
 
 <ul>
 {% for item in site.nr_qa %}
@@ -21,9 +21,9 @@ Node-RED is a flow-based programming tool.
 {% endfor %}
 </ul>
 
-## {{ site.collections.github_pages.title }}
+## GitHub Pages and Jekyll/Liquid
 
-{{ site.collections.github_pages.description }}
+Hints and tips on using Jekyll for publishing to GitHub Pages.
 
 <ul>
 {% for item in site.github_pages %}
@@ -45,4 +45,4 @@ Node-RED is a flow-based programming tool.
 {% endfor %}
 
 
-{% include footer.md %}
+{% include footer.html %}
