@@ -28,4 +28,4 @@ Create `footer.html` in your site `_includes` folder or include this in the defa
 ```
 {% endraw %}
 
-{% include footer.md %}
+{% include footer.html %}

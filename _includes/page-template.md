@@ -7,4 +7,4 @@ comments: true
 
 
 
-{% include footer.md %}
+{% include footer.html %}
