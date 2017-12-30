@@ -90,5 +90,6 @@ function processRow(i, row) {
 The result is a `msg.payload` containing 2 arrays. The first is the list of column names.
 The second is an array of objects, each object containing a property for each column.
 
+Code inspired by: https://github.com/iaincollins/tabletojson/blob/master/lib/tabletojson.js
 
 {% include footer.md date=page.date %}
