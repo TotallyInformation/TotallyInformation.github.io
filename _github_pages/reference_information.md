@@ -1,5 +1,7 @@
 ---
 ---
+{% include header.html %}
+
 Some reference sites and links for Jekyll, Liquid and GitHub Pages.
 
 ## Reference, help and tips
