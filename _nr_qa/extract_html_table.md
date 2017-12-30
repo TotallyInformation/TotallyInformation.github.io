@@ -92,4 +92,4 @@ The second is an array of objects, each object containing a property for each co
 
 Code inspired by: https://github.com/iaincollins/tabletojson/blob/master/lib/tabletojson.js
 
-{% include footer.md date=page.date %}
+{% include footer.md %}

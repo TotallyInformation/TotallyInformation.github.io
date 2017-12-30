@@ -13,6 +13,4 @@ can lead to unintended consequences where one part of a flow affects another.
 In order to avoid this, a function node may create entirely new msg variables and output
 those. Alternatively, you can use a utility function `RED.util.cloneMessage(msg)`.
 
-{% include footer.md date=page.date %}
-
-{{page.url}}
+{% include footer.md %}

@@ -1,3 +1,4 @@
+{% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
@@ -12,5 +13,10 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
 
-Updated: {{ include.date | default: site.time | date: "%Y-%m-%d %H:%M" }}
+Updated: {{ page.date | default: site.time | date: "%Y-%m-%d %H:%M" }}
+
+<script>
+    console.log( {{page | jsonify }} )
+</script>

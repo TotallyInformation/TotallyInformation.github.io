@@ -15,4 +15,4 @@
 {% endfor %}
 </ul>
 
-{% include footer.md date=page.date %}
+{% include footer.md %}

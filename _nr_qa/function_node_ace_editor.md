@@ -23,4 +23,4 @@ which would, for example:
 
 See the [JSHint documentation](http://jshint.com/docs/options/) for more information.
 
-{% include footer.md date=page.date %}
+{% include footer.md %}
