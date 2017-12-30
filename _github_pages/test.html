@@ -18,7 +18,7 @@ comments: false
         console.log(jk)
         // This should work without escaping the content but it doesn't appear to
         // https://help.shopify.com/themes/liquid/filters/additional-filters#json
-        var jk2 = {{ page | json | escape }}
+        var jk2 = {{ page | json | strip_html }}
         console.log(jk2);
     })();
 </script>
