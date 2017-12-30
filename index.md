@@ -1,5 +1,3 @@
----
----
 # Totally Information: Development Hub
 
 This site is used to publish development-related information.
