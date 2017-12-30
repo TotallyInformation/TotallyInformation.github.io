@@ -15,4 +15,4 @@
 {% endfor %}
 </ul>
 
-Last Update: {{ item.date | default: site.time }}
+{% include footer.md date=page.date %}

@@ -25,4 +25,4 @@ Node-RED is a flow-based programming tool.
   * [{{ repository.name }}]({{ repository.html_url }})
 {% endfor %}
 
-Last Update: {{ site.time }}
+{% include footer.md date=page.date %}
