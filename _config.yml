@@ -10,11 +10,21 @@ collections:
     output: true
     permalink: /:collection/:name
     title: 'Node-RED Questions and Answers'
+  github_pages:
+    output: true
+    permalink: /:collection/:name
+    title: 'Hints and tips on using GitHub Pages for publishing'
 
 defaults:
   - scope:
       path: ""
       type: nr_qa
+    values:
+      layout: default
+      comments: true
+  - scope:
+      path: ""
+      type: github_pages
     values:
       layout: default
       comments: true

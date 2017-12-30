@@ -15,4 +15,4 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
 
-Updated: {{ page.date | default: site.time | date: "%Y-%m-%d %H:%M" }}
+Updated: {{ page.date | default: site.time | date: "%Y-%m-%d %H:%M" }}, [Home]({{ site.url }})
