@@ -14,3 +14,5 @@ In order to avoid this, a function node may create entirely new msg variables an
 those. Alternatively, you can use a utility function `RED.util.cloneMessage(msg)`.
 
 {% include footer.md date=page.date %}
+
+{{page.url}}
