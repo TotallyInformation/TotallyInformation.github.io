@@ -24,3 +24,6 @@ Node-RED is a flow-based programming tool.
 {% for repository in site.github.public_repositories %}
   * [{{ repository.name }}]({{ repository.html_url }})
 {% endfor %}
+
+
+{% include footer.md date=page.date %}
