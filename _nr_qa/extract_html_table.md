@@ -1,6 +1,9 @@
 ---
+title: 'How to extract a table from HTML'
+description: 'While Node-RED has some nodes for extracting data from HTML, the nodes are rather simplistic. Here is a quick way to extract the data from an HTML table element.'
+comments: true
 ---
-# How to extract a table from HTML
+{% include header.html %}
 
 While Node-RED has some nodes for extracting data from HTML,
 the nodes are rather simplistic.

@@ -1,10 +1,10 @@
 ---
+title: 'How to create a clone of a message object'
+comments: true
 ---
-By default, Node-RED tries to stay as efficient as possible when "passing"
-messages from one node to the next.
+{% include header.html %}
 
-In order to do so, it passes the msg object by reference. This is the default for
-JavaScript anyway.
+By default, Node-RED tries to stay as efficient as possible when "passing" messages from one node to the next. In order to do so, it passes the msg object by reference. This is the default for JavaScript anyway.
 
 However, this can sometimes create issues. If, for example, you attach 2 downstream nodes,
 each gets the _same_ msg object, not a different one. Under certain circumstances, this

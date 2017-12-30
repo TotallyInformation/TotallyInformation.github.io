@@ -1,8 +1,9 @@
 ---
 title: How node.send() works
+description: 'Some detail not included in the documentation.'
+comments: true
 ---
-
-Some detail not included in the documentation
+{% include header.html %}
 
 It is synchronous.
 See [this discussion](https://groups.google.com/forum/#!topic/node-red/OCHTT8aA3lk)

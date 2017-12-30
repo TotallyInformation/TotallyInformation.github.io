@@ -1,8 +1,9 @@
 ---
+title: 'Node-RED Questions and Answers'
+description: 'Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.'
+comments: false
 ---
-# Node-RED Questions and Answers
-
-Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
+{% include header.html %}
 
 <ul>
 {% for item in site.nr_qa %}

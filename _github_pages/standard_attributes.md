@@ -1,6 +1,8 @@
 ---
+description: 'These are the default attributes (variables) that you get with each part of the Jekyll domain.'
+comments: true
 ---
-These are the default attributes (variables) that you get with each part of the Jekyll domain.
+{% include header.html %}
 
 {{ site.collections.github_pages.title }}
 

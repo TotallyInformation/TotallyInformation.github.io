@@ -1,7 +1,7 @@
 ---
 title: 'GitHub Pages and Jekyll/Liquid'
 description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
-comments: true
+comments: false
 ---
 {% include header.html %}
 
