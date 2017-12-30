@@ -15,13 +15,4 @@
 {% endfor %}
 </ul>
 
-## TEST
-
-{% for item in site.nr_qa %}
-    <pre><code>
-    {{ item | first | jsonify }}
-    </code></pre>
-{% endfor %}
-
 Last Update: {{ item.date | default: site.time }}
-Page Layout: {{ page.layout }}

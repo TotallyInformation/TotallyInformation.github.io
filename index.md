@@ -9,7 +9,7 @@ Node-RED is a flow-based programming tool.
 <ul>
 {% for item in site.nr_qa %}
   <li>
-    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a> {% if item.date %}({{ item.date }}){% endif %}
+    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
     <p>{% if item.description %}
         {{ item.description }}
     {% else %}
@@ -25,19 +25,4 @@ Node-RED is a flow-based programming tool.
   * [{{ repository.name }}]({{ repository.html_url }})
 {% endfor %}
 
-## Totally Information's Members
-
-{% for user in site.github.organization_members %}
-  * [{{ user.login }}]({{ user.html_url }})
-{% endfor %}
-
-## TEST
-
-{% for item in site.nr_qa %}
-    ```
-    {{ item | first | jsonify }}
-    ```
-{% endfor %}
-
 Last Update: {{ site.time }}
-Page Layout: {{ page.layout }}
