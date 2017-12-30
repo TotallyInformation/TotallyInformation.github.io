@@ -36,4 +36,4 @@ These are the default attributes (variables) that you get with each part of the 
 ## Collections
 
 
-{% include footer.md %}
+{% include footer.html %}

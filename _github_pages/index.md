@@ -1,11 +1,11 @@
 ---
 ---
-# Node-RED Questions and Answers
+# GitHub Pages and Jekyll/Liquid
 
-Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
+Hints and tips on using Jekyll for publishing to GitHub Pages.
 
 <ul>
-{% for item in site.nr_qa %}
+{% for item in site.github_pages %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a> ({{ item.date | default: site.time | date: "%Y-%m-%d %H:%M" }})
     <p>{% if item.description %}

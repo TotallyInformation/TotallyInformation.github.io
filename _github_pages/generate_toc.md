@@ -7,4 +7,4 @@ you can use the native Kramdown feature.
 ```
 
 
-{% include footer.md %}
+{% include footer.html %}
