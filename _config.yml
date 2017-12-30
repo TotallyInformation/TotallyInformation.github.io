@@ -18,15 +18,13 @@ defaults:
     values:
       layout: default
       comments: true
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: post
       comments: true
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
