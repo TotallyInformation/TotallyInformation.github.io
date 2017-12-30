@@ -58,6 +58,6 @@ defaults:
     values:
       image: true
 ```
-{% raw %}
+{% endraw %}
 
 {% include footer.html %}
