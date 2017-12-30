@@ -42,7 +42,7 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
 
 <table>
     {% tablerow repository in site.github.public_repositories cols:1 %}
-        [{{ repository.name }}]({{ repository.html_url }})
+        <a hre="{{ repository.html_url }}">{{ repository.name }}</a>
     {% endtablerow %}
 </table>
 
