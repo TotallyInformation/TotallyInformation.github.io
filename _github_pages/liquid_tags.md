@@ -56,4 +56,5 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 Notes:
 
 - Note the odd spelling of `elsif` (e.g. no second `e`)
+- Conditional tests support `and` and `or` to link conditions together
 
