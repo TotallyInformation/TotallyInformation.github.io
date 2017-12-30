@@ -16,7 +16,3 @@
 {% endif %}
 
 Updated: {{ page.date | default: site.time | date: "%Y-%m-%d %H:%M" }}
-
-<script>
-    var jk = {{page | jsonify }}
-</script>
