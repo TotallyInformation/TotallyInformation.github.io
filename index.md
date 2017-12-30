@@ -2,12 +2,29 @@
 
 This site is used to publish development-related information.
 
-## Node-RED
+## Node-RED QA
 
 Node-RED is a flow-based programming tool.
 
 <ul>
 {% for item in site.nr_qa %}
+  <li>
+    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
+    <p>{% if item.description %}
+        {{ item.description }}
+    {% else %}
+        {{ item.excerpt | strip_html }}
+    {% endif %}</p>
+  </li>
+{% endfor %}
+</ul>
+
+## {{ site.github_pages.title }}
+
+{{ site.github_pages.description }}
+
+<ul>
+{% for item in site.github_pages %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
     <p>{% if item.description %}
