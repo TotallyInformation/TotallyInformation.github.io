@@ -19,9 +19,9 @@ Node-RED is a flow-based programming tool.
 {% endfor %}
 </ul>
 
-## {{ site.github_pages.title }}
+## {{ site.collections.github_pages.title }}
 
-{{ site.github_pages.description }}
+{{ site.collections.github_pages.description }}
 
 <ul>
 {% for item in site.github_pages %}
