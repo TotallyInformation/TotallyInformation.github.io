@@ -5,14 +5,14 @@ Liquid provides the variable filters that can be used to amend/format the variab
 This is a more comprehensive list than you will find in most places, it is combined from multiple lists including the [source documentation](http://www.rubydoc.info/gems/liquid/Liquid/StandardFilters).
 
 - abs - absolute value
-- append - append a string e.g. `{{ 'foo' | append:'bar' }} #=> 'foobar'`
+- append - append a string e.g. {% raw %}`{{ 'foo' | append:'bar' }} #=> 'foobar'`{% endraw %}
 - capitalize - capitalize words in the input sentence
-- ceil - rounds a number up to the nearest integer, e.g. {{ 4.6 | ceil }} #=> 5
+- ceil - rounds a number up to the nearest integer, e.g. {% raw %}`{{ 4.6 | ceil }} #=> 5`{% endraw %}
 - compact - Remove nils within an array provide optional property with which to check for nil.
 - concat - ?? Not documented! ??
 - date - reformat a date ([syntax reference](http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date))
 
-  Reformat a date using Ruby's core Time#strftime( string ) -> string
+  Reformat a date using Ruby's core `Time#strftime( string ) -> string`
   <pre>
     %a - The abbreviated weekday name (``Sun'')
     %A - The  full  weekday  name (``Sunday'')
@@ -45,13 +45,13 @@ This is a more comprehensive list than you will find in most places, it is combi
   See also: http://www.ruby-doc.org/core/Time.html#method-i-strftime
 
 - default - returns the given variable unless it is null or the empty string, when it will return the given value,
-  e.g. `{{ undefined_variable | default: "Default value" }} #=> "Default value"`
-- divided_by - integer division e.g. `{{ 10 | divided_by:3 }} #=> 3`
+  e.g. {% raw %}`{{ undefined_variable | default: "Default value" }} #=> "Default value"`{% endraw %}
+- divided_by - integer division e.g. {% raw %}`{{ 10 | divided_by:3 }} #=> 3`{% endraw %}
 - downcase - convert an input string to lowercase
 - escape - html escape a string
 - escape_once - returns an escaped version of html without affecting existing escaped entities
 - first - get the first element of the passed in array
-- floor - rounds a number down to the nearest integer, e.g. `{{ 4.6 | floor }} #=> 4`
+- floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
 - group_by - group elements from array by given property: `{{ site.posts | group_by:"category" }}`
 - join - join elements of the array with certain character between them
 - jsonify -- convert data to JSON: `{{ site.data.dinosaurs | jsonify }}`
@@ -88,7 +88,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - upcase - convert an input string to uppercase
 - url_decode - url decode a string
 - url_encode - url encode a string
-- where - select elements from array with given property value: `{{ site.posts | where:"category","foo" }}`
+- where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
 
 
 {% include footer.md %}
