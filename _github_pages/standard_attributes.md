@@ -13,10 +13,25 @@ These are the default attributes (variables) that you get with each part of the 
 
 
 ## Pages
-
+- content
+- dir
+- name
+- path
+- url
 
 ## Posts
-
+- categories tags
+- content
+- date
+- dir
+- draft?
+- excerpt
+- excerpt_separator
+- id
+- next previous
+- path
+- title
+- url
 
 ## Collections
 

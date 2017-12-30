@@ -12,10 +12,10 @@ collections:
     title: 'Node-RED Questions and Answers'
     descriptions: 'Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentaiton.'
   github_pages:
-    output: true
-    permalink: /:collection/:name
     title: 'GitHub Pages and Jekyll/Liquid'
     description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
+    output: true
+    permalink: /:collection/:name
 
 defaults:
   - scope:
