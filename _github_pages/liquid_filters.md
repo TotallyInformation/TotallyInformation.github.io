@@ -69,7 +69,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - replace - replace each occurrence e.g. {% raw %}`{{ 'foofoo' | replace:'foo','bar' }} #=> 'barbar'`{% endraw %}
 - replace_first - replace the first occurrence e.g. {% raw %}`{{ 'barbar' | replace_first:'bar','foo' }} #=> 'foobar'`{% endraw %}
 - reverse - reverses the passed in array
-- round - rounds input to the nearest integer or specified number of decimals e.g. `{{ 4.5612 | round: 2 }} #=> 4.56`{% endraw %}
+- round - rounds input to the nearest integer or specified number of decimals e.g. {% raw %}`{{ 4.5612 | round: 2 }} #=> 4.56`{% endraw %}
 - rstrip - strips all whitespace from the end of a string
 - size - return the size of an array or string
 - slice - slice a string. Takes an offset and length, e.g. {% raw %}`{{ "hello" | slice: -3, 3 }} #=> llo`{% endraw %}
