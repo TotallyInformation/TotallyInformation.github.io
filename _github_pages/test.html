@@ -8,7 +8,7 @@ comments: false
 </p>
 
 <hr>
-{{ 'collection-1' | placeholder_svg_tag }}
+
 <hr>
 
 <script>
@@ -16,10 +16,6 @@ comments: false
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk = {{ page | jsonify | strip_html }};
         console.log(jk)
-        // This should work without escaping the content but it doesn't appear to
-        // https://help.shopify.com/themes/liquid/filters/additional-filters#json
-        var jk2 = {{ page | json | strip_html }}
-        console.log(jk2);
     })();
 </script>
 
