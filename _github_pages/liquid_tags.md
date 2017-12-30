@@ -52,3 +52,9 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 * capture
 * decrement
 * increment
+
+Notes:
+
+- Note the odd spelling of `elsif` (e.g. no second `e`)
+- Conditional tests support `and` and `or` to link conditions together
+  e.g. {%raw}`{% if line_item.grams > 20000 and customer_address.city == 'Ottawa' %}`{% endraw %}
