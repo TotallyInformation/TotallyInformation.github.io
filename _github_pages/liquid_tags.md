@@ -34,3 +34,21 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 * [tablerow](https://help.shopify.com/themes/liquid/tags/iteration-tags#tablerow) (endtablerow) - Generate rows for an HTML table.
 
   Includes parameters: `cols` (defines the number of columns), `limit`, `offset`, `range`. See the documentation for details
+
+### Theme/rendering tags
+* comment
+* form
+* include
+* javascript
+* layout
+* paginate
+* raw
+* schema
+* section
+* stylesheet
+
+### Variable tags
+* assign
+* capture
+* decrement
+* increment
