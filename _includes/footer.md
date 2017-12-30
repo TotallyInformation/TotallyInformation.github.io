@@ -18,5 +18,5 @@
 Updated: {{ page.date | default: site.time | date: "%Y-%m-%d %H:%M" }}
 
 <script>
-    console.log( {{page | jsonify }} )
+    var jk = {{page | jsonify }}
 </script>
