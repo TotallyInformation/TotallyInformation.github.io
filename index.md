@@ -40,9 +40,10 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
 
 ## Totally Information's Public Code Repositories
 
-{% for repository in site.github.public_repositories %}
-  * [{{ repository.name }}]({{ repository.html_url }})
-{% endfor %}
-
+<table>
+    {% tablerow repository in site.github.public_repositories cols:1 %}
+        [{{ repository.name }}]({{ repository.html_url }})
+    {% endtablerow %}
+</table>
 
 {% include footer.html %}

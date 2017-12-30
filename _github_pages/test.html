@@ -8,11 +8,14 @@ comments: false
 </p>
 
 <hr>
+{{ 'collection-1' | placeholder_svg_tag }}
+<hr>
+
 <script>
     (function() {
-        var jk = {{ page | jsonify | strip_html }};
-        console.log(jk);
+        //var jk = {{ page | jsonify | strip_html }};
+        //console.log(jk)
+        console.log({{ page | json }});
     })();
 </script>
-<hr>
 

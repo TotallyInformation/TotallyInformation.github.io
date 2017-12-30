@@ -1,6 +1,6 @@
 ---
 ---
-GitHub pages use Jekyll which in turn uses [Liquid](http://www.rubydoc.info/gems/liquid).
+GitHub pages use Jekyll which in turn uses [Liquid](https://help.shopify.com/themes/liquid).
 Liquid provides the variable filters that can be used to amend/format the variable for output.
 This is a more comprehensive list than you will find in most places, it is combined from multiple lists including the [source documentation](http://www.rubydoc.info/gems/liquid/Liquid/StandardFilters).
 
@@ -46,15 +46,24 @@ This is a more comprehensive list than you will find in most places, it is combi
 
 - default - returns the given variable unless it is null or the empty string, when it will return the given value,
   e.g. {% raw %}`{{ undefined_variable | default: "Default value" }} #=> "Default value"`{% endraw %}
+- default_errors -
+- default_pagination -
 - divided_by - integer division e.g. {% raw %}`{{ 10 | divided_by:3 }} #=> 3`{% endraw %}
 - downcase - convert an input string to lowercase
 - escape - html escape a string
 - escape_once - returns an escaped version of html without affecting existing escaped entities
 - first - get the first element of the passed in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
+- format_address -
 - group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
+- highlight -
+- highlight_active_tag
 - join - join elements of the array with certain character between them
-- jsonify -- convert data to JSON: {% raw %}`{{ site.data.dinosaurs | jsonify }}`{% endraw %}
+- [json](https://help.shopify.com/themes/liquid/filters/additional-filters#json) - Converts a string into JSON format.
+
+  You do not have to wrap the Liquid output in quotations - the json filter will add them in. The json filter will also escape quotes as needed inside the output. The json filter can also used to make Liquid objects readable by JavaScript.
+
+- jsonify - convert data to JSON: {% raw %}`{{ site.data.dinosaurs | jsonify }}`{% endraw %}
 - last - get the last element of the passed in array
 - lstrip - strips all whitespace from the beginning of a string
 - map - map/collect an array on a given property
@@ -62,6 +71,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - minus - subtraction e.g. {% raw %}`{{ 4 | minus:2 }} #=> 2`{% endraw %}
 - modulo - remainder, e.g. {% raw %}`{{ 3 | modulo:2 }} #=> 1`{% endraw %}
 - newline_to_br - replace each newline (`\n`) with html break
+- placeholder_svg_tag
 - plus - addition e.g. {% raw %}`{{ '1' | plus:'1' }} #=> 2, {{ 1 | plus:1 }} #=> 2`{% endraw %}
 - prepend - prepend a string e.g. {% raw %}`{{ 'bar' | prepend:'foo' }} #=> 'foobar'`{% endraw %}
 - remove - remove each occurrence e.g. {% raw %}`{{ 'foobarfoobar' | remove:'foo' }} #=> 'barbar'`{% endraw %}
@@ -79,6 +89,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - strip - strips all whitespace from both ends of the string
 - strip_html - strip html from string
 - strip_newlines - strip all newlines (`\n`) from string
+- time_tag
 - times - multiplication e.g {% raw %}`{{ 5 | times:4 }} #=> 20`{% endraw %}
 - truncate - truncate a string down to x characters. It also accepts a second parameter that will append to the string
   e.g. {% raw %}`{{ 'foobarfoobar' | truncate: 5, '.' }} #=> 'foob.'`{% endraw %}
@@ -88,6 +99,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - upcase - convert an input string to uppercase
 - url_decode - url decode a string
 - url_encode - url encode a string
+- weight_with_unit - Formats a number with the default weight unit. The unit can be overridden by passing it into the filter.
 - where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
 
 
