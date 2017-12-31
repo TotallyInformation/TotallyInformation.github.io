@@ -15,11 +15,14 @@ comments: false
 {{ page.url | default: 'url' }}
 </div>
 <div style="border:1px solid red">
-{% for product in collections.nr_qa %}
+  <p>Do we get the forloop variables?</p>
+{% for item in site.github_pages %}
     {% if forloop.first == true %}
-        First time through!
+        First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
+    {% elsif forloop.last == true %}
+        This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
     {% else %}
-        Not the first time.
+        Not the first time. {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
     {% endif %}
 {% endfor %}
 </div>
