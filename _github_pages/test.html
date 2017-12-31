@@ -52,7 +52,9 @@ comments: false
   <p>Number filters?</p>
   <p>
     {{ 145 | at_most: 100 }} - 'at_most: 100' should give '100' from an input of 145<br>
-    {{ 45 | at_least: 100 }} - 'at_least: 100' should give '100' from an input of 45
+    {{ 45 | at_least: 100 }} - 'at_least: 100' should give '100' from an input of 45 <br>
+    {{ 4.6 | ceil }} - 'ceil' should give 5 from an input of 4.6 <br>
+    {{ 345 | divided_by: 10 }} - 'divided_by' should give 34.5
   </p>
 </div>
 
