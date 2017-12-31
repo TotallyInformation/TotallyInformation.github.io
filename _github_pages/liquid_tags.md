@@ -36,9 +36,15 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 
   * Use the `reversed` parameter to reverse the order of the loop
 
+  For-loop variables - in a for-loop, we get the `forloop` object ([ref](https://help.shopify.com/themes/liquid/objects/for-loops)):
+  * forloop.first/last - true when the loop is at the first/last iteration
+  * forloop.index/index0 - 1/0-based index number for the current iteration
+  * forloop.rindex/rindex0 - 1/0-based reverse index number for the current iteration
+  * forloop.length - the length of the array being looped over
+
 * [tablerow](https://help.shopify.com/themes/liquid/tags/iteration-tags#tablerow) (endtablerow) - Generate rows for an HTML table.
 
-  Includes parameters: `cols` (defines the number of columns), `limit`, `offset`, `range`. See the documentation for details
+  Includes parameters: `cols` (defines the number of columns), `limit`, `offset`, `range`, `first`, `col`, `col_first` and others. See the [documentation](https://help.shopify.com/themes/liquid/objects/tablerow) for details
 
 ### Theme/rendering tags
 * comment

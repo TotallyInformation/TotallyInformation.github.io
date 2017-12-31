@@ -16,18 +16,23 @@ comments: false
 </div>
 <div style="border:1px solid red">
   <p>Do we get the forloop variables?</p>
-{% for item in site.github_pages %}
-  <p>Yes, we do!</p>
+  {% for item in site.github_pages %}
     {% if forloop.first == true %}
-        <p>First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
+      <p>Yes, we do!</p>
+      <p>First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
     {% elsif forloop.last == true %}
-        <p>This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
+      <p>This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}</p>
     {% else %}
-        <p>Not the first time. {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
+      <p>Not the first time. {{ forloop.index }}, {{ forloop.index0 }}</p>
     {% endif %}
-{% else %}
-  <p>Urm, nope!</p>
-{% endfor %}
+  {% else %}
+    <p>Urm, nope!</p>
+  {% endfor %}
+</div>
+
+<div style="border:1px solid red">
+  <p>Color filters?</p>
+  <p>{{ '#7ab55c' | color_to_rgb }}</p>
 </div>
 
 <script>

@@ -14,7 +14,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - capitalize - capitalize words in the input sentence
 - ceil - rounds a number up to the nearest integer, e.g. {% raw %}`{{ 4.6 | ceil }} #=> 5`{% endraw %}
 - compact - Remove nils within an array provide optional property with which to check for nil.
-- concat - ?? Not documented! ??
+- [concat](https://help.shopify.com/themes/liquid/filters/array-filters#concat) - Concatenates (combines) an array with another array
 - date - reformat a date ([syntax reference](http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date))
 
   Reformat a date using Ruby's core `Time#strftime( string ) -> string`
