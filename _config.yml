@@ -24,7 +24,7 @@ defaults:
       path: ""
       type: nr_qa
     values:
-      layout: default
+      layout: page
       comments: true
   - scope:
       path: ""
