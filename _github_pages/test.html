@@ -63,8 +63,8 @@ comments: false
 <div style="border:1px solid red">
   <p>String filters? Some work, some don't</p>
   <p>
-    &times; {{ 'coming-soon' | camelcase }} - 'camelcase' should give 'ComingSoon'<br>
-    &#10004; {{ 'capitalize me' | capitalize }} - 'capitalize' should give 'Capitalize me'<br>
+    &times; {{ "coming-soon" | camelcase }} - 'camelcase' should give 'ComingSoon'<br>
+    &#10004; {{ "capitalize me" | capitalize }} - 'capitalize' should give 'Capitalize me'<br>
     &times; {{ "ShopifyIsAwesome!" | sha1 }} - 'sha1' should give 'c7322e3812d3da7bc621300ca1797517c34f63b6'<br>
     &times; {{ 10 | pluralize: 'item', 'items' }} - 'pluralize' should give '10 items'<br>
     &#10004; {{ "Hello, world. Goodbye, world." | remove: "world" }} - 'remove' should give 'Hello, . Goodbye, .'<br>
@@ -77,7 +77,7 @@ comments: false
   <p>Utility filters? Some work, some don't</p>
   <p>
      {{ site.date | time_tag }} - 'time_tag' should give ''<br>
-      - '' should give ''<br>
+     {{ "Hello, world. Goodbye, world." | highlight: "world" }} - 'highlight' should give ''<br>
       - '' should give ''<br>
       - '' should give ''<br>
       - '' should give ''<br>

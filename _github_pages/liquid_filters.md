@@ -60,8 +60,8 @@ This is a more comprehensive list than you will find in most places, it is combi
 - first - get the first element of the passed in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
 - group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
-- highlight -
-- highlight_active_tag
+- [highlight](https://help.shopify.com/themes/liquid/filters/additional-filters#highlight) - Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search.terms.
+- highlight_active_tag - Wraps a tag link in a `<span>` with the class active if that tag is being used to filter a collection.
 - img_tag - generate an img html tag
 - join - join elements of the array with certain character between them
 - [json](https://help.shopify.com/themes/liquid/filters/additional-filters#json) - Converts a string into JSON format.
