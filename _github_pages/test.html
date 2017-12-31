@@ -24,6 +24,8 @@ comments: false
     {% else %}
         Not the first time. {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
     {% endif %}
+{% else %}
+  <p>Urm, nope!</p>
 {% endfor %}
 </div>
 
