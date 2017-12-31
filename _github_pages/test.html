@@ -19,11 +19,11 @@ comments: false
   {% for item in site.github_pages %}
     {% if forloop.first == true %}
       <p>Yes, we do!</p>
-      <p>First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
+      <p>First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}, {{ forloop.length }}</p>
     {% elsif forloop.last == true %}
-      <p>This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}</p>
+      <p>This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }} {{ forloop.rindex }}, {{ forloop.rindex0 }}</p>
     {% else %}
-      <p>Not the first time. {{ forloop.index }}, {{ forloop.index0 }}</p>
+      <p>Not the first time. {{ forloop.index }}, {{ forloop.index0 }} {{ forloop.rindex }}, {{ forloop.rindex0 }}</p>
     {% endif %}
   {% else %}
     <p>Urm, nope!</p>
@@ -32,7 +32,12 @@ comments: false
 
 <div style="border:1px solid red">
   <p>Color filters?</p>
-  <p style="background-color:{{ '#7ab55c' | color_to_rgb }}">#7ab55c</p>
+  <p>
+    <span style="background-color:{{ '#7ab55c' | color_to_rgb }}">Should change #7ab55c to <code>rgb(122, 181, 92)</code></span> <br>
+    #7ab55c colour brightness (should be 153.21): {{ '#7ab55c' | color_brightness }} <br>
+    <span style="background-color:{{ '#7ab55c' | color_modify: 'red', 255 }}">Modify: Should modify green to orange</span> <br>
+    <span style="background-color:{{ '#7ab55c' | color_lighten: 30 }}">Lighten: Should modify green to pale green</span>
+  </p>
 </div>
 
 <div style="border:1px solid red">

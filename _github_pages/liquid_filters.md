@@ -7,7 +7,7 @@ comments: true
 
 GitHub pages use Jekyll which in turn uses [Liquid](https://help.shopify.com/themes/liquid).
 Liquid provides the variable filters that can be used to amend/format the variable for output.
-This is a more comprehensive list than you will find in most places, it is combined from multiple lists including the [source documentation](http://www.rubydoc.info/gems/liquid/Liquid/StandardFilters).
+This is a more comprehensive list than you will find in most places, it is combined from multiple lists including the [source documentation](http://www.rubydoc.info/gems/liquid/Liquid/StandardFilters). For more details on these filters, see the [official filter documentation](https://help.shopify.com/themes/liquid/filters).
 
 - abs - absolute value
 - append - append a string e.g. {% raw %}`{{ 'foo' | append:'bar' }} #=> 'foobar'`{% endraw %}
@@ -124,6 +124,10 @@ This is a more comprehensive list than you will find in most places, it is combi
 - url_encode - url encode a string
 - weight_with_unit - Formats a number with the default weight unit. The unit can be overridden by passing it into the filter.
 - where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
+
+## Liquid filters that don't work in Jekyll
+
+- The money filters don't appear to work.
 
 
 {% include footer.html %}
