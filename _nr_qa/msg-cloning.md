@@ -52,6 +52,34 @@ delete msg1._msgid
 return [msg, msg1]
 ```
 
+In some cases, you might also consider the [node-red-contrib-diode](https://www.npmjs.com/package/node-red-contrib-diode) node created by Pete Scargill. That provides a node that enforces a clone.
+
+Also note that cloning a large msg object can take a few hundred milliseconds, not inconsiderable if you are handling large volumes of messages.
+
 See also the [page on how `node.send()` works]({{ site.baseurl }}{% link _nr_qa/how_node-send_works.md %}) as that is also impacted by this issue.
+
+Finally, here are some words on the subject by Node-RED author Nick O'Leary in [GitHub Issue 1214](https://github.com/node-red/node-red/issues/1214):
+
+> We can discuss what behaviour is expected or otherwise, but here are the facts of the current behaviour which explains what you observe.
+>
+> 1. the runtime tries to avoid cloning messages where possible as it is an expensive operation. If a node calls send with a single message object and is wired to just one other node, it will skip automatically cloning the message as, in theory, there is only the single copy to worry about.
+>
+> 2. the runtime has no way of knowing that a subsequent call to send is with a reused message object.
+>
+> 3. the message passing is 'depth-first' up to the point an async operation is encountered.
+>
+> 4. in a flow consisting of Inject -> Function -> Debug, the call to send(msg) from the Function node triggers the Debug node which displays the message. The call stack then unwinds and allows the Function node to make its next call to send. Because the original msg has already been dealt with by the Debug node, the fact the msg has been modified is not noticed.
+>
+> 5. In a flow consisting of Inject -> Function -> Delay -> Debug, the Delay node contains an async action. This means the Function node is able to make multiple calls to send - queuing up all of its messages at the Delay node. They then, asynchronously, arrive at the Debug node where you discover what your thought were multiple individual messages were in fact multiple references to the same message object.
+>
+> ### So what do we do about it?
+> We've always said that a node is responsible for cloning a message object if they intend to reuse it multiple times. That is something that is probably more explicit in the nodes we publish than in the docs (which is why I marked this as a docs issue in my original response).
+>
+> That said, it will be an uphill struggle to explain this nuance of message passing to all users - especially those who don't read the docs.
+>
+> ### In summary:
+> * we avoid cloning in order to improve performance on the most common flow case (one node, one message, one recipient).
+> * users who have wanted to implement the edge case of sending multiple messages (and reuse the object) have either diligently cloned their message or not.
+> * if we add cloning to all messages it will penalise all users - and those that have been diligent doubly so as their code will clone the message and then so will ours.
 
 {% include footer.html %}
