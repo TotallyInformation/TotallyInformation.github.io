@@ -11,8 +11,6 @@ This is a more comprehensive list than you will find in most places, it is combi
 
 - abs - absolute value
 - append - append a string e.g. {% raw %}`{{ 'foo' | append:'bar' }} #=> 'foobar'`{% endraw %}
-- at_least - Limits a number to a minimum value.
-- [at_most](https://help.shopify.com/themes/liquid/filters/math-filters#at_most) - Limits a number to a maximum value.
 - capitalize - capitalize words in the input sentence
 - ceil - rounds a number up to the nearest integer, e.g. {% raw %}`{{ 4.6 | ceil }} #=> 5`{% endraw %}
 - compact - Remove nils within an array provide optional property with which to check for nil.
@@ -61,7 +59,6 @@ This is a more comprehensive list than you will find in most places, it is combi
 - escape_once - returns an escaped version of html without affecting existing escaped entities
 - first - get the first element of the passed in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
-- format_address -
 - group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
 - highlight -
 - highlight_active_tag
@@ -109,10 +106,26 @@ This is a more comprehensive list than you will find in most places, it is combi
 - upcase - convert an input string to uppercase
 - url_decode - url decode a string
 - url_encode - url encode a string
-- weight_with_unit - Formats a number with the default weight unit. The unit can be overridden by passing it into the filter.
 - where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
 
 ## Liquid filters that don't work in Jekyll
+
+- These math filters don't work:
+
+    - at_least - Limits a number to a minimum value.
+    - [at_most](https://help.shopify.com/themes/liquid/filters/math-filters#at_most) - Limits a number to a maximum value.
+
+- Not all of the string filters work:
+
+    - The hashing filters don't work
+    - camelcase
+    - pluralize
+
+- Not all of the utility filters work:
+
+    - weight_with_unit - Formats a number with the default weight unit. The unit can be overridden by passing it into the filter.
+    - format_address
+
 
 - The money filters don't appear to work.
 
