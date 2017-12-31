@@ -35,6 +35,14 @@ comments: false
   <p style="background-color:{{ '#7ab55c' | color_to_rgb }}">#7ab55c</p>
 </div>
 
+<div style="border:1px solid red">
+  <p>Color filters?</p>
+  <p>
+    {{ 145 | money }} <br>
+    {{ 145 | money_with_currency }}
+  </p>
+</div>
+
 <script>
     (function() {
         // Dump the page object to a JS variable - note we have to strip or escape the html
