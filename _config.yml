@@ -4,6 +4,9 @@ remote-theme: minima
 title: 'Totally Information: Development Hub'
 description: 'Development Information website for Totally Information'
 
+disqus:
+  shortname: totally-information-development-hub
+
 plugins:
   - jekyll-sitemap
 
@@ -24,7 +27,7 @@ defaults:
       path: ""
       type: nr_qa
     values:
-      layout: page
+      layout: pages
       comments: true
   - scope:
       path: ""
