@@ -15,7 +15,7 @@ comments: false
 {{ page.url | default: 'url' }}
 </div>
 <div style="border:1px solid red">
-  <p>Do we get the forloop variables?</p>
+  <p>&#10004; Do we get the forloop variables?</p>
   {% for item in site.github_pages %}
     {% if forloop.first == true %}
       <p>Yes, we do!</p>
@@ -53,8 +53,8 @@ comments: false
   <p>
     {{ 145 | at_most: 100 }} - 'at_most: 100' should give '100' from an input of 145<br>
     {{ 45 | at_least: 100 }} - 'at_least: 100' should give '100' from an input of 45 <br>
-    {{ 4.6 | ceil }} - 'ceil' should give 5 from an input of 4.6 <br>
-    {{ 345 | divided_by: 10 }} - 'divided_by' should give 34.5
+    &#10004; {{ 4.6 | ceil }} - 'ceil' should give 5 from an input of 4.6 <br>
+    &#10004; {{ 345 | divided_by: 10 }} - 'divided_by' should give 34 from an input of 345
   </p>
 </div>
 
