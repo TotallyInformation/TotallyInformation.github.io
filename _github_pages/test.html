@@ -76,12 +76,7 @@ comments: false
 <div style="border:1px solid red">
   <p>Utility filters? Some work, some don't</p>
   <p>
-     {{ site.date | time_tag }} - 'time_tag' should give ''<br>
-     {{ "Hello, world. Goodbye, world." | highlight: "world" }} - 'highlight' should give ''<br>
-      - '' should give ''<br>
-      - '' should give ''<br>
-      - '' should give ''<br>
-      - '' should give ''<br>
+    &times; {{ site.date | time_tag }} - 'time_tag' should give a date/time string wrapped in html time tags<br>
   </p>
 </div>
 

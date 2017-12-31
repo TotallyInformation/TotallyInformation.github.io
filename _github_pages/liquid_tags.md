@@ -14,6 +14,12 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 ### Control flow tags
 - [case](https://help.shopify.com/themes/liquid/tags/control-flow-tags#case-when) (when, else, endcase) - a switch statement
 - if (else, elsif, endif) - execute block only if the condition is met
+
+  Note the odd spelling of `elsif` (e.g. no second `e`)
+
+  Conditional tests support `and` and `or` to link conditions together
+  e.g. {% raw %}`{% if line_item.grams > 20000 and customer_address.city == 'Ottawa' %}`{% endraw %}
+
 - raw (endraw) - stops Liquid from parsing the content so that you can include double braces for example.
 - unless (endunless) - execute block only if the condition is **not** met
 
@@ -47,28 +53,23 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
   Includes parameters: `cols` (defines the number of columns), `limit`, `offset`, `range`, `first`, `col`, `col_first` and others. See the [documentation](https://help.shopify.com/themes/liquid/objects/tablerow) for details
 
 ### Theme/rendering tags
-* comment
+* comment (endcomment)
 * form
 * include
 * javascript
 * layout
 * paginate
-* raw
+* raw (endraw) - temporarily disables tag processing. Useful for generating content (eg, Mustache, Handlebars) which uses conflicting syntax.
 * schema
 * section
 * stylesheet
 
 ### Variable tags
-* assign
-* capture
+* assign - Assign a value to a variable. e.g. {% raw %}`{% assign name = 'freestyle' %}`{% endraw %}
+* capture (endcapture) - Combine a number of outputs and assign to a variable.
+  e.g. {% raw %}`{% capture attribute_name %}{{ item.title | handleize }}-{{ i }}-color{% endcapture %}`{% endraw %}
 * decrement
 * increment
-
-Notes:
-
-- Note the odd spelling of `elsif` (e.g. no second `e`)
-- Conditional tests support `and` and `or` to link conditions together
-  e.g. {% raw %}`{% if line_item.grams > 20000 and customer_address.city == 'Ottawa' %}`{% endraw %}
 
 
 {% include footer.html %}
