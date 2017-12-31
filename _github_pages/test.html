@@ -1,19 +1,21 @@
 ---
 title: 'A Page to test things'
-description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesnt'
+description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t'
 comments: false
 ---
 {% include header.html %}
 
 <hr>
-{{page.author}} <br>
-{{page.content}} <br>
-{{page.handle}} <br>
-{{page.id}} <br>
-{{page.published_at}} <br>
-{{page.template_suffix}} <br>
-{{page.title}} <br>
-{{page.url}} <br>
+<div style="border:1px solid red">
+{{ page.author }} <br>
+{{ page.content }} <br>
+{{ page.handle }} <br>
+{{ page.id }} <br>
+{{ page.published_at }} <br>
+{{ page.template_suffix }} <br>
+{{ page.title }} <br>
+{{ page.url }}
+</div>
 <hr>
 
 <script>
