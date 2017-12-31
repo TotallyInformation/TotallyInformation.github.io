@@ -1,7 +1,8 @@
 #theme: jekyll-theme-tactile
+# https://github.com/jekyll/minima
 remote-theme: minima
-title: ['Totally Information: Development Hub']
-description: [Development Information website for Totally Information]
+title: 'Totally Information: Development Hub'
+description: 'Development Information website for Totally Information'
 
 plugins:
   - jekyll-sitemap
