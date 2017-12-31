@@ -17,12 +17,13 @@ comments: false
 <div style="border:1px solid red">
   <p>Do we get the forloop variables?</p>
 {% for item in site.github_pages %}
+  <p>Yes, we do!</p>
     {% if forloop.first == true %}
-        First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
+        <p>First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
     {% elsif forloop.last == true %}
-        This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
+        <p>This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
     {% else %}
-        Not the first time. {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}
+        <p>Not the first time. {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.length }}</p>
     {% endif %}
 {% else %}
   <p>Urm, nope!</p>
