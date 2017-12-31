@@ -6,13 +6,13 @@ comments: false
 {% include header.html %}
 
 <div style="border:1px solid red">
-{{ page.author | default: 'author'}} <br>
-{{ page.handle | default: 'handle' }} <br>
-{{ page.id | default: 'id' }} <br>
-{{ page.published_at | default: 'published_at' }} <br>
-{{ page.template_suffix | default: 'template_suffix' }} <br>
-{{ page.title | default: 'title' }} <br>
-{{ page.url | default: 'url' }}
+{{ page.author | default: 'should be `author`'}} <br>
+{{ page.handle | default: 'should be `handle`' }} <br>
+&#10004; {{ page.id | default: 'should be `id`' }} <br>
+{{ page.published_at | default: 'should be `published_at`' }} <br>
+{{ page.template_suffix | default: 'should be `template_suffix`' }} <br>
+{{ page.title | default: 'should be `title`' }} <br>
+&#10004; {{ page.url | default: 'should be `url`' }}
 </div>
 <div style="border:1px solid red">
   <p>&#10004; Do we get the forloop variables?</p>
@@ -49,12 +49,20 @@ comments: false
 </div>
 
 <div style="border:1px solid red">
-  <p>Number filters?</p>
+  <p>Number filters? Some work, some don't</p>
   <p>
     {{ 145 | at_most: 100 }} - 'at_most: 100' should give '100' from an input of 145<br>
     {{ 45 | at_least: 100 }} - 'at_least: 100' should give '100' from an input of 45 <br>
     &#10004; {{ 4.6 | ceil }} - 'ceil' should give 5 from an input of 4.6 <br>
     &#10004; {{ 345 | divided_by: 10 }} - 'divided_by' should give 34 from an input of 345
+  </p>
+</div>
+
+
+<div style="border:1px solid red">
+  <p>String filters?</p>
+  <p>
+    {{ 'coming-soon' | camelcase }} - 'camelcase' should give 'ComingSoon'<br>
   </p>
 </div>
 
