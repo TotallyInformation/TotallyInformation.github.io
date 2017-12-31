@@ -60,11 +60,15 @@ comments: false
 
 
 <div style="border:1px solid red">
-  <p>String filters?</p>
+  <p>String filters? Some work, some don't</p>
   <p>
     {{ 'coming-soon' | camelcase }} - 'camelcase' should give 'ComingSoon'<br>
-    {{ 'capitalize me' | capitalize }} - 'capitalize' should give 'Capitalize me'<br>
+    &#10004; {{ 'capitalize me' | capitalize }} - 'capitalize' should give 'Capitalize me'<br>
     {{ "ShopifyIsAwesome!" | sha1 }} - 'sha1' should give 'c7322e3812d3da7bc621300ca1797517c34f63b6'<br>
+    {{ 10 | pluralize: 'item', 'items' }} - 'pluralize' should give '10 items'<br>
+    {{ "Hello, world. Goodbye, world." | remove: "world" }} - 'remove' should give 'Hello, . Goodbye, .'<br>
+    {{ "hello" | slice: 1, 3 }} - 'slice' should give 'ell'<br>
+    {{ "<h1>Hello</h1> World" | strip_html }} - 'strip_html' should give 'Hello World'<br>
   </p>
 </div>
 
