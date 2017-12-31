@@ -1,11 +1,15 @@
 ---
 title: 'How to create a clone of a message object'
-description: 'Node-RED passes messages by reference not copy. Sometimes though, a copy is needed.'
+description: 'Node-RED tried to pass messages by reference not copy. Sometimes though, a copy is needed.'
 comments: true
 ---
 {% include header.html %}
 
 By default, Node-RED tries to stay as efficient as possible when "passing" messages from one node to the next. In order to do so, it passes the msg object [by reference](https://hackernoon.com/grasp-by-value-and-by-reference-in-javascript-7ed75efa1293). This is the default for JavaScript.
+
+These are the rules for when msg's are cloned:
+- If a node is wired to another single node, the message is **not** cloned.
+- If a node is wired to **two** or more nodes from a single output of the parent node, the message is cloned to all except the 'first' of the output nodes. Put another way, downstream nodes 2-n get a copy of the msg object.
 
 However, this can sometimes create issues. If, for example, you attach 2 downstream nodes, each gets the _same_ msg object, not a different one. Under certain circumstances, this can lead to unintended consequences where one part of a flow affects another.
 
@@ -48,5 +52,6 @@ delete msg1._msgid
 return [msg, msg1]
 ```
 
+See also the [page on how `node.send()` works]({{ site.baseurl }}{% link _nr_qa/how_node-send_works.md %}) as that is also impacted by this issue.
 
 {% include footer.html %}
