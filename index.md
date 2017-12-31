@@ -1,6 +1,5 @@
 ---
 description: 'This site is used to publish development-related reference information curated by Totally Information.'
-layout: home
 ---
 {% include header.html %}
 
