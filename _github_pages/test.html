@@ -5,7 +5,6 @@ comments: false
 ---
 {% include header.html %}
 
-<hr>
 <div style="border:1px solid red">
 {{ page.author | default: 'author'}} <br>
 {{ page.handle | default: 'handle' }} <br>
@@ -15,7 +14,15 @@ comments: false
 {{ page.title | default: 'title' }} <br>
 {{ page.url | default: 'url' }}
 </div>
-<hr>
+<div style="border:1px solid red">
+{% for product in collections.nr_qa %}
+    {% if forloop.first == true %}
+        First time through!
+    {% else %}
+        Not the first time.
+    {% endif %}
+{% endfor %}
+</div>
 
 <script>
     (function() {
