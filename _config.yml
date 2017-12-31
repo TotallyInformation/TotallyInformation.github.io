@@ -1,4 +1,5 @@
-theme: jekyll-theme-tactile
+#theme: jekyll-theme-tactile
+remote-theme: minima
 title: ['Totally Information: Development Hub']
 description: [Development Information website for Totally Information]
 
