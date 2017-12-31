@@ -36,10 +36,10 @@ comments: false
 </div>
 
 <div style="border:1px solid red">
-  <p>Color filters?</p>
+  <p>Money filters?</p>
   <p>
-    {{ 145 | money }} <br>
-    {{ 145 | money_with_currency }}
+    {{ 145 | money }} - should give '£145.00' or similar<br>
+    {{ 145 | money_with_currency }} - should give '145 GBP' or similar
   </p>
 </div>
 
