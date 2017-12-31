@@ -6,6 +6,13 @@ comments: false
 {% include header.html %}
 
 <div style="border:1px solid red">
+  <p>Do we get the Jekyll Environment data?</p>
+  <p>
+     {{ jekyll.environment }} - 'jekyll.environment'<br>
+  </p>
+</div>
+
+<div style="border:1px solid red">
   <p>Do we get all the page variables for this page which uses the "Default" template? Nope.</p>
   &times; {{ page.author | default: 'should be `author`'}} <br>
   &times; {{ page.handle | default: 'should be `handle`' }} <br>
