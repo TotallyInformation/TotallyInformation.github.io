@@ -9,6 +9,7 @@ description: 'Some reference sites and links for Jekyll, Liquid and GitHub Pages
 - [Liquid Reference](https://help.shopify.com/themes/liquid) - the official documentation for Liquid which is used by Jekyll
 - [CloudCannon Academy](https://learn.cloudcannon.com/) - getting started with Jekyll
 - [Jekyll Codex](https://jekyllcodex.org/getting-started/) - General information plus snippets that require not plugins (useful for GitHub Pages).
+- [Jekyll & Liquid Cheatsheet](https://gist.github.com/smutnyleszek/9803727) - "A list of the most common functionalities in Jekyll"
 
 
 ## Cloud services
