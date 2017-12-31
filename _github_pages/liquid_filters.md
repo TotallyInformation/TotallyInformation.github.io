@@ -15,19 +15,6 @@ This is a more comprehensive list than you will find in most places, it is combi
 - [at_most](https://help.shopify.com/themes/liquid/filters/math-filters#at_most) - Limits a number to a maximum value.
 - capitalize - capitalize words in the input sentence
 - ceil - rounds a number up to the nearest integer, e.g. {% raw %}`{{ 4.6 | ceil }} #=> 5`{% endraw %}
-
-- [color_brightness](https://help.shopify.com/themes/liquid/filters/color-filters#color_brightness) - Calculates the perceived brightness of the given color. Uses [W3C recommendations for calculating perceived brightness](https://www.w3.org/TR/AERT#color-contrast), for the purpose of ensuring adequate contrast.
-- color_darken - Darkens the input color. Takes a value between 0 and 100 percent.
-- color_desaturate - Desaturates the input color. Takes a value between 0 and 100 percent.
-- color_extract - Extracts a component from the color. Valid components are alpha, red, green, blue, hue, saturation and lightness.
-- color_lighten - Lightens the input color. Takes a value between 0 and 100 percent.
-- color_mix - Blends together two colors. Blend factor should be a value value between 0 and 100 percent.
-- color_modify - Modifies the given component of a color. {% raw %}`{{ '#7ab55c' | color_modify: 'red', 255 }} #=> #ffb55c`{% endraw %}
-- color_saturate - Saturates the input color. Takes a value between 0 and 100 percent.
-- color_to_hex - Converts a CSS color string to hex6 format.
-- color_to_hsl - Converts a CSS color string to CSS `hsl()` format.
-- [color_to_rgb](https://help.shopify.com/themes/liquid/filters/color-filters#color_to_rgb) - Converts a CSS color string to CSS `rgb()` format.
-
 - compact - Remove nils within an array provide optional property with which to check for nil.
 - [concat](https://help.shopify.com/themes/liquid/filters/array-filters#concat) - Concatenates (combines) an array with another array
 - date - reformat a date ([syntax reference](http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date))
@@ -128,6 +115,21 @@ This is a more comprehensive list than you will find in most places, it is combi
 ## Liquid filters that don't work in Jekyll
 
 - The money filters don't appear to work.
+
+- The colour filters don't seem to work:
+
+    - [color_brightness](https://help.shopify.com/themes/liquid/filters/color-filters#color_brightness) - Calculates the perceived brightness of the given color. Uses [W3C recommendations for calculating perceived brightness](https://www.w3.org/TR/AERT#color-contrast), for the purpose of ensuring adequate contrast.
+    - color_darken - Darkens the input color. Takes a value between 0 and 100 percent.
+    - color_desaturate - Desaturates the input color. Takes a value between 0 and 100 percent.
+    - color_extract - Extracts a component from the color. Valid components are alpha, red, green, blue, hue, saturation and lightness.
+    - color_lighten - Lightens the input color. Takes a value between 0 and 100 percent.
+    - color_mix - Blends together two colors. Blend factor should be a value value between 0 and 100 percent.
+    - color_modify - Modifies the given component of a color. {% raw %}`{{ '#7ab55c' | color_modify: 'red', 255 }} #=> #ffb55c`{% endraw %}
+    - color_saturate - Saturates the input color. Takes a value between 0 and 100 percent.
+    - color_to_hex - Converts a CSS color string to hex6 format.
+    - color_to_hsl - Converts a CSS color string to CSS `hsl()` format.
+    - [color_to_rgb](https://help.shopify.com/themes/liquid/filters/color-filters#color_to_rgb) - Converts a CSS color string to CSS `rgb()` format.
+
 
 
 {% include footer.html %}

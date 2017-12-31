@@ -31,7 +31,7 @@ comments: false
 </div>
 
 <div style="border:1px solid red">
-  <p>Color filters?</p>
+  <p>Color filters? Nope, they don't work</p>
   <p>
     <span style="background-color:{{ '#7ab55c' | color_to_rgb }}">Should change #7ab55c to <code>rgb(122, 181, 92)</code></span> <br>
     #7ab55c colour brightness (should be 153.21): {{ '#7ab55c' | color_brightness }} <br>
@@ -41,12 +41,21 @@ comments: false
 </div>
 
 <div style="border:1px solid red">
-  <p>Money filters?</p>
+  <p>Money filters? Nope, they don't work</p>
   <p>
     {{ 145 | money }} - should give '£145.00' or similar<br>
     {{ 145 | money_with_currency }} - should give '145 GBP' or similar
   </p>
 </div>
+
+<div style="border:1px solid red">
+  <p>Number filters?</p>
+  <p>
+    {{ 145 | at_most: 100 }} - 'at_most: 100' should give '100' from an input of 145<br>
+    {{ 45 | at_least: 100 }} - 'at_least: 100' should give '100' from an input of 45
+  </p>
+</div>
+
 
 <script>
     (function() {
