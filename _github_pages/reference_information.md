@@ -5,6 +5,7 @@ description: 'Some reference sites and links for Jekyll, Liquid and GitHub Pages
 ## Reference, help and tips
 
 - [Jekyll Official Documentation](https://jekyllrb.com/docs/home/)
+- [Jekyll Discussion Groups](https://talk.jekyllrb.com/)
 - [Liquid Reference on GitHub](https://shopify.github.io/liquid/)
 - [Liquid Reference](https://help.shopify.com/themes/liquid) - the official documentation for Liquid which is used by Jekyll
 - [CloudCannon Academy](https://learn.cloudcannon.com/) - getting started with Jekyll
