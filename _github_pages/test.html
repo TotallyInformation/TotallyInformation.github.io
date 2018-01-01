@@ -30,8 +30,8 @@ borderColor2: 'silver'
   <p>
     &#10004; 'page.url': --{{ page.url }}--<br>
     &#10004; 'page.layout': --{{ page.layout }}-- : Default for this collection is "page" but set to "home" in front matter - should show "home"<br>
-    &#10004; 'page.date': --{{ page.date }}-- : Should be auto-set according to docs but apparently not.<br>
     &#10004; 'page.path': --{{ page.path }}--<br>
+    &times;  'page.date': --{{ page.date }}-- : Should be auto-set according to docs but apparently not.<br>
   </p>
 
   <p>Custom variables set in _config.yml or front matter? <b>Only available to actual Pages and NOT TO COLLECTION DOCUMENTS!</b></p>
@@ -62,20 +62,19 @@ borderColor2: 'silver'
 
 <div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
-  <p>
+  <pre>
   {% for item in site.github_pages %}
     {% if forloop.first == true %}
-      Yes, we do!
-         First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}, {{ forloop.length }}<br>
+      Yes, we do! First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}, {{ forloop.length }}<br>
     {% elsif forloop.last == true %}
-      This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }} {{ forloop.rindex }}, {{ forloop.rindex0 }}
+      This is the last iteration! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}
     {% else %}
-      Not the first time. {{ forloop.index }}, {{ forloop.index0 }} {{ forloop.rindex }}, {{ forloop.rindex0 }}<br>
+      Not the first time. {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}<br>
     {% endif %}
   {% else %}
     Urm, nope!
   {% endfor %}
-  </p>
+  </pre>
 </div>
 
 <div style="border:1px solid {{ borderColor }}">
