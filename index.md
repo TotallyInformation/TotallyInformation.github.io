@@ -76,8 +76,8 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
     (function() {
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk_page = {{ page | jsonify | strip_html }};
-        var someData = {{ page.someData }}
-        var layout = {{ layout }}
+        var someData = '{{ page.someData }}'
+        var layout = '{{ layout }}'
         console.log('--PAGE (jsonify)--', jk_page)
         console.log('someData', someData)
     })();
