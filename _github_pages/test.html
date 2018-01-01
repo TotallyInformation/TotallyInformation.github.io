@@ -2,12 +2,18 @@
 title: 'A Page to test things'
 description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t'
 comments: false
-borderColor: 'silver'
+borderColor2: 'silver'
 ---
 {{ assign borderColor = 'silver' }}
 
 <div style="border:1px solid {{ borderColor }}">
   <pre>{{ page | inspect }}</pre>
+  <p>Do we get the page variables?</p>
+  <p>
+    'borderColor2': --{{ borderColor2 }}--<br>
+    'comments': --{{ comments }}--<br>
+    'page.comments': --{{ page.comments }}--<br>
+  </p>
 </div>
 
 <div style="border:1px solid {{ borderColor }}">
