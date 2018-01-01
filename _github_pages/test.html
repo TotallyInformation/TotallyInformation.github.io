@@ -5,6 +5,7 @@ comments: false
 borderColor: 'silver'
 ---
 
+{{ assign borderColor = 'silver' }}
 <div style="border:1px solid {{ page.borderColor }}">
   <p>Do we get site variables defined in _config.yml? Not everything.</p>
   <p>
