@@ -48,29 +48,38 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
 </table>
 
 <!--
-  <p>Do we get all the page variables for this page which uses the "Default" template? Nope.</p>
-  &#10004; 'page.url': --{{ page.url }}--<br>
-  &#10004; 'page.layout': --{{ page.layout }}-- : Default for this collection is "page" but set to "home" in front matter - should show "home"<br>
-  &#10004; 'page.type': --{{ page.type }}--<br>
-   'page.date': --{{ page.date }}-- : Should be auto-set according to docs but apparently not.<br>
-   'page.path': --{{ page.path }}--<br>
+  <p>Do we get all the page variables for this {% if page.collection %}collection document{% else %}Page{% endif %}? Nope.</p>
+  <p>
+    &#10004; 'page.url': --{{ page.url }}--<br>
+    &#10004; 'page.layout': --{{ page.layout }}-- : Default for this collection is "page" but set to "home" in front matter - should show "home"<br>
+    &#10004; 'page.date': --{{ page.date }}-- : Should be auto-set according to docs but apparently not.<br>
+    &#10004; 'page.path': --{{ page.path }}--<br>
+  </p>
 
   <p>Custom variables set in _config.yml or front matter? <b>Only available to actual Pages and NOT TO COLLECTION DOCUMENTS!</b></p>
-  &times;  'page.title': --{{ page.title }}-- : This is set in this page's front matter, it should be available! <br>
-  &times;  'page.description': --{{ page.description }}-- : This is set in this page's front matter, it should be available! <br>
-  &times;  'page.comments': --{{ page.comments }}-- : Is set in this page as false but is, instead showing true which is the default<br>
-  &times;  'page.borderColor2': --{{ page.borderColor2 }}--: Is set in this page's front matter, it should be available!<br>
+  <p>
+    &times;  'page.title': --{{ page.title }}-- : This is set in this page's front matter, it should be available! <br>
+    &times;  'page.description': --{{ page.description }}-- : This is set in this page's front matter, it should be available! <br>
+    &times;  'page.comments': --{{ page.comments }}-- : Is set in this page as false but is, instead showing true which is the default<br>
+    &times;  'page.borderColor2': --{{ page.borderColor2 }}--: Is set in this page's front matter, it should be available!<br>
+  </p>
 
   <p>Local assigned variables? Yes.</p>
-  &#10004; 'borderColor': --{{ borderColor }}-- : Is set in an assignment tag so is available.<br>
+  <p>
+    &#10004; 'borderColor': --{{ borderColor }}-- : Is set in an assignment tag so is available.<br>
+  </p>
 
-  <p>Only available in collection documents like this</p>
-   'page.id': --{{ page.id }}-- : Should be set for documents in a collection or a post so should be available here (collection document).<br>
-   'page.collection': --{{ page.collection }}-- : Should be set for documents in a collection or a post so should be available here (collection document).<br>
+  <p>Only available in collection documents{% if page.collection %} like this{% endif %}</p>
+  <p>
+    'page.id': --{{ page.id }}-- : Should be set for documents in a collection or a post{% if page.collection %} so should be available here (collection document){% endif %}.<br>
+    'page.collection': --{{ page.collection }}-- : Should be set for documents in a collection or a post{% if page.collection %} so should be available here (collection document){% endif %}.<br>
+  </p>
 
-  <p>Only available in actual pages (not a collection document like this)</p>
-  &#10004; 'page.dir': --{{ page.dir }}--<br>
-  &#10004; 'page.name': --{{ page.name }}--<br>
+  <p>Only available in actual pages (not a collection document{% if page.collection %} like this{% endif %})</p>
+  <p>
+    &#10004; 'page.dir': --{{ page.dir }}--<br>
+    &#10004; 'page.name': --{{ page.name }}--<br>
+  </p>
 -->
 
 <script>
