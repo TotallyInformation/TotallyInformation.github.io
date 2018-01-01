@@ -62,6 +62,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - [highlight](https://help.shopify.com/themes/liquid/filters/additional-filters#highlight) - Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search.terms. Has to be used in a search form.
 - highlight_active_tag - Wraps a tag link in a `<span>` with the class active if that tag is being used to filter a collection.
 - img_tag - generate an img html tag
+- **inspect** - Doesn't appear to be documented but returns a JSON stringified version of a variable so use as {% raw %}`<pre>{{ page | inspect }}</pre>`{% endraw %} - possibly references Ruby's inspect function?
 - join - join elements of the array with certain character between them
 - [json](https://help.shopify.com/themes/liquid/filters/additional-filters#json) - Converts a string into JSON format.
 

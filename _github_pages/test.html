@@ -7,16 +7,6 @@ borderColor2: 'silver'
 {{ assign borderColor = 'silver' }}
 
 <div style="border:1px solid {{ borderColor }}">
-  <pre>{{ page | inspect }}</pre>
-  <p>Do we get the page variables?</p>
-  <p>
-    'borderColor2': --{{ borderColor2 }}--<br>
-    'comments': --{{ comments }}--<br>
-    'page.comments': --{{ page.comments }}--<br>
-  </p>
-</div>
-
-<div style="border:1px solid {{ borderColor }}">
   <p>Do we get site variables defined in _config.yml? Not everything.</p>
   <p>
     &#10004; 'site.remote-theme': --{{ site.remote-theme }}--<br>
@@ -30,6 +20,10 @@ borderColor2: 'silver'
   <p>&#10004; Do we get the Jekyll Environment data? Yes</p>
   <p>
     &#10004; 'jekyll.environment': --{{ jekyll.environment }}-- : should give "production" on GitHub Pages.<br>
+    &#10004; 'jekyll.version': --{{ jekyll.version }}-- : should give "production" on GitHub Pages.<br>
+  </p>
+  <p>
+    {{"This is some text to work woth" | regex_replace: "woth", "with"}}
   </p>
 </div>
 
@@ -42,6 +36,10 @@ borderColor2: 'silver'
   &times; {{ page.template_suffix | default: 'should be `template_suffix`' }} <br>
   &times; {{ page.title | default: 'should be `title`' }} <br>
   &#10004; {{ page.url | default: 'should be `url`' }}
+  'page.borderColor2': --{{ page.borderColor2 }}--<br>
+  &#10004; 'page.comments': --{{ page.comments }}--<br>
+  <p>Local assigned variables? Yes.</p>
+  &#10004; 'borderColor': --{{ borderColor }}--<br>
 </div>
 <div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
@@ -122,6 +120,17 @@ borderColor2: 'silver'
     {% endraw %}
   </pre>
 </div>
+
+<div style="border:1px solid {{ borderColor }}">
+  <p>This page object</p>
+  <pre>{{ page | inspect }}</pre>
+</div>
+
+<div style="border:1px solid {{ borderColor }}">
+  <p>site object</p>
+  <pre>{{ site | inspect }}</pre>
+</div>
+
 
 <script>
     (function() {
