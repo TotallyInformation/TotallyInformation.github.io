@@ -27,10 +27,12 @@ defaults:
       path: ""
       type: nr_qa
     values:
+      layout: page
       comments: true
   - scope:
       path: ""
       type: github_pages
     values:
+      layout: page
       comments: true
 

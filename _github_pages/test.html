@@ -110,7 +110,7 @@ borderColor2: 'silver'
 <div style="border:1px solid {{ borderColor }}">
   <p>jsonify? See the dev console for the following:</p>
   <pre>
-    &#123;% raw %&#125;
+    {% raw %}
     <script>
         (function() &#123;
             // Dump the page object to a JS variable - note we have to strip or escape the html
@@ -118,7 +118,7 @@ borderColor2: 'silver'
             console.log(jk)
         &#125;)()&#59;
     </script>
-    &#123;% endraw %&#125;
+    {% endraw %}
   </pre>
 </div>
 
