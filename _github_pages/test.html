@@ -37,8 +37,10 @@ borderColor2: 'silver'
   &times; {{ page.template_suffix | default: 'should be `template_suffix`' }} <br>
   &times; {{ page.title | default: 'should be `title`' }} <br>
   &#10004; {{ page.url | default: 'should be `url`' }}
-  'page.borderColor2': --{{ page.borderColor2 }}--<br>
+  &times; 'page.borderColor2': --{{ page.borderColor2 }}--<br>
   &#10004; 'page.comments': --{{ page.comments }}--<br>
+  &#10004; 'page.layout': --{{ page.layout }}--<br>
+  &#10004; 'page.type': --{{ page.type }}--<br>
   <p>Local assigned variables? Yes.</p>
   &#10004; 'borderColor': --{{ borderColor }}--<br>
 </div>
