@@ -1,8 +1,25 @@
 #theme: jekyll-theme-tactile
 # https://github.com/jekyll/minima
+
+theme: minima
 remote-theme: minima
 title: 'Totally Information: Development Hub'
+# Start with > to ignore newlines until next something:
 description: 'Development Information website for Totally Information'
+author: Julian Knight
+email: gh@totallyinformation.com
+twitter_username: knightnet
+github_username:  TotallyInformation
+
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.html
 
 disqus:
   shortname: 'totally-information-development-hub'
