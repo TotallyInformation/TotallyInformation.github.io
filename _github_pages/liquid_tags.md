@@ -3,7 +3,6 @@ title: 'Jekyll/Liquid Tags'
 description: 'This is a list of `tags` that can be used in Jekyll.'
 comments: true
 ---
-{% include header.html %}
 
 Tags appear within {% raw %}`{% tagname %}`{% endraw %} markup.
 Matching end-tags are shown in brackets.
@@ -71,5 +70,3 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 * decrement
 * increment
 
-
-{% include footer.html %}

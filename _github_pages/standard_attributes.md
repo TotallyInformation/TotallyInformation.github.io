@@ -2,11 +2,6 @@
 description: 'These are the default attributes (variables) that you get with each part of the Jekyll domain.'
 comments: true
 ---
-{% include header.html %}
-
-{{ site.collections.github_pages.title }}
-
-{{ site.collections.github_pages.description }}
 
 ## Global
 
@@ -60,4 +55,3 @@ defaults:
 ```
 {% endraw %}
 
-{% include footer.html %}

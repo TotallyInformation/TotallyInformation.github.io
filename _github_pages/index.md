@@ -3,7 +3,6 @@ title: 'GitHub Pages and Jekyll/Liquid'
 description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
 comments: false
 ---
-{% include header.html %}
 
 <ul>
 {% for item in site.github_pages %}
@@ -18,4 +17,3 @@ comments: false
 {% endfor %}
 </ul>
 
-{% include footer.html %}

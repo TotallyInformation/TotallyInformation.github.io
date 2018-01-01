@@ -3,7 +3,6 @@ title: 'How to create a clone of a message object'
 description: 'Node-RED tried to pass messages by reference not copy. Sometimes though, a copy is needed.'
 comments: true
 ---
-{% include header.html %}
 
 By default, Node-RED tries to stay as efficient as possible when "passing" messages from one node to the next. In order to do so, it passes the msg object [by reference](https://hackernoon.com/grasp-by-value-and-by-reference-in-javascript-7ed75efa1293). This is the default for JavaScript.
 
@@ -82,4 +81,3 @@ Finally, here are some words on the subject by Node-RED author Nick O'Leary in [
 > * users who have wanted to implement the edge case of sending multiple messages (and reuse the object) have either diligently cloned their message or not.
 > * if we add cloning to all messages it will penalise all users - and those that have been diligent doubly so as their code will clone the message and then so will ours.
 
-{% include footer.html %}

@@ -3,7 +3,6 @@ title: 'Add Disqus to Jekyll pages'
 description: 'Example code to add to every page as a footer to enable the Disqus comments service.'
 comments: true
 ---
-{% include header.html %}
 
 Create `footer.html` in your site `_includes` folder or include this in the default layout in `_layouts`.
 
@@ -28,4 +27,3 @@ Create `footer.html` in your site `_includes` folder or include this in the defa
 ```
 {% endraw %}
 
-{% include footer.html %}

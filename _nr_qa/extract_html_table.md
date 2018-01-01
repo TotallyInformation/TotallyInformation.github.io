@@ -3,7 +3,6 @@ title: 'How to extract a table from HTML'
 description: 'While Node-RED has some nodes for extracting data from HTML, the nodes are rather simplistic. Here is a quick way to extract the data from an HTML table element.'
 comments: true
 ---
-{% include header.html %}
 
 While Node-RED has some nodes for extracting data from HTML,
 the nodes are rather simplistic.
@@ -94,5 +93,3 @@ The result is a `msg.payload` containing 2 arrays. The first is the list of colu
 The second is an array of objects, each object containing a property for each column.
 
 Code inspired by: https://github.com/iaincollins/tabletojson/blob/master/lib/tabletojson.js
-
-{% include footer.html %}

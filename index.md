@@ -1,7 +1,6 @@
 ---
 description: 'This site is used to publish development-related reference information curated by Totally Information.'
 ---
-{% include header.html %}
 
 ## Node-RED Questions and Answers
 
@@ -44,5 +43,3 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
         <a hre="{{ repository.html_url }}">{{ repository.name }}</a>
     {% endtablerow %}
 </table>
-
-{% include footer.html %}

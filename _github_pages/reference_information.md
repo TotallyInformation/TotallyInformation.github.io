@@ -1,7 +1,6 @@
 ---
 description: 'Some reference sites and links for Jekyll, Liquid and GitHub Pages.'
 ---
-{% include header.html %}
 
 ## Reference, help and tips
 
@@ -23,4 +22,3 @@ description: 'Some reference sites and links for Jekyll, Liquid and GitHub Pages
 - [Tactile](https://github.com/pages-themes/tactile) - Not perfect but I like the dark themed syntax highlighting.
 - [Minima](https://github.com/jekyll/minima) - GitHub supported, seems to be about the most popular.
 
-{% include footer.html %}
