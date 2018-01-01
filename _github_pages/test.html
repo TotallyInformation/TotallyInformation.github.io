@@ -111,13 +111,13 @@ borderColor2: 'silver'
   <p>jsonify? See the dev console for the following:</p>
   <pre>
     {% raw %}
-    <script>
+    &lt;script>
         (function() &#123;
             // Dump the page object to a JS variable - note we have to strip or escape the html
             var jk = &#123;&#123; page | jsonify | strip_html &#125;&#125;&#59;
             console.log(jk)
         &#125;)()&#59;
-    </script>
+    &lt;/script>
     {% endraw %}
   </pre>
 </div>

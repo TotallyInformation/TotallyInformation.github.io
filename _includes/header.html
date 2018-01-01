@@ -32,6 +32,6 @@
 </header>
 <script>
   console.log('--HEADER--')
-  console.log('--default_paths--', [{{ default_paths }}])
-  console.log('--page_paths--', [{{ page_paths }}])
+  console.log('--default_paths--', [{{ default_paths | json }}])
+  console.log('--page_paths--', [{{ page_paths | json  }}])
 </script>
