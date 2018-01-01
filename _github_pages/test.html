@@ -2,24 +2,27 @@
 title: 'A Page to test things'
 description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t'
 comments: false
+borderColor: 'red'
 ---
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
+  <p>Do we get site variables defined in _config.yml? Not everything.</p>
+  <p>
+    &#10004; 'site.remote-theme': --{{ site.remote-theme }}--<br>
+    &#10004; 'site.title': --{{ site.title }}--<br>
+    &#10004; 'site.disqus.shortname': --{{ site.disqus.shortname }}--<br>
+    &times;  'site.collections.nr_qa.title': --{{ site.collections.nr_qa.title }}-- : Nothing from collections is directly accessible.<br>
+  </p>
+</div>
+
+<div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the Jekyll Environment data? Yes</p>
   <p>
     &#10004; 'jekyll.environment': --{{ jekyll.environment }}-- : should give "production" on GitHub Pages.<br>
   </p>
-  <p>Do we get site variables defined in _config.yml?</p>
-  <p>
-    'site.remote-theme': --{{ site.remote-theme }}--<br>
-    'site.title': --{{ site.title }}--<br>
-    'site.disqus.shortname': --{{ site.disqus.shortname }}--<br>
-    'site.collections.nr_qa.title': --{{ site.collections.nr_qa.title }}--<br>
-    'site.collections.nr_qa.title': --{{ site.collections['nr_qa']['title'] }}--<br>
-  </p>
 </div>
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>Do we get all the page variables for this page which uses the "Default" template? Nope.</p>
   &times; {{ page.author | default: 'should be `author`'}} <br>
   &times; {{ page.handle | default: 'should be `handle`' }} <br>
@@ -29,7 +32,7 @@ comments: false
   &times; {{ page.title | default: 'should be `title`' }} <br>
   &#10004; {{ page.url | default: 'should be `url`' }}
 </div>
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
   {% for item in site.github_pages %}
     {% if forloop.first == true %}
@@ -45,7 +48,7 @@ comments: false
   {% endfor %}
 </div>
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>Color filters? Nope, they don't work</p>
   <p>
     &times; <span style="background-color:{{ '#7ab55c' | color_to_rgb }}">Should change #7ab55c to <code>rgb(122, 181, 92)</code></span> <br>
@@ -55,7 +58,7 @@ comments: false
   </p>
 </div>
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>Money filters? Nope, they don't work</p>
   <p>
     &times; {{ 145 | money }} - should give '£145.00' or similar<br>
@@ -63,7 +66,7 @@ comments: false
   </p>
 </div>
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>Number filters? Some work, some don't</p>
   <p>
     &times; {{ 145 | at_most: 100 }} - 'at_most: 100' should give '100' from an input of 145<br>
@@ -74,7 +77,7 @@ comments: false
 </div>
 
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>String filters? Some work, some don't</p>
   <p>
     &times; {{ "coming-soon" | camelcase }} - 'camelcase' should give 'ComingSoon'<br>
@@ -87,11 +90,26 @@ comments: false
   </p>
 </div>
 
-<div style="border:1px solid red">
+<div style="border:1px solid {{ borderColor }}">
   <p>Utility filters? Some work, some don't</p>
   <p>
     &times; {{ site.date | time_tag }} - 'time_tag' should give a date/time string wrapped in html time tags<br>
   </p>
+</div>
+
+<div style="border:1px solid {{ borderColor }}">
+  <p>jsonify? See the dev console for the following:</p>
+  <pre>
+    {% raw %}
+    <script>
+        (function() {
+            // Dump the page object to a JS variable - note we have to strip or escape the html
+            var jk = {{ page | jsonify | strip_html }};
+            console.log(jk)
+        })();
+    </script>
+    {% endraw %}
+  </pre>
 </div>
 
 <script>
