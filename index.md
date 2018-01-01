@@ -44,21 +44,11 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
     {% endtablerow %}
 </table>
 
-<!--
-<div style="border:1px solid silver">
-  <p>Do we get all the page variables for this page which uses the "Default" template? Nope.</p>
-  &times; {{ page.author | default: 'should be `author`'}} <br>
-  &times; {{ page.handle | default: 'should be `handle`' }} <br>
-  &#10004; {{ page.id | default: 'should be `id`' }} <br>
-  &times; {{ page.published_at | default: 'should be `published_at`' }} <br>
-  &times; {{ page.template_suffix | default: 'should be `template_suffix`' }} <br>
-  &times; {{ page.title | default: 'should be `title`' }} <br>
-  &#10004; {{ page.url | default: 'should be `url`' }}
-  &times; 'page.borderColor2': --{{ page.borderColor2 }}--<br>
-  &#10004; 'page.comments': --{{ page.comments }}--<br>
-  &#10004; 'page.layout': --{{ page.layout }}--<br>
-  &#10004; 'page.type': --{{ page.type }}--<br>
-  <p>Local assigned variables? Yes.</p>
-  &#10004; 'borderColor': --{{ borderColor }}--<br>
-</div>
--->
+<script>
+    (function() {
+        // Dump the page object to a JS variable - note we have to strip or escape the html
+        var jk_page = {{ page | jsonify | strip_html }};
+        console.log('--PAGE (jsonify)--')
+        console.log(jk_page)
+    })();
+</script>
