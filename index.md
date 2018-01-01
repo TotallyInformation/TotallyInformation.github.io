@@ -2,6 +2,7 @@
 title: Home
 description: 'This site is used to publish development-related reference information curated by Totally Information.'
 someData: Some Text for someData
+comments: false
 ---
 
 ## Node-RED Questions and Answers
