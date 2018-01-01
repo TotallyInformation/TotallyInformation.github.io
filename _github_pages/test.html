@@ -2,6 +2,7 @@
 title: 'A Page to test things'
 description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t'
 comments: false
+layout: page
 borderColor2: 'silver'
 ---
 {{ assign borderColor = 'silver' }}
@@ -20,7 +21,7 @@ borderColor2: 'silver'
   <p>&#10004; Do we get the Jekyll Environment data? Yes</p>
   <p>
     &#10004; 'jekyll.environment': --{{ jekyll.environment }}-- : should give "production" on GitHub Pages.<br>
-    &#10004; 'jekyll.version': --{{ jekyll.version }}-- : should give "production" on GitHub Pages.<br>
+    &#10004; 'jekyll.version': --{{ jekyll.version }}--<br>
   </p>
   <p>
     {{"This is some text to work woth" | regex_replace: "woth", "with"}}
@@ -136,7 +137,12 @@ borderColor2: 'silver'
     (function() {
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk = {{ page | jsonify | strip_html }};
+        console.log('--PAGE (jsonify)--')
         console.log(jk)
+        console.log('--PAGE--')
+        console.log({{ page | inspect }})
+        console.log('--SITE--')
+        console.log({{ site | inspect }})
     })();
 </script>
 
