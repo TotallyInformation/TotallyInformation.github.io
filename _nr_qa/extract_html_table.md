@@ -4,12 +4,11 @@ description: 'While Node-RED has some nodes for extracting data from HTML, the n
 comments: true
 ---
 
-While Node-RED has some nodes for extracting data from HTML,
-the nodes are rather simplistic.
+While Node-RED has some nodes for extracting data from HTML, the nodes are rather simplistic.
 
 Here is a quick way to extract the data from an HTML table element.
 
-To us it, you need to install `cheerio` to your user data folder (usually `~/.node-red`).
+To use it, you need to install `cheerio` to your user data folder (usually `~/.node-red`).
 
 Then you need to reference it in the global variables part of your `settings.js` file (same location as above).
 
