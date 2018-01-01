@@ -5,7 +5,7 @@ title: 'Totally Information: Development Hub'
 description: 'Development Information website for Totally Information'
 
 disqus:
-  shortname: totally-information-development-hub
+  shortname: 'totally-information-development-hub'
 
 plugins:
   - jekyll-sitemap
