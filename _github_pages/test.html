@@ -122,6 +122,7 @@ borderColor2: 'silver'
   </pre>
 </div>
 
+<!--
 <div style="border:1px solid {{ borderColor }}">
   <p>This page object</p>
   <pre>{{ page | inspect }}</pre>
@@ -131,18 +132,17 @@ borderColor2: 'silver'
   <p>site object</p>
   <pre>{{ site | inspect }}</pre>
 </div>
-
+-->
 
 <script>
     (function() {
         // Dump the page object to a JS variable - note we have to strip or escape the html
-        var jk = {{ page | jsonify | strip_html }};
+        var jk_page = {{ page | jsonify | strip_html }};
+        var jk_site = {{ site | jsonify | strip_html }};
         console.log('--PAGE (jsonify)--')
-        console.log(jk)
-        console.log('--PAGE--')
-        console.log({{ page | inspect }})
-        console.log('--SITE--')
-        console.log({{ site | inspect }})
+        console.log(jk_page)
+        console.log('--SITE (jsonify)--')
+        console.log(jk_site)
     })();
 </script>
 
