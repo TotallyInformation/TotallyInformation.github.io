@@ -5,7 +5,7 @@ comments: false
 borderColor: 'silver'
 ---
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>Do we get site variables defined in _config.yml? Not everything.</p>
   <p>
     &#10004; 'site.remote-theme': --{{ site.remote-theme }}--<br>
@@ -15,14 +15,14 @@ borderColor: 'silver'
   </p>
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>&#10004; Do we get the Jekyll Environment data? Yes</p>
   <p>
     &#10004; 'jekyll.environment': --{{ jekyll.environment }}-- : should give "production" on GitHub Pages.<br>
   </p>
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>Do we get all the page variables for this page which uses the "Default" template? Nope.</p>
   &times; {{ page.author | default: 'should be `author`'}} <br>
   &times; {{ page.handle | default: 'should be `handle`' }} <br>
@@ -32,7 +32,7 @@ borderColor: 'silver'
   &times; {{ page.title | default: 'should be `title`' }} <br>
   &#10004; {{ page.url | default: 'should be `url`' }}
 </div>
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
   {% for item in site.github_pages %}
     {% if forloop.first == true %}
@@ -48,7 +48,7 @@ borderColor: 'silver'
   {% endfor %}
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>Color filters? Nope, they don't work</p>
   <p>
     &times; <span style="background-color:{{ '#7ab55c' | color_to_rgb }}">Should change #7ab55c to <code>rgb(122, 181, 92)</code></span> <br>
@@ -58,7 +58,7 @@ borderColor: 'silver'
   </p>
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>Money filters? Nope, they don't work</p>
   <p>
     &times; {{ 145 | money }} - should give '£145.00' or similar<br>
@@ -66,7 +66,7 @@ borderColor: 'silver'
   </p>
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>Number filters? Some work, some don't</p>
   <p>
     &times; {{ 145 | at_most: 100 }} - 'at_most: 100' should give '100' from an input of 145<br>
@@ -77,7 +77,7 @@ borderColor: 'silver'
 </div>
 
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>String filters? Some work, some don't</p>
   <p>
     &times; {{ "coming-soon" | camelcase }} - 'camelcase' should give 'ComingSoon'<br>
@@ -90,14 +90,14 @@ borderColor: 'silver'
   </p>
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>Utility filters? Some work, some don't</p>
   <p>
     &times; {{ site.date | time_tag }} - 'time_tag' should give a date/time string wrapped in html time tags<br>
   </p>
 </div>
 
-<div style="border:1px solid {{ borderColor }}">
+<div style="border:1px solid {{ page.borderColor }}">
   <p>jsonify? See the dev console for the following:</p>
   <pre>
     {% raw %}
