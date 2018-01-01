@@ -90,7 +90,7 @@ There are some standard front matter attributes:
 
 ### These are _not_ described in the Jekyll docs section on Pages but are certainly available
 - `dir` - Only available to _pages_, not to collection documents.
-- `name` - Only available to _pages_, not to collection documents.
+- `name` - Only available to _pages_, not to collection documents. Source name of document.
 
 ## Posts
 - categories

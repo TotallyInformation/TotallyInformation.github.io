@@ -6,7 +6,8 @@ layout: home
 borderColor2: 'silver'
 category: test
 ---
-{{ assign borderColor = 'silver' }}
+
+{% assign borderColor = 'silver' %}
 
 <div style="border:1px solid {{ borderColor }}">
   <p>Do we get site variables defined in _config.yml? Not everything.</p>
@@ -63,7 +64,7 @@ category: test
 
 <div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
-  <pre>
+  <p>
   {% for item in site.github_pages %}
     {% if forloop.first == true %}
       Yes, we do! First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}, {{ forloop.length }}<br>
@@ -75,7 +76,7 @@ category: test
   {% else %}
     Urm, nope!
   {% endfor %}
-  </pre>
+  </p>
 </div>
 
 <div style="border:1px solid {{ borderColor }}">
