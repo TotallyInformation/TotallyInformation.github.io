@@ -58,6 +58,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - escape_once - returns an escaped version of html without affecting existing escaped entities
 - first - get the first element of the passed in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
+- __gist__ (provided by [jekyll-gist plugin](https://github.com/jekyll/jekyll-gist)) - display a gist. e.g. {% raw %}`{% gist c08ee0f2726fd0e3909d %}`{% endraw %}
 - group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
 - [highlight](https://help.shopify.com/themes/liquid/filters/additional-filters#highlight) - Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search.terms. Has to be used in a search form.
 - highlight_active_tag - Wraps a tag link in a `<span>` with the class active if that tag is being used to filter a collection.

@@ -110,15 +110,15 @@ borderColor2: 'silver'
 <div style="border:1px solid {{ borderColor }}">
   <p>jsonify? See the dev console for the following:</p>
   <pre>
-    {% raw %}
+    &#123;% raw %&#125;
     <script>
-        (function() {
+        (function() &#123;
             // Dump the page object to a JS variable - note we have to strip or escape the html
-            var jk = {{ page | jsonify | strip_html }};
+            var jk = &#123;&#123; page | jsonify | strip_html &#125;&#125;&#59;
             console.log(jk)
-        })();
+        &#125;)()&#59;
     </script>
-    {% endraw %}
+    &#123;% endraw %&#125;
   </pre>
 </div>
 
@@ -139,10 +139,13 @@ borderColor2: 'silver'
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk_page = {{ page | jsonify | strip_html }};
         var jk_site = {{ site | jsonify | strip_html }};
+        var jk_pages = {{ site.pages | jsonify | strip_html }};
         console.log('--PAGE (jsonify)--')
         console.log(jk_page)
         console.log('--SITE (jsonify)--')
         console.log(jk_site)
+        console.log('--SITE.PAGES (jsonify)--')
+        console.log(jk_pages)
     })();
 </script>
 

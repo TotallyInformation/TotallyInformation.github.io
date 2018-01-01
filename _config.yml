@@ -27,23 +27,10 @@ defaults:
       path: ""
       type: nr_qa
     values:
-      layout: default
       comments: true
   - scope:
       path: ""
       type: github_pages
     values:
-      layout: default
       comments: true
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-      comments: true
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
-      comments: true
+
