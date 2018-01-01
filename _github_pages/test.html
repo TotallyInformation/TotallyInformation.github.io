@@ -2,7 +2,7 @@
 title: 'A Page to test things'
 description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t'
 comments: false
-layout: page
+layout: home
 borderColor2: 'silver'
 ---
 {{ assign borderColor = 'silver' }}
@@ -23,27 +23,34 @@ borderColor2: 'silver'
     &#10004; 'jekyll.environment': --{{ jekyll.environment }}-- : should give "production" on GitHub Pages.<br>
     &#10004; 'jekyll.version': --{{ jekyll.version }}--<br>
   </p>
-  <p>
-    {{"This is some text to work woth" | regex_replace: "woth", "with"}}
-  </p>
 </div>
 
 <div style="border:1px solid {{ borderColor }}">
   <p>Do we get all the page variables for this page which uses the "Default" template? Nope.</p>
-  &times; {{ page.author | default: 'should be `author`'}} <br>
-  &times; {{ page.handle | default: 'should be `handle`' }} <br>
-  &#10004; {{ page.id | default: 'should be `id`' }} <br>
-  &times; {{ page.published_at | default: 'should be `published_at`' }} <br>
-  &times; {{ page.template_suffix | default: 'should be `template_suffix`' }} <br>
-  &times; {{ page.title | default: 'should be `title`' }} <br>
-  &#10004; {{ page.url | default: 'should be `url`' }}
-  &times; 'page.borderColor2': --{{ page.borderColor2 }}--<br>
-  &#10004; 'page.comments': --{{ page.comments }}--<br>
-  &#10004; 'page.layout': --{{ page.layout }}--<br>
+  &#10004; 'page.url': --{{ page.url }}--<br>
+  &#10004; 'page.layout': --{{ page.layout }}-- : Default for this collection is "page" but set to "home" in front matter - should show "home"<br>
   &#10004; 'page.type': --{{ page.type }}--<br>
+   'page.date': --{{ page.date }}-- : Should be auto-set according to docs but apparently not.<br>
+   'page.path': --{{ page.path }}--<br>
+
+  <p>Custom variables set in _config.yml or front matter? <b>Only available to actual Pages and NOT TO COLLECTION DOCUMENTS!</b></p>
+  &times;  'page.title': --{{ page.title }}-- : This is set in this page's front matter, it should be available! <br>
+  &times;  'page.description': --{{ page.description }}-- : This is set in this page's front matter, it should be available! <br>
+  &times;  'page.comments': --{{ page.comments }}-- : Is set in this page as false but is, instead showing true which is the default<br>
+  &times;  'page.borderColor2': --{{ page.borderColor2 }}--: Is set in this page's front matter, it should be available!<br>
+
   <p>Local assigned variables? Yes.</p>
-  &#10004; 'borderColor': --{{ borderColor }}--<br>
+  &#10004; 'borderColor': --{{ borderColor }}-- : Is set in an assignment tag so is available.<br>
+
+  <p>Only available in collection documents like this</p>
+   'page.id': --{{ page.id }}-- : Should be set for documents in a collection or a post so should be available here (collection document).<br>
+   'page.collection': --{{ page.collection }}-- : Should be set for documents in a collection or a post so should be available here (collection document).<br>
+
+  <p>Only available in actual pages (not a collection document like this)</p>
+  &#10004; 'page.dir': --{{ page.dir }}--<br>
+  &#10004; 'page.name': --{{ page.name }}--<br>
 </div>
+
 <div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
   {% for item in site.github_pages %}
@@ -142,12 +149,12 @@ borderColor2: 'silver'
         var jk_page = {{ page | jsonify | strip_html }};
         var jk_site = {{ site | jsonify | strip_html }};
         var jk_pages = {{ site.pages | jsonify | strip_html }};
-        console.log('--PAGE (jsonify)--')
-        console.log(jk_page)
-        console.log('--SITE (jsonify)--')
-        console.log(jk_site)
-        console.log('--SITE.PAGES (jsonify)--')
-        console.log(jk_pages)
+        var layout = {{ layout }}
+
+        console.log('--PAGE (jsonify)--', jk_page)
+        console.log('--SITE (jsonify)--', jk_site)
+        console.log('--SITE.PAGES (jsonify)--', jk_pages)
+        console.log('--LAYOUT (jsonify)--', layout)
     })();
 </script>
 
