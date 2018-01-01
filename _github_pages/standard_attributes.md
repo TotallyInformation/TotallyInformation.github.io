@@ -68,7 +68,7 @@ There are some standard front matter attributes:
 
 - `page.content` The content of the Page, rendered or un-rendered depending upon what Liquid is being processed and what page is.
 
-- `page.title` The title of the Page.
+- `page.title` The title of the Page (if set)
 
 - `page.excerpt` The un-rendered excerpt of the Page.
 
@@ -89,13 +89,12 @@ There are some standard front matter attributes:
 - `page.previous` The previous post relative to the position of the current post in site.posts. Returns nil for the first entry.
 
 ### These are _not_ described in the Jekyll docs section on Pages but are certainly available
-- dir - Only available to _pages_, not to collection documents.
-- name - Only available to _pages_, not to collection documents.
-- path
-- url
+- `dir` - Only available to _pages_, not to collection documents.
+- `name` - Only available to _pages_, not to collection documents.
 
 ## Posts
-- categories tags
+- categories
+- tags
 - content
 - date
 - dir
@@ -108,8 +107,24 @@ There are some standard front matter attributes:
 - title
 - url
 
-## Collections
+## Collection document variables
+- `page.categories`
+- `page.collection`
+- `page.comments`
+- `page.content`
+- `page.draft`
+- `page.excerpt`
+- `page.id`
+- `page.layout`
+- `page.next`
+- `page.output` - rendered output of collection document
+- `page.path`
+- `page.previous`
+- `page.relative_path`
+- `url`
+- `layout`
 
+## Collections variables (site.collections.xxxx)
 
 ## Files
 
