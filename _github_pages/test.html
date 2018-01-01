@@ -7,7 +7,14 @@ comments: false
 <div style="border:1px solid red">
   <p>&#10004; Do we get the Jekyll Environment data? Yes</p>
   <p>
-    &#10004; {{ jekyll.environment }} - 'jekyll.environment' - should give "production" on GitHub Pages.<br>
+    &#10004; 'jekyll.environment': --{{ jekyll.environment }}-- : should give "production" on GitHub Pages.<br>
+  </p>
+  <p>Do we get site variables defined in _config.yml?</p>
+  <p>
+    'site.remote-theme': --{{ site.remote-theme }}--<br>
+    'site.title': --{{ site.title }}--<br>
+    'site.disqus.shortname': --{{ site.disqus.shortname }}--<br>
+    'site.collections.nr_qa.title': --{{ site.collections.nr_qa.title }}--<br>
   </p>
 </div>
 
