@@ -149,7 +149,7 @@ borderColor2: 'silver'
         var jk_page = {{ page | jsonify | strip_html }};
         var jk_site = {{ site | jsonify | strip_html }};
         var jk_pages = {{ site.pages | jsonify | strip_html }};
-        var layout = {{ layout }}
+        var layout = {{ layout | jsonify }}
 
         console.log('--PAGE (jsonify)--', jk_page)
         console.log('--SITE (jsonify)--', jk_site)
