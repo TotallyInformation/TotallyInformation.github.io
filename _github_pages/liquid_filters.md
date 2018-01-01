@@ -3,7 +3,6 @@ title: 'Jekyll/Liquid Variable Filters'
 description: 'A comprehensive list of filters available to modify/format Jekyll variables.'
 comments: true
 ---
-{% include header.html %}
 
 GitHub pages use Jekyll which in turn uses [Liquid](https://help.shopify.com/themes/liquid).
 Liquid provides the variable filters that can be used to amend/format the variable for output.
@@ -143,6 +142,3 @@ This is a more comprehensive list than you will find in most places, it is combi
     - color_to_hsl - Converts a CSS color string to CSS `hsl()` format.
     - [color_to_rgb](https://help.shopify.com/themes/liquid/filters/color-filters#color_to_rgb) - Converts a CSS color string to CSS `rgb()` format.
 
-
-
-{% include footer.html %}
