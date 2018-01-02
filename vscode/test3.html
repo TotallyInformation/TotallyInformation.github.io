@@ -9,7 +9,14 @@ date: 2018-01-02 17:11:00
 <h1>This is a {% if page.collection %}COLLECTION DOCUMENT{% else %}JEKYLL PAGE{% endif %}</h1>
 
 <p>
-  NOTE: that page.layout is set to <i>home</i> in the frontmatter, unlike MarkDown Pages in this folder, HTML files don't get a default layout.
+  NOTE: that, unlike MarkDown Pages in this folder, HTML files don't get a default layout. I had to add a default to <code>_config.yml</code>
+  <pre>
+  - scope:
+      path: "vscode"
+    values:
+      layout: page
+      comments: true
+  </pre>
 </p>
 
 <p>Here are some page variables:</p>
