@@ -3,81 +3,9 @@ title: A Test Jekyll/GitHub Collection Document (MarkDown)
 description: Testing collections and page variables - this page is in a collection and is a markdown file
 comments: test
 testFm: testing front matter variables
-date: 2018-01-02 17:11:00
+date: 2018-01-02 17:10:10
 ---
-
-{% assign n = "<span style='font-weight:normal;'>" %}
-{% assign ne = "</span>" %}
-{% assign na = "<span style='color:#dd0000;'>--NOT AVAILABLE--</span>" %}
 
 <h1>This is a {% if page.collection %}COLLECTION DOCUMENT{% else %}JEKYLL PAGE{% endif %}</h1>
 
-<p>Here are some page variables:</p>
-<dl>
-    <dd>page.collection {{n}}(collection documents only){{ne}}</dd>
-    <dt>{{ page.collection | default:na }}</dt>
-
-    <dd>page.comments {{n}}(custom, set in <code>_config.yml</code> defaults but to "test" frontmatter. NB: value of false triggers the default N/A msg){{ne}}</dd>
-    <dt>{{ page.comments | default:na }}</dt>
-
-    <dd>page.content {{n}}(actual Jekyll Pages only?){{ne}}</dd>
-    <dt>{{ page.content | default:na | escape_once | strip_newlines | truncatewords: 10 }}</dt>
-
-    <dd>page.date {{n}}(custom, set in frontmatter though docs indicate this should be created automatically){{ne}}</dd>
-    <dt>{{ page.date | default:na }}</dt>
-
-    <dd>page.description</dd>
-    <dt>{{ page.description | default:na }}</dt>
-
-    <dd>page.dir {{n}}(actual Jekyll Pages only){{ne}}</dd>
-    <dt>{{ page.dir | default:na }}</dt>
-
-    <dd>page.draft {{n}}(collection documents and Posts only){{ne}}</dd>
-    <dt>{{ page.draft | default:na }}</dt>
-
-    <dd>page.excerpt {{n}}(collection documents and Posts only?){{ne}}</dd>
-    <dt>{{ page.excerpt | default:na | strip_newlines | truncatewords: 10 }}</dt>
-
-    <dd>page.ext {{n}}(collection documents and Posts only?){{ne}}</dd>
-    <dt>{{ page.ext | default:na }}</dt>
-
-    <dd>page.id {{n}}(collection documents and Posts only){{ne}}</dd>
-    <dt>{{ page.id | default:na }}</dt>
-
-    <dd>page.layout</dd>
-    <dt>{{ page.layout | default:na }}</dt>
-
-    <dd>page.name {{n}}(actual Jekyll Pages only){{ne}}</dd>
-    <dt>{{ page.name | default:na }}</dt>
-
-    <dd>page.output {{n}}(collection documents and Posts only?){{ne}}</dd>
-    <dt>{{ page.output | default:na | escape_once | strip_newlines | truncatewords: 10 }}</dt>
-
-    <dd>page.path</dd>
-    <dt>{{ page.path | default:na }}</dt>
-
-    <dd>page.relative_path {{n}}(collection documents and Posts only){{ne}}</dd>
-    <dt>{{ page.relative_path | default:na }}</dt>
-
-    <dd>page.slug {{n}}(collection documents and Posts only){{ne}}</dd>
-    <dt>{{ page.slug | default:na }}</dt>
-
-    <dd>page.testFm {{n}}(custom, set in frontmatter){{ne}}</dd>
-    <dt>{{ page.testFm | default:na }}</dt>
-
-    <dd>page.title</dd>
-    <dt>{{ page.title | default:na }}</dt>
-
-    <dd>page.url</dd>
-    <dt>{{ page.url | default:na }}</dt>
-
-</dl>
-
-<script>
-    (function() {
-        // Dump the page object to a JS variable - note we have to strip or escape the html
-        var jk_page = {{ page | jsonify | strip_html }};
-        console.log('--PAGE (jsonify)--', jk_page)
-    })();
-</script>
-
+{{ include test_page_vars }}

@@ -1,0 +1,91 @@
+{% assign s1 = "<span style='font-weight:normal;'>" %}{% assign se = "</span>" %}
+{% assign s2 = "<span style='font-style:italic;'>" %}
+{% assign na = "<span style='color:#ac0000;'>--NOT AVAILABLE--</span>" %}
+
+<p>Here are some page variables:</p>
+<dl>
+    <dd>page.collection {{s1}}(collection documents only){{se}}</dd>
+    <dt>{{ page.collection | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.comments {{s1}}(custom, set in <code>_config.yml</code> defaults but to "test" frontmatter. NB: value of false triggers the default N/A msg){{se}}</dd>
+    <dt>{{ page.comments | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.content {{s1}}(actual Jekyll Pages only?){{se}}</dd>
+    <dt>{{ page.content | default:na | escape_once | strip_newlines | truncatewords: 10 }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.date {{s1}}(custom, set in frontmatter though docs indicate this should be created automatically){{se}}</dd>
+    <dt>{{ page.date | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.description</dd>
+    <dt>{{ page.description | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.dir {{s1}}(actual Jekyll Pages only){{se}}</dd>
+    <dt>{{ page.dir | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.draft {{s1}}(collection documents and Posts only){{se}}</dd>
+    <dt>{{ page.draft | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.excerpt {{s1}}(collection documents and Posts only?){{se}}</dd>
+    <dt>{{ page.excerpt | default:na | strip_newlines | truncatewords: 10 }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.ext {{s1}}(collection documents and Posts only?){{se}}</dd>
+    <dt>{{ page.ext | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.id {{s1}}(collection documents and Posts only){{se}}</dd>
+    <dt>{{ page.id | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.layout</dd>
+    <dt>{{ page.layout | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.name {{s1}}(actual Jekyll Pages only){{se}}</dd>
+    <dt>{{ page.name | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.output {{s1}}(collection documents and Posts only?){{se}}</dd>
+    <dt>{{ page.output | default:na | escape_once | strip_newlines | truncatewords: 10 }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.path</dd>
+    <dt>{{ page.path | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.relative_path {{s1}}(collection documents and Posts only){{se}}</dd>
+    <dt>{{ page.relative_path | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.slug {{s1}}(collection documents and Posts only){{se}}</dd>
+    <dt>{{ page.slug | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.testFm {{s1}}(custom, set in frontmatter){{se}}</dd>
+    <dt>{{ page.testFm | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.title</dd>
+    <dt>{{ page.title | default:na }}
+      {{s2}} {{se}}</dt>
+
+    <dd>page.url</dd>
+    <dt>{{ page.url | default:na }}
+      {{s2}} {{se}}</dt>
+
+</dl>
+
+<script>
+    (function() {
+        // Dump the page object to a JS variable - note we have to strip or escape the html
+        var jk_page = {{ page | jsonify | strip_html }};
+        console.log('--PAGE (jsonify)--', jk_page)
+    })();
+</script>
