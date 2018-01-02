@@ -4,83 +4,91 @@
 {% assign na = "<span class='na'>--NOT AVAILABLE--</span>" %}
 {% assign st1 = "class='st1'" %}
 
-<p>Here are some page variables:</p>
+<p>Here are the main page variables/metadata available in Jekyll on GitHub Pages:</p>
 <dl>
     <dd>page.collection {{s1}}(collection documents only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.collection | default:na }}{{se}}
       {{s2}}The name of the current collection if this is a collection document. {{se}}</dt>
 
-    <dd>page.comments {{s1}}(custom, set in <code>_config.yml</code> defaults but to "test" frontmatter. NB: value of false triggers the default N/A msg){{se}}</dd>
+    <dd>page.comments {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.comments | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}Custom metadata, set in <code>_config.yml</code> defaults but set to "test" in the frontmatter for this page.
+      NB: value of false triggers the default N/A msg {{se}}</dt>
 
-    <dd>page.content {{s1}}(actual Jekyll Pages only?){{se}}</dd>
+    <dd>page.content {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.content | default:na | escape_once | strip_newlines | truncatewords: 10 }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The unrendered content for the document. {{se}}</dt>
 
-    <dd>page.date {{s1}}(custom, set in frontmatter though docs indicate this should be created automatically){{se}}</dd>
+    <dd>page.date {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.date | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}Custom metadata, set in the frontmatter for the page though docs indicate this should be created automatically {{se}}</dt>
 
     <dd>page.description</dd>
     <dt {{st1}}>{{s3}}{{ page.description | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}Custom metadata, set in the frontmatter for the page. Commonly used in templates. {{se}}</dt>
 
     <dd>page.dir {{s1}}(actual Jekyll Pages only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.dir | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The name of the folder containing the Page. With leading/trailing slashes. {{se}}</dt>
 
     <dd>page.draft {{s1}}(collection documents and Posts only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.draft | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}Whether the document/post is in draft (unpublished). {{se}}</dt>
 
     <dd>page.excerpt {{s1}}(collection documents and Posts only?){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.excerpt | default:na | strip_newlines | truncatewords: 10 }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The unrendered excerpt of the document/post. Excerpts are generated from the top of the page (after the frontmatter)
+      until the first <code>excerpt_separator</code> (a blank line by default). {{se}}</dt>
+
+    <dd>page.excerpt_separator {{s1}}(collection documents and Posts only?){{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ page.excerpt_separator | default:na }}{{se}}
+      {{s2}}The trigger for the end of a generated excerpt (a blank line by default). May be set in the frontmatter. {{se}}</dt>
 
     <dd>page.ext {{s1}}(collection documents and Posts only?){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.ext | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The extension of the document/post. With leading dot. {{se}}</dt>
 
     <dd>page.id {{s1}}(collection documents and Posts only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.id | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The document/post ID. For a collection document, the format is <code>/[collectionName]/[pageSlug]</code> {{se}}</dt>
 
     <dd>page.layout</dd>
     <dt {{st1}}>{{s3}}{{ page.layout | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The layout name for the page. Typically one of default, page, post, home. Must match the name of a layout file
+      in the <code>_layouts</code> folder. e.g. <code>home.html</code> {{se}}</dt>
 
     <dd>page.name {{s1}}(actual Jekyll Pages only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.name | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The name of the Page (with original extension, e.g. <code>test2.md</code>) {{se}}</dt>
 
-    <dd>page.output {{s1}}(collection documents and Posts only?){{se}}</dd>
+    <dd>page.output {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.output | default:na | escape_once | strip_newlines | truncatewords: 10 }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The rendered version of the page (e.g. all Jekyll markup replaced). {{se}}</dt>
 
     <dd>page.path</dd>
     <dt {{st1}}>{{s3}}{{ page.path | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The path to the original (unrendered) file. Without leading slash (e.g. <code>_nr_qa/test2.md</code>) {{se}}</dt>
 
     <dd>page.relative_path {{s1}}(collection documents and Posts only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.relative_path | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The path to the original (unrendered) file. Without leading slash (e.g. <code>_nr_qa/test2.md</code>) {{se}}</dt>
 
     <dd>page.slug {{s1}}(collection documents and Posts only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.slug | default:na }}{{se}}
       {{s2}} {{se}}</dt>
 
-    <dd>page.testFm {{s1}}(custom, set in frontmatter){{se}}</dd>
+    <dd>page.testFm {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.testFm | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}Custom metadata, set in the frontmatter for this page. {{se}}</dt>
 
     <dd>page.title</dd>
     <dt {{st1}}>{{s3}}{{ page.title | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}Custom metadata, set in the frontmatter for the page. Commonly used in templates to provide the HTML title and
+      often an H1 tag at the top of the page content. {{se}}</dt>
 
     <dd>page.url</dd>
     <dt {{st1}}>{{s3}}{{ page.url | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The absolute URL for rendered version of the document. With leading slash, e.g. <code>/nr_qa/test2.html</code> {{se}}</dt>
 
 </dl>
 
