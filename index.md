@@ -37,5 +37,6 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
         console.log('--PAGE (jsonify)--', jk_page)
         //console.log('someData', someData)
         console.log('--SITE.GITHUB (jsonify)--', github)
+        console.log('--SITE.POSTS.SIZE--', {{site.posts.size}})
     })();
 </script>
