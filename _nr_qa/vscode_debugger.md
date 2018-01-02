@@ -37,4 +37,4 @@ When the execution hits a breakpoint, you will see the current call stack, varia
 
 I seriously wish that I'd got this working before because it is massively useful whether you are creating your own nodes or trying to track down performance or resource issues in your flows.
 
-There are more VScode hints and information in the [VSCode section of this site]().
+There are more VScode hints and information in the [VSCode section of this site](/vscode/).
