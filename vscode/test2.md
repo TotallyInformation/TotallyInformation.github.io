@@ -1,7 +1,7 @@
 ---
 title: A Test Jekyll/GitHub Pages Page (MarkDown)
 description: Testing collections and page variables - this page is an actual Jekyll Page and is in a folder, it is a markdown file
-comments: false
+comments: test
 testFm: testing front matter variables
 date: 2018-01-02 17:11:00
 ---
