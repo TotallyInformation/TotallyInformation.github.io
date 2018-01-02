@@ -35,10 +35,10 @@ date: 2018-01-02 17:11:00
     <dt>{{ page.description }}</dt>
 
     <dd>page.id (collection documents only)</dd>
-    <dt>{{ page. }}</dt>
+    <dt>{{ page.id }}</dt>
 
     <dd>page.collection (collection documents only)</dd>
-    <dt>{{ page. }}</dt>
+    <dt>{{ page.collection }}</dt>
 
     <dd>page.dir (actual Jekyll Pages only)</dd>
     <dt>{{ page.dir }}</dt>
