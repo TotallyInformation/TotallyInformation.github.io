@@ -8,7 +8,7 @@ comments: true
 
 {% include page_lister.html dir="/vscode/" %}
 
-There is also a hint on [how to use VSCode to debug Node-RED]( link _nr_qa/vscode_debugging.md ) (and Node.JS) code in the [Node-RED section](/nr_qa) of this site.
+There is also a hint on [how to use VSCode to debug Node-RED]({% link _nr_qa/vscode_debugger.md %}) (and Node.JS) code in the [Node-RED section](/nr_qa) of this site.
 
 <script>
     (function() {

@@ -10,36 +10,13 @@ date: 2018-01-02 14:20:00
 
 Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
 
-<ul>
-{% for item in site.nr_qa | sort: "title" %}
-  <li>
-    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
-    <p>{% if item.description %}
-        {{ item.description }}
-    {% else %}
-        {{ item.excerpt | strip_html }}
-    {% endif %}</p>
-  </li>
-{% endfor %}
-</ul>
+{% include collection_doc_lister.html collection=site.nr_qa %}
 
 ## GitHub Pages and Jekyll/Liquid
 
 Hints and tips on using Jekyll for publishing to GitHub Pages.
 
-<ul>
-{% for item in site.github_pages | sort: "title" %}
-  <li>
-    {% assign mytitle = item.title | default: item.url %}
-    <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a>
-    <p>{% if item.description %}
-        {{ item.description }}
-    {% else %}
-        {{ item.excerpt | strip_html }}
-    {% endif %}</p>
-  </li>
-{% endfor %}
-</ul>
+{% include collection_doc_lister.html collection=site.github_pages %}
 
 ## Totally Information's Public Code Repositories
 
