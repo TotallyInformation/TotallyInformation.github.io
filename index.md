@@ -3,7 +3,6 @@ title: Home
 description: 'This site is used to publish development-related reference information curated by Totally Information.'
 someData: Some Text for someData
 comments: false
-layout: home
 date: 2018-01-02 14:20:00
 ---
 
@@ -28,10 +27,3 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
     {% endtablerow %}
 </table>
 
-<script>
-    (function() {
-        console.log('--SITE.POSTS.SIZE--', {{site.posts.size}})
-        console.log('--PAGE.TITLE--', '{{page.title}}')
-        console.log('--PAGE.LAYOUT--', '{{page.layout}}')
-    })();
-</script>
