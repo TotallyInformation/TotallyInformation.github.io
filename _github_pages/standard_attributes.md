@@ -138,6 +138,16 @@ Files can be accessed via `site.static_files`. They are typically kept in the `a
 
 While front-matter variables can't be added directly to files, they can be made accessible via the `defaults` section of `_config.yml`.
 
+## Includes files variable
+
+When using the `_includes` folder, any include files that allow parameters gain an `include` object variable.
+
+The object will contain a key for each variable passed as a parameter in the calling page.
+
+Example - in the calling page: {% raw %}`{% include note.html content="This is my sample note." %}`{% endraw %} and in the include page: {% raw %}`{{ include.content }}`{% endraw %}
+
+If you need to send the contents of Jekyll/Liquid variables to the included page, you can do so directly. For example: {% raw %}`{% include note.html title=page.title %}`{% endraw %} - note the lack of quotes.
+
 ## Github Metadata (site.github.xxxx)
 
 - `versions` object containing version numbers for Jekyll, Ruby and other plugins (e.g. keys: jekyll, kramdown, liquid, maruku, rdiscount, redcarpet, RedCloth, jemoji, jekyll-mentions, jekyll-redirect-from, jekyll-sitemap, github-pages, ruby)

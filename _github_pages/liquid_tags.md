@@ -54,7 +54,8 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 ### Theme/rendering tags
 * comment (endcomment)
 * form
-* include
+* [include](https://jekyllrb.com/docs/includes/)
+* include_relative
 * javascript
 * layout
 * paginate
