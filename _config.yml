@@ -55,7 +55,7 @@ defaults:
       layout: page
       comments: true
   - scope:
-      path: "/vscode"
+      path: "/vscode/*.html"
     values:
       layout: page
       comments: true
