@@ -8,7 +8,7 @@ comments: false
 
 <script>
     (function() {
-        var collection = {{ site.github_pages | jsonify | strip_html }};
-        console.log('--COLLECTION (jsonify)--', collection)
+        //var collection = {{ site.github_pages | jsonify | strip_html }};
+        //console.log('--COLLECTION (jsonify)--', collection)
     })();
 </script>
