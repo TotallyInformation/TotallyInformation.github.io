@@ -14,10 +14,10 @@ date: 2018-01-02 17:11:00
     <dt>{{ page.url }}</dt>
 
     <dd>page.layout</dd>
-    <dt>{{ page. }}</dt>
+    <dt>{{ page.layout }}</dt>
 
     <dd>page.path</dd>
-    <dt>{{ page.layout }}</dt>
+    <dt>{{ page.path }}</dt>
 
     <dd>page.date</dd>
     <dt>{{ page.date }}</dt>
@@ -41,29 +41,11 @@ date: 2018-01-02 17:11:00
     <dt>{{ page. }}</dt>
 
     <dd>page.dir (actual Jekyll Pages only)</dd>
-    <dt>{{ page. }}</dt>
+    <dt>{{ page.dir }}</dt>
 
     <dd>page.name (actual Jekyll Pages only)</dd>
-    <dt>{{ page. }}</dt>
-
-    <dd>page.</dd>
-    <dt>{{ page. }}</dt>
-
+    <dt>{{ page.name }}</dt>
 </dl>
-
-  <p>Only available in collection documents{% if page.collection %} like this{% endif %}</p>
-  <p>
-    &#10004; 'page.id': --{{ page.id }}-- : Should be set for documents in a collection or a post{% if page.collection %} so should be available here (collection document){% endif %}.<br>
-    &#10004; 'page.collection': --{{ page.collection }}-- : Should be set for documents in a collection or a post{% if page.collection %} so should be available here (collection document){% endif %}.<br>
-  </p>
-
-  <p>Only available in actual pages (not a collection document{% if page.collection %} like this{% endif %})</p>
-  <p>
-    &#10004; 'page.dir': --{{ page.dir }}--<br>
-    &#10004; 'page.name': --{{ page.name }}--<br>
-  </p>
-</div>
-
 
 <script>
     (function() {
