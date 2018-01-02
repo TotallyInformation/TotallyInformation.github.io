@@ -1,4 +1,4 @@
----
+
 title: VSCode Hints and Tips
 description: >
     Visual Studio Code is an Integrated Development Environment (IDE) or code editor that is open source and actively developed by Microsoft.
