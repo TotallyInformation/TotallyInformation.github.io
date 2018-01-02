@@ -1,5 +1,5 @@
 {% assign s1 = "<span style='font-weight:normal;'>" %}{% assign se = "</span>" %}
-{% assign s2 = "<span style='font-style:italic;'>" %}
+{% assign s2 = "<span style='font-style:italic;background-color:white;'>" %}
 {% assign s3 = "<span style=''>" %}
 {% assign na = "<span style='color:#ac0000;'>--NOT AVAILABLE--</span>" %}
 {% assign st1 = "style='background-color:PaleGoldenRod;'" %}
@@ -8,7 +8,7 @@
 <dl>
     <dd>page.collection {{s1}}(collection documents only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.collection | default:na }}{{se}}
-      {{s2}} {{se}}</dt>
+      {{s2}}The name of the current collection if this is a collection document. {{se}}</dt>
 
     <dd>page.comments {{s1}}(custom, set in <code>_config.yml</code> defaults but to "test" frontmatter. NB: value of false triggers the default N/A msg){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.comments | default:na }}{{se}}
