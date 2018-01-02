@@ -13,7 +13,19 @@ When using [Visual Studio Code](https://code.visualstudio.com/), the free code e
 
 2. Add the following configuration to the `.vscode` file:
 
-
+   {% highlight json %}{% raw %}
+   {
+       "version": "0.0.1",
+       "configurations": [
+           {
+               "type": "node",
+               "request": "attach",
+               "name": "Attach to Process",
+               "processId": "${command:PickProcess}"
+           }
+       ]
+   }
+   {% endraw %}{% endhighlight %}
 
 3. Start up Node-RED then click on the green "start debugging" icon in VSCode, you will get a popup to choose the active process you want to debug. All Node.js based processes will be listed. Pick the one that is Node-RED.
 
@@ -25,4 +37,4 @@ When the execution hits a breakpoint, you will see the current call stack, varia
 
 I seriously wish that I'd got this working before because it is massively useful whether you are creating your own nodes or trying to track down performance or resource issues in your flows.
 
-There are more VScode hints and information in the [VSCode section of this site](/vscode/).
+There are more VScode hints and information in the [VSCode section of this site]().
