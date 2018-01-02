@@ -159,14 +159,17 @@ category: test
     (function() {
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk_page = {{ page | jsonify | strip_html }};
-        var jk_site = {{ site | jsonify | strip_html }};
-        var jk_pages = {{ site.pages | jsonify | strip_html }};
-        var layout = {{ layout | jsonify }}
-
         console.log('--PAGE (jsonify)--', jk_page)
+        var jk_site = {{ site | jsonify | strip_html }};
         console.log('--SITE (jsonify)--', jk_site)
+        var jk_pages = {{ site.pages | jsonify | strip_html }};
         console.log('--SITE.PAGES (jsonify)--', jk_pages)
-        console.log('--LAYOUT (jsonify)--', layout)
+        //var layout = {{ layout | jsonify }}
+        //console.log('--LAYOUT (jsonify)--', layout)
+        var ghpages = (( site.github_pages | jsonify | strip_html ))
+        console.log('--SITE.GITHUB_PAGES (jsonify)--', ghpages)
+        var github = '{{ site.github | jsonify }}'
+        console.log('--SITE.GITHUB (jsonify)--', github)
     })();
 </script>
 

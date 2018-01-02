@@ -10,7 +10,7 @@ comments: false
 Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
 
 <ul>
-{% for item in site.nr_qa %}
+{% for item in site.nr_qa | sort: "title" %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
     <p>{% if item.description %}
@@ -27,9 +27,10 @@ Node-RED is a flow-based (visual) programming tool. These pages have some inform
 Hints and tips on using Jekyll for publishing to GitHub Pages.
 
 <ul>
-{% for item in site.github_pages %}
+{% for item in site.github_pages | sort: "title" %}
   <li>
-    <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
+    {% assign mytitle = item.title | default: item.url %}
+    <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a>
     <p>{% if item.description %}
         {{ item.description }}
     {% else %}
@@ -42,7 +43,8 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
 ## Totally Information's Public Code Repositories
 
 <table>
-    {% tablerow repository in site.github.public_repositories cols:1 %}
+    {% assign repos =  site.github.public_repositories | sort: "name" %}
+    {% tablerow repository in repos cols:1 %}
         <a hre="{{ repository.html_url }}">{{ repository.name }}</a>
     {% endtablerow %}
 </table>
@@ -51,11 +53,11 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
     (function() {
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk_page = {{ page | jsonify | strip_html }};
-        var someData = '{{ page.someData }}'
-        var layout = '{{ layout }}'
+        //var someData = '{{ page.someData }}'
+        //var layout = '{{ layout }}'
         var github = '{{ site.github | jsonify }}'
         console.log('--PAGE (jsonify)--', jk_page)
-        console.log('someData', someData)
+        //console.log('someData', someData)
         console.log('--SITE.GITHUB (jsonify)--', github)
     })();
 </script>
