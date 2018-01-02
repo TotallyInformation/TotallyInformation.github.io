@@ -7,7 +7,7 @@ comments: true
 ---
 
 <ul>
-{% for item in site.pages where:"dir", "/vscode/" | sort: "title" %}
+{% for item in site.pages where:"item.dir", "/vscode/" | sort: "title" %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
     <p>{% if item.description %}

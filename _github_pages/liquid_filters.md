@@ -9,6 +9,7 @@ Liquid provides the variable filters that can be used to amend/format the variab
 This is a more comprehensive list than you will find in most places, it is combined from multiple lists including the [source documentation](http://www.rubydoc.info/gems/liquid/Liquid/StandardFilters). For more details on these filters, see the [official filter documentation](https://help.shopify.com/themes/liquid/filters).
 
 - abs - absolute value
+- absolute_url - Prepend the `url` and `baseurl` value to the input. e.g. {% raw %}`{{ "/assets/style.css" | absolute_url }} #=> http://example.com/my-baseurl/assets/style.css`{% endraw %}
 - append - append a string e.g. {% raw %}`{{ 'foo' | append:'bar' }} #=> 'foobar'`{% endraw %}
 - capitalize - capitalize words in the input sentence
 - ceil - rounds a number up to the nearest integer, e.g. {% raw %}`{{ 4.6 | ceil }} #=> 5`{% endraw %}
@@ -80,6 +81,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - placeholder_svg_tag
 - plus - addition e.g. {% raw %}`{{ '1' | plus:'1' }} #=> 2, {{ 1 | plus:1 }} #=> 2`{% endraw %}
 - prepend - prepend a string e.g. {% raw %}`{{ 'bar' | prepend:'foo' }} #=> 'foobar'`{% endraw %}
+- relative_url - Prepend the baseurl value to the input. Useful if your site is hosted at a subpath rather than the root of the domain. e.g. {% raw %}`{{ "/assets/style.css" | relative_url }} #=> /my-baseurl/assets/style.css`{% endraw %}
 - remove - remove each occurrence e.g. {% raw %}`{{ 'foobarfoobar' | remove:'foo' }} #=> 'barbar'`{% endraw %}
 - remove_first - remove the first occurrence e.g. {% raw %}`{{ 'barbar' | remove_first:'bar' }} #=> 'bar'`{% endraw %}
 - replace - replace each occurrence e.g. {% raw %}`{{ 'foofoo' | replace:'foo','bar' }} #=> 'barbar'`{% endraw %}
