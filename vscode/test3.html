@@ -21,41 +21,63 @@ date: 2018-01-02 17:11:00
 
 <p>Here are some page variables:</p>
 <dl>
-    <dd>page.url</dd>
-    <dt>{{ page.url | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.collection (collection documents only)</dd>
+    <dt>{{ page.collection | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.comments</dd>
+    <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.content (actual Jekyll Pages only?)</dd>
+    <dt>{{ page.content | default:"--NOT AVAILABLE--" | escape_once | strip_newlines | truncatewords: 10 }}</dt>
+
+    <dd>page.date (custom, set in frontmatter though docs indicate this should be created automatically)</dd>
+    <dt>{{ page.date | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.description</dd>
+    <dt>{{ page.description | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.dir (actual Jekyll Pages only)</dd>
+    <dt>{{ page.dir | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.draft (collection documents and Posts only)</dd>
+    <dt>{{ page.draft | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.excerpt (collection documents and Posts only?)</dd>
+    <dt>{{ page.excerpt | default:"--NOT AVAILABLE--" | strip_newlines | truncatewords: 10 }}</dt>
+
+    <dd>page.ext (collection documents and Posts only?)</dd>
+    <dt>{{ page.ext | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.id (collection documents and Posts only)</dd>
+    <dt>{{ page.id | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.layout</dd>
     <dt>{{ page.layout | default:"--NOT AVAILABLE--" }}</dt>
 
+    <dd>page.name (actual Jekyll Pages only)</dd>
+    <dt>{{ page.name | default:"--NOT AVAILABLE--" }}</dt>
+
+    <dd>page.output (collection documents and Posts only?)</dd>
+    <dt>{{ page.output | default:"--NOT AVAILABLE--" | escape_once | strip_newlines | truncatewords: 10 }}</dt>
+
     <dd>page.path</dd>
     <dt>{{ page.path | default:"--NOT AVAILABLE--" }}</dt>
 
-    <dd>page.date</dd>
-    <dt>{{ page.date | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.relative_path (collection documents and Posts only)</dd>
+    <dt>{{ page.relative_path | default:"--NOT AVAILABLE--" }}</dt>
 
-    <dd>page.testFm</dd>
-    <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.slug (collection documents and Posts only)</dd>
+    <dt>{{ page.slug | default:"--NOT AVAILABLE--" }}</dt>
 
-    <dd>page.comments</dd>
+    <dd>page.testFm (custom, set in frontmatter)</dd>
     <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.title</dd>
     <dt>{{ page.title | default:"--NOT AVAILABLE--" }}</dt>
 
-    <dd>page.description</dd>
-    <dt>{{ page.description | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.url</dd>
+    <dt>{{ page.url | default:"--NOT AVAILABLE--" }}</dt>
 
-    <dd>page.id (collection documents and Posts only)</dd>
-    <dt>{{ page.id | default:"--NOT AVAILABLE--" }}</dt>
-
-    <dd>page.collection (collection documents only)</dd>
-    <dt>{{ page.collection | default:"--NOT AVAILABLE--" }}</dt>
-
-    <dd>page.dir (actual Jekyll Pages only)</dd>
-    <dt>{{ page.dir | default:"--NOT AVAILABLE--" }}</dt>
-
-    <dd>page.name (actual Jekyll Pages only)</dd>
-    <dt>{{ page.name | default:"--NOT AVAILABLE--" }}</dt>
 </dl>
 
 <script>

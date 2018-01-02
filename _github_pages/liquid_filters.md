@@ -108,17 +108,21 @@ This is a more comprehensive list than you will find in most places, it is combi
 - sort - sort elements of the array
 - sort_natural - Sort elements of an array ignoring case if strings provide optional property with which to sort an array of hashes or drops.
 - split - split a string on a matching pattern e.g. {% raw %}`{{ "a~b" | split:"~" }} #=> ['a','b']`{% endraw %}
+
 - strip - strips all whitespace from both ends of the string
 - strip_html - strip html from string
 - strip_newlines - strip all newlines (`\n`) from string
+
 - stylesheet_tag - generate a stylesheet html tag
 - times - multiplication e.g {% raw %}`{{ 5 | times:4 }} #=> 20`{% endraw %}
+
 - truncate - truncate a string down to x characters. It also accepts a second parameter that will append to the string
   e.g. {% raw %}`{{ 'foobarfoobar' | truncate: 5, '.' }} #=> 'foob.'`{% endraw %}
-- truncate - truncate a string down to x characters
 - truncatewords - truncate a string down to x words
+
 - uniq - remove duplicate elements from an array, optionally using a given property to test for uniqueness
 - upcase - convert an input string to uppercase
+
 - uri_escape - Percent encodes any special characters in a URI. URI escape normally replaces a space with `%20`. Reserved characters will not be escaped.
 - url_decode - url decode a string
 - url_encode - url encode a string
