@@ -21,7 +21,9 @@ comments: true
 
 <script>
     (function() {
-        //var mypage = {{ page | jsonify | strip_html }};
-        //console.log('--PAGE (jsonify)--', mypage)
+        var mypage = {{ page | jsonify | strip_html }};
+        console.log('--PAGE (jsonify)--', mypage)
+        var mypages = {{ site.pages | where:"item.dir", "/vscode/" | jsonify | strip_html }};
+        console.log('--PAGES (jsonify)--', mypages)
     })();
 </script>

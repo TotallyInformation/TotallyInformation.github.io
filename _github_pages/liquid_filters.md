@@ -64,12 +64,20 @@ This is a more comprehensive list than you will find in most places, it is combi
 - first - get the first element of the passed in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
 - __gist__ (provided by [jekyll-gist plugin](https://github.com/jekyll/jekyll-gist)) - display a gist. e.g. {% raw %}`{% gist c08ee0f2726fd0e3909d %}`{% endraw %}
+
 - group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
+- group_by_exp - Group an array's items using a Liquid expression. e.g. {% raw %}`{{ site.members | group_by_exp:"item","item.graduation_year | truncate: 3, \"\"" }} #=> [{"name"=>"201...", "items"=>[...]},{"name"=>"200...", "items"=>[...]}]`{% endraw %}
+
 - [highlight](https://help.shopify.com/themes/liquid/filters/additional-filters#highlight) - Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search.terms. Has to be used in a search form.
+
 - highlight_active_tag - Wraps a tag link in a `<span>` with the class active if that tag is being used to filter a collection.
+
 - img_tag - generate an img html tag
+
 - **inspect** - Doesn't appear to be documented but returns a JSON stringified version of a variable so use as {% raw %}`<pre>{{ page | inspect }}</pre>`{% endraw %} - possibly references Ruby's inspect function?
+
 - join - join elements of the array with certain character between them
+
 - [json](https://help.shopify.com/themes/liquid/filters/additional-filters#json) - Converts a string into JSON format.
 
   You do not have to wrap the Liquid output in quotations - the json filter will add them in. The json filter will also escape quotes as needed inside the output. The json filter can also used to make Liquid objects readable by JavaScript.
@@ -113,6 +121,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - url_decode - url decode a string
 - url_encode - url encode a string
 - where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
+- where_exp - Select all the objects in an array where the expression is true. Jekyll v3.2.0 & later. e.g. {% raw %}`{{ site.members | where_exp:"item","item.graduation_year == 2014" }} {{ site.members | where_exp:"item","item.graduation_year < 2014" }} {{ site.members | where_exp:"item","item.projects contains 'foo'" }}`{% endraw %}
 
 ## Liquid filters that don't work in Jekyll
 
