@@ -30,5 +30,7 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
 <script>
     (function() {
         console.log('--SITE.POSTS.SIZE--', {{site.posts.size}})
+        console.log('--PAGE.TITLE--', '{{page.title}}')
+        console.log('--PAGE.LAYOUT--', '{{page.layout}}')
     })();
 </script>
