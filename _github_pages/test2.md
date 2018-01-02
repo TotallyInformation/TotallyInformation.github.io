@@ -8,4 +8,4 @@ date: 2018-01-02 17:10:10
 
 <h1>This is a {% if page.collection %}COLLECTION DOCUMENT{% else %}JEKYLL PAGE{% endif %}</h1>
 
-{{ include test_page_vars }}
+{{ include test_page_vars.html }}
