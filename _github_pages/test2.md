@@ -11,40 +11,40 @@ date: 2018-01-02 17:11:00
 <p>Here are some page variables:</p>
 <dl>
     <dd>page.url</dd>
-    <dt>{{ page.url }}</dt>
+    <dt>{{ page.url | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.layout</dd>
-    <dt>{{ page.layout }}</dt>
+    <dt>{{ page.layout | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.path</dd>
-    <dt>{{ page.path }}</dt>
+    <dt>{{ page.path | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.date</dd>
-    <dt>{{ page.date }}</dt>
+    <dt>{{ page.date | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.testFm</dd>
-    <dt>{{ page.testFm }}</dt>
+    <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.comments</dd>
-    <dt>{{ page.testFm }}</dt>
+    <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.title</dd>
-    <dt>{{ page.title }}</dt>
+    <dt>{{ page.title | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.description</dd>
-    <dt>{{ page.description }}</dt>
+    <dt>{{ page.description | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.id (collection documents only)</dd>
-    <dt>{{ page.id }}</dt>
+    <dt>{{ page.id | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.collection (collection documents only)</dd>
-    <dt>{{ page.collection }}</dt>
+    <dt>{{ page.collection | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.dir (actual Jekyll Pages only)</dd>
-    <dt>{{ page.dir }}</dt>
+    <dt>{{ page.dir | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.name (actual Jekyll Pages only)</dd>
-    <dt>{{ page.name }}</dt>
+    <dt>{{ page.name | default:"--NOT AVAILABLE--" }}</dt>
 </dl>
 
 <script>
