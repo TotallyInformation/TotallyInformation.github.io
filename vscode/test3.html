@@ -1,5 +1,5 @@
 ---
-title: A Test Page (HTML)
+title: A Test Jekyll/GitHub Pages Page (HTML)
 description: Testing collections and page variables - this page is in an actual Jekyll Page and is in a folder, it is an HTML file
 comments: false
 testFm: testing front matter variables
@@ -25,7 +25,7 @@ date: 2018-01-02 17:11:00
     <dt>{{ page.collection | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.comments</dd>
-    <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
+    <dt>{{ page.comments | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.content (actual Jekyll Pages only?)</dd>
     <dt>{{ page.content | default:"--NOT AVAILABLE--" | escape_once | strip_newlines | truncatewords: 10 }}</dt>
