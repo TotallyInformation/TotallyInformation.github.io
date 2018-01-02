@@ -21,4 +21,4 @@ If you are writing nodes, you will have access to and will need richer tools tha
 
 * [Logging events in Node-RED function nodes](https://nodered.org/docs/writing-functions#logging-events) from the official Node-RED documentation.
 * [Controlling console logging output levels](https://nodered.org/docs/user-guide/logging) again from the official Node-RED documentation.
-* [Using the Visual Studio Code debugger to debug Node-RED issues]({% link vscode_debugger.md %}) from this web site. This is much more serious stuff!
+* [Using the Visual Studio Code debugger to debug Node-RED issues]({ % link vscode_debugger.md % }) from this web site. This is much more serious stuff!
