@@ -4,4 +4,4 @@ description: 'Node-RED is a flow-based (visual) programming tool. These pages ha
 comments: false
 ---
 
-{% include collection_doc_lister.html collection=site.github_pages %}
+{% include collection_doc_lister.html collection=site.nr_qa %}
