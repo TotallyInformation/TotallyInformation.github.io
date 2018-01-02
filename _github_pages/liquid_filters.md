@@ -90,6 +90,7 @@ This is a more comprehensive list than you will find in most places, it is combi
 - minus - subtraction e.g. {% raw %}`{{ 4 | minus:2 }} #=> 2`{% endraw %}
 - modulo - remainder, e.g. {% raw %}`{{ 3 | modulo:2 }} #=> 1`{% endraw %}
 - newline_to_br - replace each newline (`\n`) with html break
+- number_of_words - Count the number of words in some text.
 - placeholder_svg_tag
 - plus - addition e.g. {% raw %}`{{ '1' | plus:'1' }} #=> 2, {{ 1 | plus:1 }} #=> 2`{% endraw %}
 - prepend - prepend a string e.g. {% raw %}`{{ 'bar' | prepend:'foo' }} #=> 'foobar'`{% endraw %}
