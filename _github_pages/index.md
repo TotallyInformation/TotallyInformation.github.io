@@ -17,3 +17,12 @@ comments: false
 {% endfor %}
 </ul>
 
+
+{% include collection_doc_lister.html collection=site.github_pages %}
+
+<script>
+    (function() {
+        var collection = {{ site.github_pages | jsonify | strip_html }};
+        console.log('--COLLECTION (jsonify)--', collection)
+    })();
+</script>
