@@ -4,6 +4,7 @@ description: Testing collections and page variables - this page is an actual Jek
 comments: false
 testFm: testing front matter variables
 date: 2018-01-02 17:11:00
+layout: home
 ---
 
 <h1>This is a {% if page.collection %}COLLECTION DOCUMENT{% else %}JEKYLL PAGE{% endif %}</h1>
