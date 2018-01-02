@@ -6,66 +6,70 @@ testFm: testing front matter variables
 date: 2018-01-02 17:11:00
 ---
 
+{% assign n = "<span style='font-weight:normal;'>" %}
+{% assign ne = "</span>" %}
+{% assign na = "<span style='color:#dd0000;'>--NOT AVAILABLE--</span>" %}
+
 <h1>This is a {% if page.collection %}COLLECTION DOCUMENT{% else %}JEKYLL PAGE{% endif %}</h1>
 
 <p>Here are some page variables:</p>
 <dl>
-    <dd>page.collection (collection documents only)</dd>
-    <dt>{{ page.collection | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.collection {{n}}(collection documents only){{ne}}</dd>
+    <dt>{{ page.collection | default:na }}</dt>
 
-    <dd>page.comments (custom, set in <code>_config.yml</code> defaults but also in frontmatter. NB: value of false triggers the default N/A msg)</dd>
-    <dt>{{ page.comments | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.comments {{n}}(custom, set in <code>_config.yml</code> defaults but also in frontmatter. NB: value of false triggers the default N/A msg){{ne}}</dd>
+    <dt>{{ page.comments | default:na }}</dt>
 
-    <dd>page.content (actual Jekyll Pages only?)</dd>
-    <dt>{{ page.content | default:"--NOT AVAILABLE--" | escape_once | strip_newlines | truncatewords: 10 }}</dt>
+    <dd>page.content {{n}}(actual Jekyll Pages only?){{ne}}</dd>
+    <dt>{{ page.content | default:na | escape_once | strip_newlines | truncatewords: 10 }}</dt>
 
-    <dd>page.date (custom, set in frontmatter though docs indicate this should be created automatically)</dd>
-    <dt>{{ page.date | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.date {{n}}(custom, set in frontmatter though docs indicate this should be created automatically){{ne}}</dd>
+    <dt>{{ page.date | default:na }}</dt>
 
     <dd>page.description</dd>
-    <dt>{{ page.description | default:"--NOT AVAILABLE--" }}</dt>
+    <dt>{{ page.description | default:na }}</dt>
 
-    <dd>page.dir (actual Jekyll Pages only)</dd>
-    <dt>{{ page.dir | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.dir {{n}}(actual Jekyll Pages only){{ne}}</dd>
+    <dt>{{ page.dir | default:na }}</dt>
 
-    <dd>page.draft (collection documents and Posts only)</dd>
-    <dt>{{ page.draft | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.draft {{n}}(collection documents and Posts only){{ne}}</dd>
+    <dt>{{ page.draft | default:na }}</dt>
 
-    <dd>page.excerpt (collection documents and Posts only?)</dd>
-    <dt>{{ page.excerpt | default:"--NOT AVAILABLE--" | strip_newlines | truncatewords: 10 }}</dt>
+    <dd>page.excerpt {{n}}(collection documents and Posts only?){{ne}}</dd>
+    <dt>{{ page.excerpt | default:na | strip_newlines | truncatewords: 10 }}</dt>
 
-    <dd>page.ext (collection documents and Posts only?)</dd>
-    <dt>{{ page.ext | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.ext {{n}}(collection documents and Posts only?){{ne}}</dd>
+    <dt>{{ page.ext | default:na }}</dt>
 
-    <dd>page.id (collection documents and Posts only)</dd>
-    <dt>{{ page.id | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.id {{n}}(collection documents and Posts only){{ne}}</dd>
+    <dt>{{ page.id | default:na }}</dt>
 
     <dd>page.layout</dd>
-    <dt>{{ page.layout | default:"--NOT AVAILABLE--" }}</dt>
+    <dt>{{ page.layout | default:na }}</dt>
 
-    <dd>page.name (actual Jekyll Pages only)</dd>
-    <dt>{{ page.name | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.name {{n}}(actual Jekyll Pages only){{ne}}</dd>
+    <dt>{{ page.name | default:na }}</dt>
 
-    <dd>page.output (collection documents and Posts only?)</dd>
-    <dt>{{ page.output | default:"--NOT AVAILABLE--" | escape_once | strip_newlines | truncatewords: 10 }}</dt>
+    <dd>page.output {{n}}(collection documents and Posts only?){{ne}}</dd>
+    <dt>{{ page.output | default:na | escape_once | strip_newlines | truncatewords: 10 }}</dt>
 
     <dd>page.path</dd>
-    <dt>{{ page.path | default:"--NOT AVAILABLE--" }}</dt>
+    <dt>{{ page.path | default:na }}</dt>
 
-    <dd>page.relative_path (collection documents and Posts only)</dd>
-    <dt>{{ page.relative_path | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.relative_path {{n}}(collection documents and Posts only){{ne}}</dd>
+    <dt>{{ page.relative_path | default:na }}</dt>
 
-    <dd>page.slug (collection documents and Posts only)</dd>
-    <dt>{{ page.slug | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.slug {{n}}(collection documents and Posts only){{ne}}</dd>
+    <dt>{{ page.slug | default:na }}</dt>
 
-    <dd>page.testFm (custom, set in frontmatter)</dd>
-    <dt>{{ page.testFm | default:"--NOT AVAILABLE--" }}</dt>
+    <dd>page.testFm {{n}}(custom, set in frontmatter){{ne}}</dd>
+    <dt>{{ page.testFm | default:na }}</dt>
 
     <dd>page.title</dd>
-    <dt>{{ page.title | default:"--NOT AVAILABLE--" }}</dt>
+    <dt>{{ page.title | default:na }}</dt>
 
     <dd>page.url</dd>
-    <dt>{{ page.url | default:"--NOT AVAILABLE--" }}</dt>
+    <dt>{{ page.url | default:na }}</dt>
 
 </dl>
 
