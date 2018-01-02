@@ -13,7 +13,7 @@ date: 2018-01-02 17:11:00
     <dd>page.collection (collection documents only)</dd>
     <dt>{{ page.collection | default:"--NOT AVAILABLE--" }}</dt>
 
-    <dd>page.comments (custom, set in <code>_config.yml</code> defaults but also in frontmatter)</dd>
+    <dd>page.comments (custom, set in <code>_config.yml</code> defaults but also in frontmatter. NB: value of false triggers the default N/A msg)</dd>
     <dt>{{ page.comments | default:"--NOT AVAILABLE--" }}</dt>
 
     <dd>page.content (actual Jekyll Pages only?)</dd>
