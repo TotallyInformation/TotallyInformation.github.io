@@ -1,6 +1,6 @@
 ---
 title: A Test Page (MarkDown)
-description: Testing collections and page variables - this page is in a collection and is a markdown file
+description: Testing collections and page variables - this page is an actual Jekyll Page and is in a folder, it is a markdown file
 comments: false
 testFm: testing front matter variables
 date: 2018-01-02 17:11:00
