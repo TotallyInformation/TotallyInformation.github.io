@@ -1,7 +1,6 @@
 ---
 title: Node-RED - debugging flows
-description: >
-    Some hints for debugging Node-RED flows
+description: Some hints for debugging Node-RED flows
 comments: true
 date: 2018-01-02 22:00:00
 ---
@@ -15,7 +14,7 @@ If you are writing nodes, you will have access to and will need richer tools tha
 
 * Inside a function that is giving an error, you might need additional debugging output in order to identify where in the function code the error occurs. You can use <code>node.log('position 1')</code>, <code>node.warn('position 1')</code> or similar statements throughout the code.
 
-* Remember that msg's are passed by <i>reference</i> much of the time, see the [article on how node.send() works]({% link how_node-send_works.md %}) for more details.
+* Remember that msg's are passed by <i>reference</i> much of the time, see the [article on how `node.send()` works]({% link how_node-send_works.md %}) for more details.
 
 ### Additional Resources
 

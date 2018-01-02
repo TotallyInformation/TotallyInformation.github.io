@@ -1,7 +1,6 @@
 ---
 title: Node-RED - How to use the Visual Studio Code debugger
-description: >
-    Using the Visual Studio Code debugger to debug Node-RED issues
+description: Using the Visual Studio Code debugger to debug Node-RED issues
 comments: true
 date: 2018-01-02 22:00:00
 ---
@@ -15,14 +14,14 @@ When using [Visual Studio Code](https://code.visualstudio.com/), the free code e
 2. Add the following configuration to the `.vscode` file:
 
    ```json
-   {
+   &#123;
        "version": "0.0.1",
        "configurations": [
-           {
+           &#123;
                "type": "node",
                "request": "attach",
                "name": "Attach to Process",
-               "processId": "${command:PickProcess}"
+               "processId": "$&#123;command:PickProcess}"
            }
    }
    ```
