@@ -7,7 +7,8 @@ comments: true
 ---
 
 <ul>
-{% for item in site.pages | where:"item.dir", "/vscode/" | sort: "title" %}
+{% assign mypages = site.pages | where:"dir", "/vscode/" %}
+{% for item in mypages | sort: "title" %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
     <p>{% if item.description %}
@@ -23,7 +24,9 @@ comments: true
     (function() {
         var mypage = {{ page | jsonify | strip_html }};
         console.log('--PAGE (jsonify)--', mypage)
-        var mypages = {{ site.pages | where:"item.dir", "/vscode/" | jsonify | strip_html }};
+        var mypages = {{ mypages | jsonify | strip_html }};
         console.log('--PAGES (jsonify)--', mypages)
+        var sitepages = {{ site.pages | jsonify | strip_html }};
+        console.log('--SITEPAGES (jsonify)--', sitepages)
     })();
 </script>
