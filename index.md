@@ -6,13 +6,13 @@ comments: false
 date: 2018-01-02 14:20:00
 ---
 
-## Node-RED Questions and Answers
+## [Node-RED Questions and Answers](/nr_qa/)
 
 Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
 
 {% include collection_doc_lister.html collection=site.nr_qa %}
 
-## GitHub Pages and Jekyll/Liquid
+## [GitHub Pages and Jekyll/Liquid](/github_pages/)
 
 Hints and tips on using Jekyll for publishing to GitHub Pages.
 
