@@ -17,7 +17,7 @@ date: 2018-01-02 17:11:00
     <dd>page.collection {{n}}(collection documents only){{ne}}</dd>
     <dt>{{ page.collection | default:na }}</dt>
 
-    <dd>page.comments {{n}}(custom, set in <code>_config.yml</code> defaults but also in frontmatter. NB: value of false triggers the default N/A msg){{ne}}</dd>
+    <dd>page.comments {{n}}(custom, set in <code>_config.yml</code> defaults but to "test" frontmatter. NB: value of false triggers the default N/A msg){{ne}}</dd>
     <dt>{{ page.comments | default:na }}</dt>
 
     <dd>page.content {{n}}(actual Jekyll Pages only?){{ne}}</dd>
