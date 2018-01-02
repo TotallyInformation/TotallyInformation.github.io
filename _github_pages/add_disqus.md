@@ -29,3 +29,11 @@ Create `footer.html` in your site `_includes` folder or include this in the defa
 ```
 {% endraw %}
 
+<script>
+    (function() {
+        // Dump the page object to a JS variable - note we have to strip or escape the html
+        var jk_page = {{ page | jsonify | strip_html }};
+        console.log('--PAGE (jsonify)--', jk_page)
+    })();
+</script>
+
