@@ -49,6 +49,10 @@ This is a more comprehensive list than you will find in most places, it is combi
   </pre>
   See also: http://www.ruby-doc.org/core/Time.html#method-i-strftime
 
+- date_to_long_string - Format a date to long format. e.g. `07 November 2008`
+- date_to_rfc822 - Convert a Date into the RFC-822 format used for RSS feeds.
+- date_to_string - Convert a date to short format. e.g. `07 Nov 2008`
+- date_to_xmlschema - Convert a Date into XML Schema (ISO 8601) format.
 - default - returns the given variable unless it is null or the empty string, when it will return the given value,
   e.g. {% raw %}`{{ undefined_variable | default: "Default value" }} #=> "Default value"`{% endraw %}
 - default_errors -
