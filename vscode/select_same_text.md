@@ -1,11 +1,18 @@
 ---
-title: VSCode - select all of the same text
+title: VSCode - multiple cursors
 description: >
-    If you want to quickly change all of the same text in a document, you can use the Ctrl+F2 shortcut.
+    VSCode supports multi-cursor editing, here are some tips on using it.
 comments: true
 ---
 
-Select the text or code that you want to change. VSCode highlights all matching text. Press <kbd>Ctrl+F2</kbd> and type your new text.
+Note that, in multi-cursor mode, the standard selection shortcuts also work.
+
+### Change all the same text in a document to something else
+
+If you want to quickly change all of the same text in a document:
+
+* Select the text or code that you want to change. VSCode highlights all matching text.
+* Press <kbd>Ctrl+F2</kbd> and type your new text.
 
 VSCode supports multi-cursor editing which this tip makes use of.
 
