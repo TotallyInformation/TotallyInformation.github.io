@@ -27,7 +27,8 @@ When using [Visual Studio Code](https://code.visualstudio.com/), the free code e
    }
    {% endraw %}{% endhighlight %}
 
-    ```json{% raw %}
+   ```json
+   {% raw %}
    {
        "version": "0.0.1",
        "configurations": [
@@ -39,7 +40,8 @@ When using [Visual Studio Code](https://code.visualstudio.com/), the free code e
            }
        ]
    }
-   {% endraw %}```
+   {% endraw %}
+   ```
 
 
 3. Start up Node-RED then click on the green "start debugging" icon in VSCode, you will get a popup to choose the active process you want to debug. All Node.js based processes will be listed. Pick the one that is Node-RED.
