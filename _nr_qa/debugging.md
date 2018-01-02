@@ -1,9 +1,9 @@
----
+
 title: Node-RED - debugging flows
 description: Some hints for debugging Node-RED flows
 comments: true
 date: 2018-01-02 22:00:00
----
+
 
 > Note: Debugging <i>flows</i> is not the same as debugging <i>nodes</i>.
 If you are writing nodes, you will have access to and will need richer tools than are needed here.
