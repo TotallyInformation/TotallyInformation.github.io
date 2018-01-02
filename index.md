@@ -53,7 +53,9 @@ Hints and tips on using Jekyll for publishing to GitHub Pages.
         var jk_page = {{ page | jsonify | strip_html }};
         var someData = '{{ page.someData }}'
         var layout = '{{ layout }}'
+        var github = '{{ site.github | jsonify }}'
         console.log('--PAGE (jsonify)--', jk_page)
         console.log('someData', someData)
+        console.log('--SITE.GITHUB (jsonify)--', someData)
     })();
 </script>
