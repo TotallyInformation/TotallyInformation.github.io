@@ -4,7 +4,7 @@
   {% for item in collection | sort: "title" %}
     <li>
       {% assign mytitle = item.title | default: item.url %}
-      <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a>
+      <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a> {% if item.date %}({{ item.date | date: "%Y-%m-%d %H:%M" }}){% endif %}
       <p>{% if item.description %}
           {{ item.description }}
       {% else %}
