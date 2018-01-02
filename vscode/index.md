@@ -7,7 +7,7 @@ comments: true
 ---
 
 <ul>
-{% assign mypages = site.pages | where:"dir", "/vscode/" %}
+{% assign mypages = site.pages | where:"dir", "/vscode/" | where_exp:"item", "item.name != page.name" %}
 {% for item in mypages | sort: "title" %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>

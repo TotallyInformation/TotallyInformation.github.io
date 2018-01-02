@@ -118,10 +118,14 @@ This is a more comprehensive list than you will find in most places, it is combi
 - truncatewords - truncate a string down to x words
 - uniq - remove duplicate elements from an array, optionally using a given property to test for uniqueness
 - upcase - convert an input string to uppercase
+- uri_escape - Percent encodes any special characters in a URI. URI escape normally replaces a space with `%20`. Reserved characters will not be escaped.
 - url_decode - url decode a string
 - url_encode - url encode a string
+
 - where - select elements from array with given property value: {% raw %}`{{ site.posts | where:"category","foo" }}`{% endraw %}
 - where_exp - Select all the objects in an array where the expression is true. Jekyll v3.2.0 & later. e.g. {% raw %}`{{ site.members | where_exp:"item","item.graduation_year == 2014" }} {{ site.members | where_exp:"item","item.graduation_year < 2014" }} {{ site.members | where_exp:"item","item.projects contains 'foo'" }}`{% endraw %}
+
+- xml_escape - Escape some text for use in XML.
 
 ## Liquid filters that don't work in Jekyll
 
