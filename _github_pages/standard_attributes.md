@@ -141,7 +141,7 @@ While front-matter variables can't be added directly to files, they can be made 
 ## Github Metadata (site.github.xxxx)
 
 - `versions` object containing version numbers for Jekyll, Ruby and other plugins (e.g. keys: jekyll, kramdown, liquid, maruku, rdiscount, redcarpet, RedCloth, jemoji, jekyll-mentions, jekyll-redirect-from, jekyll-sitemap, github-pages, ruby)
-- `hostname` "github.com",
+- `hostname` "github.com"
 
 <pre>
 pages_hostname": "github.io",
