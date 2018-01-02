@@ -7,7 +7,7 @@ comments: true
 ---
 
 <ul>
-{% for item in site.pages where:"item.dir", "/vscode/" | sort: "title" %}
+{% for item in site.pages | where:"item.dir", "/vscode/" | sort: "title" %}
   <li>
     <a href="{{ item.url }}">{{ item.title | replace:'_',' ' }}</a>
     <p>{% if item.description %}
@@ -18,3 +18,10 @@ comments: true
   </li>
 {% endfor %}
 </ul>
+
+<script>
+    (function() {
+        //var mypage = {{ page | jsonify | strip_html }};
+        //console.log('--PAGE (jsonify)--', mypage)
+    })();
+</script>
