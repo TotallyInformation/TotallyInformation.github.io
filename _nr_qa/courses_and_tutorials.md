@@ -1,8 +1,8 @@
 ---
-title: Node-RED - How to use the Visual Studio Code debugger
-description: Using the Visual Studio Code debugger to debug Node-RED issues
+title: Node-RED - Courses and Tutorials
+description: A list of some tutorials and courses for learning Node-RED and Node.JS, maybe some web stuff too.
 comments: true
-date: 2018-01-02 22:00:00
+date: 2018-01-03 19:00:00
 ---
 
 TBC
