@@ -2,7 +2,7 @@
 title: Node-RED - debugging flows
 description: Some hints for debugging Node-RED flows
 comments: true
-date: 2018-01-03 14:00:00
+date: 2018-01-03 14:00:01
 ---
 
 Note: Debugging <i>flows</i> is not the same as debugging <i>nodes</i>.
@@ -20,7 +20,7 @@ If you are writing nodes, you will have access to and will need richer tools tha
 
 ### Debugging Node-RED admin page, Dashboard and webpage issues
 
-Debugging web pages delivered by Node-RED can be especially challanging for beginners. The main thing to remember is that things are being processed in **two** places. In Node-RED (sometimes referred to as "the server" or "the back end") which happens on your server device; and in the browser (sometimes referred to as "the client" or "the front end"). You will want to become familiar with what happens where so that you know where to look for information.
+Debugging web pages delivered by Node-RED can be especially challenging for beginners. The main thing to remember is that things are being processed in **two** places. In Node-RED (sometimes referred to as "the server" or "the back end") which happens on your server device; and in the browser (sometimes referred to as "the client" or "the front end"). You will want to become familiar with what happens where so that you know where to look for information.
 
 Node-RED (server, back-end) issues are covered above.
 
