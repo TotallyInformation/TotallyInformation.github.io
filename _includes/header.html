@@ -31,7 +31,7 @@
   </div>
 </header>
 
-<% if site.debug == true %}
+{% if site.debug == true %}
 <script>
     (function() {
         var page_paths = {{ page_paths | jsonify | strip_html }};
