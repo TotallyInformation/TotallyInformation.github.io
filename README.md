@@ -22,9 +22,9 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 - Fix the feed
 - Extend and improve the repo list
 
-  [ ] Move to an include
-  [ ] Sort by recent changes if possible
-  [ ] Include description if possible
+  * [ ] Move to an include
+  * [ ] Sort by recent changes if possible
+  * [ ] Include description if possible
 
 # Index
 
