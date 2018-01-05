@@ -5,16 +5,44 @@
 {% assign st1 = "class='st1'" %}
 
 {% if page.collection %}
-<p>Here are the main collection variables/metadata available in Jekyll on GitHub Pages (if this is part of a collection):</p>
+<h2>Here are the main collection variables/metadata available in Jekyll on GitHub Pages (if this is part of a collection):</h2>
 {% assign col = site.collections | where: 'label','github_pages' | first%}
 <dl>
-    <dd>col.title {{s1}}{{se}}</dd>
-    <dt {{st1}}>{{s3}}{{ col.title | default:na }}{{se}}
-      {{s2}}The optional title metadata from <code>_config.yml</code>. {{se}}</dt>
-
     <dd>col.description {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ col.description | default:na }}{{se}}
       {{s2}}The optional description metadata from <code>_config.yml</code>. {{se}}</dt>
+
+    <dd>col.directory {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.directory | default:na }}{{se}}
+      {{s2}}The source folder that contains the collection documents. {{se}}</dt>
+
+    <dd>col.docs {{s1}}(Array, Not shown{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{se}}
+      {{s2}}An array of unrendered source. 1 entry for each document. {{se}}</dt>
+
+    <dd>col.files {{s1}}(Array, Not shown{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{se}}
+      {{s2}}An array of static files in the collection. {{se}}</dt>
+
+    <dd>col.label {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.label | default:na }}{{se}}
+      {{s2}}The name of the collection (e.g. the collection folder name without the leading underscore). {{se}}</dt>
+
+    <dd>col.output {{s1}}(boolean){{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.output | default:na }}{{se}}
+      {{s2}}Whether documents in the collection should be rendered as pages. {{se}}</dt>
+
+    <dd>col.permalink {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.permalink | default:na }}{{se}}
+      {{s2}}Permalink style for output pages. {{se}}</dt>
+
+    <dd>col.relative_directory {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.relative_directory | default:na }}{{se}}
+      {{s2}}The source folder that contains the collection documents. Relative to the site source. {{se}}</dt>
+
+    <dd>col.title {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.title | default:na }}{{se}}
+      {{s2}}The optional title metadata from <code>_config.yml</code>. {{se}}</dt>
 
     <dd>col.ymlMeta {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ col.ymlMeta | default:na }}{{se}}
@@ -23,7 +51,7 @@
 </dl>
 {% endif %}
 
-<p>Here are the main page variables/metadata available in Jekyll on GitHub Pages:</p>
+<h2>Here are the main page variables/metadata available in Jekyll on GitHub Pages:</h2>
 <dl>
     <dd>page.collection {{s1}}(collection documents only){{se}}</dd>
     <dt {{st1}}>{{s3}}{{ page.collection | default:na }}{{se}}

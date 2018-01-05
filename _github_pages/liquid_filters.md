@@ -11,10 +11,13 @@ This is a more comprehensive list than you will find in most places, it is combi
 - abs - absolute value
 - absolute_url - Prepend the `url` and `baseurl` value to the input. e.g. {% raw %}`{{ "/assets/style.css" | absolute_url }} #=> http://example.com/my-baseurl/assets/style.css`{% endraw %}
 - append - append a string e.g. {% raw %}`{{ 'foo' | append:'bar' }} #=> 'foobar'`{% endraw %}
+- array_to_sentence_string - Convert an array into a sentence. Useful for listing tags. Optional argument for connector. e.g. {% raw %}`{{ page.tags | array_to_sentence_string: 'or' }} #=> foo, bar, or baz`{% endraw %}
 - capitalize - capitalize words in the input sentence
 - ceil - rounds a number up to the nearest integer, e.g. {% raw %}`{{ 4.6 | ceil }} #=> 5`{% endraw %}
 - compact - Remove nils within an array provide optional property with which to check for nil.
 - [concat](https://help.shopify.com/themes/liquid/filters/array-filters#concat) - Concatenates (combines) an array with another array
+- cgi_escape - Replaces any special characters with appropriate `%XX` replacements. CGI escape normally replaces a space with a plus `+` sign.
+
 - date - reformat a date ([syntax reference](http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date))
 
   Reformat a date using Ruby's core `Time#strftime( string ) -> string`
@@ -53,28 +56,29 @@ This is a more comprehensive list than you will find in most places, it is combi
 - date_to_rfc822 - Convert a Date into the RFC-822 format used for RSS feeds.
 - date_to_string - Convert a date to short format. e.g. `07 Nov 2008`
 - date_to_xmlschema - Convert a Date into XML Schema (ISO 8601) format.
+
 - default - returns the given variable unless it is null or the empty string, when it will return the given value,
   e.g. {% raw %}`{{ undefined_variable | default: "Default value" }} #=> "Default value"`{% endraw %}
 - default_errors -
 - default_pagination -
+
 - divided_by - integer division e.g. {% raw %}`{{ 10 | divided_by:3 }} #=> 3`{% endraw %}
 - downcase - convert an input string to lowercase
 - escape - html escape a string
 - escape_once - returns an escaped version of html without affecting existing escaped entities
-- first - get the first element of the passed in array
+- first - get the first element of the passed-in array
 - floor - rounds a number down to the nearest integer, e.g. {% raw %}`{{ 4.6 | floor }} #=> 4`{% endraw %}
 - __gist__ (provided by [jekyll-gist plugin](https://github.com/jekyll/jekyll-gist)) - display a gist. e.g. {% raw %}`{% gist c08ee0f2726fd0e3909d %}`{% endraw %}
 
 - group_by - group elements from array by given property: {% raw %}`{{ site.posts | group_by:"category" }}`{% endraw %}
 - group_by_exp - Group an array's items using a Liquid expression. e.g. {% raw %}`{{ site.members | group_by_exp:"item","item.graduation_year | truncate: 3, \"\"" }} #=> [{"name"=>"201...", "items"=>[...]},{"name"=>"200...", "items"=>[...]}]`{% endraw %}
 
-- [highlight](https://help.shopify.com/themes/liquid/filters/additional-filters#highlight) - Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search.terms. Has to be used in a search form.
-
+- [highlight](https://help.shopify.com/themes/liquid/filters/additional-filters#highlight) - Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search.terms. Has to be used in a search form. **Does this work in Jekyll?** Not to be confused with the `highlight` **tag**.
 - highlight_active_tag - Wraps a tag link in a `<span>` with the class active if that tag is being used to filter a collection.
 
 - img_tag - generate an img html tag
 
-- **inspect** - Doesn't appear to be documented but returns a JSON stringified version of a variable so use as {% raw %}`<pre>{{ page | inspect }}</pre>`{% endraw %} - possibly references Ruby's inspect function?
+- inspect - Convert an object into its String representation for debugging. Returns a JSON stringified version of a variable so use as {% raw %}`<pre>{{ page | inspect }}</pre>`{% endraw %} - possibly references Ruby's inspect function?
 
 - join - join elements of the array with certain character between them
 
@@ -90,10 +94,13 @@ This is a more comprehensive list than you will find in most places, it is combi
 - minus - subtraction e.g. {% raw %}`{{ 4 | minus:2 }} #=> 2`{% endraw %}
 - modulo - remainder, e.g. {% raw %}`{{ 3 | modulo:2 }} #=> 1`{% endraw %}
 - newline_to_br - replace each newline (`\n`) with html break
+- normalize_whitespace - Replace any occurrence of whitespace with a single space.
 - number_of_words - Count the number of words in some text.
 - placeholder_svg_tag
 - plus - addition e.g. {% raw %}`{{ '1' | plus:'1' }} #=> 2, {{ 1 | plus:1 }} #=> 2`{% endraw %}
+- pop - Remove an entry from the end of an array. Non-destructive, makes a copy of the array and changes that.
 - prepend - prepend a string e.g. {% raw %}`{{ 'bar' | prepend:'foo' }} #=> 'foobar'`{% endraw %}
+- push - Add entry to the end of an array. Non-destructive, makes a copy of the array and changes that.
 - relative_url - Prepend the baseurl value to the input. Useful if your site is hosted at a subpath rather than the root of the domain. e.g. {% raw %}`{{ "/assets/style.css" | relative_url }} #=> /my-baseurl/assets/style.css`{% endraw %}
 - remove - remove each occurrence e.g. {% raw %}`{{ 'foobarfoobar' | remove:'foo' }} #=> 'barbar'`{% endraw %}
 - remove_first - remove the first occurrence e.g. {% raw %}`{{ 'barbar' | remove_first:'bar' }} #=> 'bar'`{% endraw %}
@@ -102,11 +109,19 @@ This is a more comprehensive list than you will find in most places, it is combi
 - reverse - reverses the passed in array
 - round - rounds input to the nearest integer or specified number of decimals e.g. {% raw %}`{{ 4.5612 | round: 2 }} #=> 4.56`{% endraw %}
 - rstrip - strips all whitespace from the end of a string
+- sample - Pick a random value from an array. Optionally provide a number to pick multiple values.
+- sassify - Convert a Sass-formatted string into CSS.
 - script_tag - generate a script html tag
+- scssify - Convert a Scss-formatted string into CSS.
+- shift - Add entry to the start of an array. Non-destructive, makes a copy of the array and changes that.
 - size - return the size of an array or string
 - slice - slice a string. Takes an offset and length, e.g. {% raw %}`{{ "hello" | slice: -3, 3 }} #=> llo`{% endraw %}
+- slugify - Convert a string into a lowercase URL "slug". [Optionally takes a style parameter](https://jekyllrb.com/docs/templates/#options-for-the-slugify-filter): none, raw, default, pretty, ascii, latin. [Definitions for permalink styles](https://jekyllrb.com/docs/permalinks/#builtinpermalinkstyles)
+
 - sort - sort elements of the array
 - sort_natural - Sort elements of an array ignoring case if strings provide optional property with which to sort an array of hashes or drops.
+
+- smartify - Convert "quotes" into “smart quotes.”
 - split - split a string on a matching pattern e.g. {% raw %}`{{ "a~b" | split:"~" }} #=> ['a','b']`{% endraw %}
 
 - strip - strips all whitespace from both ends of the string
@@ -115,12 +130,14 @@ This is a more comprehensive list than you will find in most places, it is combi
 
 - stylesheet_tag - generate a stylesheet html tag
 - times - multiplication e.g {% raw %}`{{ 5 | times:4 }} #=> 20`{% endraw %}
+- to_integer - Convert a string or boolean to integer.
 
 - truncate - truncate a string down to x characters. It also accepts a second parameter that will append to the string
   e.g. {% raw %}`{{ 'foobarfoobar' | truncate: 5, '.' }} #=> 'foob.'`{% endraw %}
 - truncatewords - truncate a string down to x words
 
 - uniq - remove duplicate elements from an array, optionally using a given property to test for uniqueness
+- unshift - Remove an entry from the start of an array. Non-destructive, makes a copy of the array and changes that.
 - upcase - convert an input string to uppercase
 
 - uri_escape - Percent encodes any special characters in a URI. URI escape normally replaces a space with `%20`. Reserved characters will not be escaped.

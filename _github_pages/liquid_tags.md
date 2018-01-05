@@ -64,6 +64,10 @@ See also the [official tags reference](https://help.shopify.com/themes/liquid/ta
 * section
 * stylesheet
 
+* [highlight](https://jekyllrb.com/docs/templates/#code-snippet-highlighting) - render a code block with syntax highlighting, optional line numbers. Note that filters are processed inside code blocks so wrap the block with {% raw %}{% raw %}{% endraw %} and endraw tags if it contains curly braces. To find the appropriate identifier to use for the language you want to highlight, look for the “short name” on the [Rouge wiki](https://github.com/jayferd/rouge/wiki/List-of-supported-languages-and-lexers) or the [Pygments’ Lexers page](http://pygments.org/docs/lexers/).
+
+* [link](https://jekyllrb.com/docs/templates/#links) - create an html link to another page in the Jekyll site. **WARNING: MUST CONTAIN A VALID SOURCE DOCUMENT NAME including folder and source extension otherwise the Jekyll build fails - on GitHub an immensely unhelpful generic error message is produced that does not allow you to identify the document causing the issue.**
+
 ### Variable tags
 * assign - Assign a value to a variable. e.g. {% raw %}`{% assign name = 'freestyle' %}`{% endraw %}
 * capture (endcapture) - Combine a number of outputs and assign to a variable.
