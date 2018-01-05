@@ -19,8 +19,8 @@ minima:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:
-  - /nr_qa/index.md
-  - /github_pages/
+  - /nr-qa/
+  - /github-pages/
   - /vscode/
 
 disqus:
@@ -30,12 +30,12 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  nr_qa:
+  nr-qa:
     output: true
     permalink: /:collection/:name
     title: 'Node-RED Questions and Answers'
     descriptions: 'Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.'
-  github_pages:
+  github-pages:
     title: 'GitHub Pages and Jekyll/Liquid'
     description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
     ymlMeta: This is some metadata from the config file
@@ -45,13 +45,13 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: nr_qa
+      type: nr-qa
     values:
       layout: page
       comments: true
   - scope:
       path: ""
-      type: github_pages
+      type: github-pages
     values:
       layout: page
       comments: true
