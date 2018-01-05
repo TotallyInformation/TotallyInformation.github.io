@@ -12,6 +12,7 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 
 ## To Do
 
+- Remove index.xx from collection docs lister
 - Add link to directly edit page on GitHub if logged in as TI
 - Add link to license in footer
 - Add links to my other sites
