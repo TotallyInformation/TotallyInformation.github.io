@@ -4,6 +4,21 @@
 {% assign na = "<span class='na'>--NOT AVAILABLE--</span>" %}
 {% assign st1 = "class='st1'" %}
 
+{% if page.collection %}
+<p>Here are the main collection variables/metadata available in Jekyll on GitHub Pages (if this is part of a collection):</p>
+{% assign col = site.collections | where: 'label','github_pages' | first%}
+<dl>
+    <dd>col.title {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.title | default:na }}{{se}}
+      {{s2}}The optional title metadata from <code>_config.yml</code>. {{se}}</dt>
+
+    <dd>col.description {{s1}}{{se}}</dd>
+    <dt {{st1}}>{{s3}}{{ col.description | default:na }}{{se}}
+      {{s2}}The optional description metadata from <code>_config.yml</code>. {{se}}</dt>
+
+</dl>
+{% endif %}
+
 <p>Here are the main page variables/metadata available in Jekyll on GitHub Pages:</p>
 <dl>
     <dd>page.collection {{s1}}(collection documents only){{se}}</dd>
@@ -97,5 +112,10 @@
         // Dump the page object to a JS variable - note we have to strip or escape the html
         var jk_page = {{ page | jsonify | strip_html }};
         console.log('--PAGE (jsonify)--', jk_page)
+
+        {% if page.collection %}
+        var col = {{ col | jsonify | strip_html }};
+        console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)
+        {% endif %}
     })();
 </script>

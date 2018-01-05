@@ -38,6 +38,7 @@ collections:
   github_pages:
     title: 'GitHub Pages and Jekyll/Liquid'
     description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
+    ymlMeta: This is some metadata from the config file
     output: true
     permalink: /:collection/:name
 
