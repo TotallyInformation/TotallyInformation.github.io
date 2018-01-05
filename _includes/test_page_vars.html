@@ -154,6 +154,9 @@
 
           var col2 = {{ site[col.label] | jsonify | strip_html }};
           console.log('--SITE.[this collection] (jsonify)--', col2)
+
+          var col3 = {{ site | map: col.label | jsonify | strip_html }};
+          console.log('--SITE.[this collection] (map, jsonify)--', col3)
         {% endif %}
     })();
 </script>
