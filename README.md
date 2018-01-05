@@ -22,15 +22,17 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 - Fix the feed
 - Extend and improve the repo list
 
-  * [ ] Move to an include
-  * [ ] Sort by recent changes if possible
-  * [ ] Include description if possible
+  * Move to an include
+  * Sort by recent changes if possible
+  * Include description if possible
 
 # Index
 
 {% include collection_doc_lister.html collection='nr_qa' %}
 
 {% include collection_doc_lister.html collection='github_pages' %}
+
+{% include page_lister.html dir="/vscode/" %}
 
 ## Totally Information's Public Code Repositories
 
