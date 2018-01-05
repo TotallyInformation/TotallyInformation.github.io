@@ -1,3 +1,25 @@
 {% assign colName = include.collection %}
-{% assign collection = site[colName] %}
+{% assign collection = site['github_pages'] %}
 
+{% assign col = site.collections | where: 'label',colName | first %}
+{% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
+
+<h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
+
+{% if col.description %}<p>{{ col.description }}</p>{% endif %}
+
+<div>
+  <ul>
+  {% for item in collection | sort: "title" %}
+    <li>
+      {% assign mytitle = item.title | default: item.url %}
+      <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a> {% if item.date %}({{ item.date | date: "%Y-%m-%d %H:%M" }}){% endif %}
+      <p>{% if item.description %}
+          {{ item.description }}
+      {% else %}
+          {{ item.excerpt | strip_html }}
+      {% endif %}</p>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
