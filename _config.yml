@@ -21,10 +21,10 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-header_pages:
-  - /nr-qa/
-  - /github-pages/
-  - /vscode/
+# header_pages:
+#   - /nr-qa/
+#   - /github-pages/
+#   - /vscode/
 
 disqus:
   shortname: 'totally-information-development-hub'
