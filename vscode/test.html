@@ -67,7 +67,7 @@ testFm: testing front matter variables
 <div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
   <p>
-  {% for item in site.github_pages %}
+  {% for item in site.github-pages %}
     {% if forloop.first == true %}
       Yes, we do! First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}, {{ forloop.length }}<br>
     {% elsif forloop.last == true %}
@@ -168,8 +168,8 @@ testFm: testing front matter variables
         console.log('--SITE.PAGES (jsonify)--', jk_pages)
         //var layout = {{ layout | jsonify }}
         //console.log('--LAYOUT (jsonify)--', layout)
-        var ghpages = {{ site.github_pages | jsonify | strip_html }}
-        console.log('--SITE.GITHUB_PAGES (jsonify)--', ghpages)
+        var ghpages = {{ site.github-pages | jsonify | strip_html }}
+        console.log('--SITE.GITHUB-PAGES (jsonify)--', ghpages)
         var github = '{{ site.github | jsonify }}'
         console.log('--SITE.GITHUB (jsonify)--', github)
     })();

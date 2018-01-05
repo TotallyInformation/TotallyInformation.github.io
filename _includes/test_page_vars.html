@@ -6,7 +6,7 @@
 
 {% if page.collection %}
 <h2>Here are the main collection variables/metadata available in Jekyll on GitHub Pages (if this is part of a collection):</h2>
-{% assign col = site.collections | where: 'label','github_pages' | first%}
+{% assign col = site.collections | where: 'label','github-pages' | first%}
 <dl>
     <dd>col.description {{s1}}{{se}}</dd>
     <dt {{st1}}>{{s3}}{{ col.description | default:na }}{{se}}

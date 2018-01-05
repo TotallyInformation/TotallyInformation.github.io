@@ -59,7 +59,7 @@ To use, place the following code wherever you want a list of the output files - 
 
 {% raw %}
 ```markdown
-{% include collection_doc_lister.html collection='github_pages' %}
+{% include collection_doc_lister.html collection='github-pages' %}
 ```
 {% endraw %}
 

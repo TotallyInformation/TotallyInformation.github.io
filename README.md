@@ -30,7 +30,7 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 
 {% include collection_doc_lister.html collection='nr_qa' %}
 
-{% include collection_doc_lister.html collection='github_pages' %}
+{% include collection_doc_lister.html collection='github-pages' %}
 
 {% include page_lister.html dir="/vscode/" %}
 

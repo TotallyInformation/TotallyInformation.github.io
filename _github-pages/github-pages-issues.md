@@ -19,7 +19,7 @@ Sorry, can't think of any others that aren't matched by alternative tools.
 
 * Build failures generate error messages that are worse than useless. Often not even identifying the page that the build failed on.
 
-* Looks like there may be some issues when creating pages directly from the GitHub web interface. I've managed to create several pages that show inconsistent metadata - I suspect they were all created via the web interface first. See [Issue #6661](https://github.com/jekyll/jekyll/issues/6661) and [this test page](https://totallyinformation.github.io/github_pages/test).
+* Looks like there may be some issues when creating pages directly from the GitHub web interface. I've managed to create several pages that show inconsistent metadata - I suspect they were all created via the web interface first. See [Issue #6661](https://github.com/jekyll/jekyll/issues/6661) and [this test page](https://totallyinformation.github.io/github-pages/test).
 
 * Jekyll uses Kramdown to render markdown files. This does not quite match the default GFM format. While this is improving, the version used is typically behind the current one, often by a fair margin.
 

@@ -67,7 +67,7 @@ testFm: testing front matter variables
 <div style="border:1px solid {{ borderColor }}">
   <p>&#10004; Do we get the forloop variables?</p>
   <p>
-  {% for item in site.github_pages %}
+  {% for item in site.github-pages %}
     {% if forloop.first == true %}
       Yes, we do! First time through! {{ forloop.index }}, {{ forloop.index0 }}, {{ forloop.rindex }}, {{ forloop.rindex0 }}, {{ forloop.length }}<br>
     {% elsif forloop.last == true %}
