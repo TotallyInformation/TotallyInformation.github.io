@@ -33,9 +33,9 @@
 
 <script>
     console.log('v1.0')
-    (function() {
+    ;(function() {
         var page_paths = {{ page_paths | jsonify | strip_html }};
         console.log('--PAGE_PATHS (jsonify)--', page_paths)
 
-    })();
+    })()
 </script>
