@@ -10,13 +10,13 @@ date: 2018-01-02 14:20:00
 
 Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
 
-{% include collection_doc_lister.html collection=site.nr_qa %}
+{% include collection_doc_lister.html collection='nr_qa' %}
 
 ## [GitHub Pages and Jekyll/Liquid](/github_pages/)
 
 Hints and tips on using Jekyll for publishing to GitHub Pages.
 
-{% include collection_doc_lister.html collection=site.github_pages %}
+{% include collection_doc_lister.html collection='github_pages' %}
 
 ## Totally Information's Public Code Repositories
 

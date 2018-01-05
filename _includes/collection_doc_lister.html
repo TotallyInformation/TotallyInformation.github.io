@@ -1,5 +1,5 @@
-{% assign collection = include.collection %}
-{% assign colName = include.collection | replace: 'site.',''  %}
+{% assign colName = include.collection %}
+{% assign collection = site[colName] %}
 {% assign col = site.collections | where: 'label',colName | first %}
 {% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
 
