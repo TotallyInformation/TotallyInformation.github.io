@@ -4,6 +4,7 @@
 {% assign indexpage = mypages | where_exp:"item","item.name contains 'index.'"| first %}
 {% assign dummy_title = dir | append:"//" | prepend:"/" | replace:"///","" | replace:"//","" | replace:"/"," > " | replace:"_"," " | replace:"-"," " %}
 <h2>{{ indexpage.title | default: dummy_title }}</h2>
+{% if indexpage.description %}<p>{{ indexpage.description }}</p>{% endif %}
 {% if mypages.size > 0 %}
   <ul>
   {% for item in mypages | sort: "title" %}
