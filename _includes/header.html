@@ -39,10 +39,13 @@
         console.log('--page_paths (jsonify)--', page_paths)
 
         {% for path in page_paths %}
+          {% assign page_docs = site.pages  | concat: site.documents %}
+          var page_docs = {{ page_docs | jsonify | strip_html }};
+          console.log('--page_docs (jsonify)--', '{{ path }}', page_docs)
           {% assign my_page = site.pages  | concat: site.documents | where: "path", path | first %}
           {% assign dummy_title = path | replace: "index.md","" | replace: "index.html","" | append: "//" | prepend: "/" | replace: "///","" | replace: "//","" | replace: "/"," > " | replace: "_", " " | replace: "-", " " | capitalize %}
           var my_page = {{ my_page | jsonify | strip_html }};
-          console.log('--my_page (jsonify)--', my_page)
+          console.log('--my_page (jsonify)--', '{{ path }}', my_page)
         {% endfor %}
 
     })()
