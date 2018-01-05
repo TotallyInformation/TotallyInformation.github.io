@@ -19,3 +19,15 @@
   <p>No pages found in folder <code>{{ dir }}</code>.</p>
 {% endif %}
 </div>
+
+
+{% if site.ti_debug == true %}
+<script>
+    console.log('v1.0', 'DIR: ', '{{ dir }}')
+    ;(function() {
+        var mypages = {{ mypages | jsonify | strip_html }};
+        console.log('--mypages (jsonify)--', mypages)
+
+    })()
+</script>
+{% endif %}
