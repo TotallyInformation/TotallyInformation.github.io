@@ -1,24 +1,25 @@
 {% assign dir = include.dir | default: page.dir %}
 <div class="page-list">
 {% assign mypages = site.pages | where:"dir", dir | where_exp:"item", "item.name != page.name" %}
-{% assign indexpage = mypages | where_exp:"item","item.name == 'index.md' or item.name == 'index.html'"| first %}
-{% if mypages.size > 0 %}
-
-  <ul>
-  {% for item in mypages | sort: "title" %}
-    {% assign mytitle = item.title | default: item.url %}
-    <li>
-      <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a>
-      <p>{% if item.description %}
-          {{ item.description }}
-      {% else %}
-          {{ item.excerpt | strip_html }}
-      {% endif %}</p>
-    </li>
-  {% endfor %}
-  </ul>
-{% else %}
-  <p>No pages found in folder <code>{{ dir }}</code>.</p>
+{% assign indexpage = mypages | where_exp:"item","item.name == 'index.md'"| first %}
+{% if %}<h2></h2>
+  {% if mypages.size > 0 %}
+    <ul>
+    {% for item in mypages | sort: "title" %}
+      {% assign mytitle = item.title | default: item.url %}
+      <li>
+        <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a>
+        <p>{% if item.description %}
+            {{ item.description }}
+        {% else %}
+            {{ item.excerpt | strip_html }}
+        {% endif %}</p>
+      </li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No pages found in folder <code>{{ dir }}</code>.</p>
+  {% endif %}
 {% endif %}
 </div>
 
