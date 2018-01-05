@@ -30,3 +30,13 @@
     {% endif %}
   </div>
 </header>
+
+<% if debug == true %}
+<script>
+    (function() {
+        var page_paths = {{ page_paths | jsonify | strip_html }};
+        console.log('--PAGE_PATHS (jsonify)--', page_paths)
+
+    })();
+</script>
+{% endif %}

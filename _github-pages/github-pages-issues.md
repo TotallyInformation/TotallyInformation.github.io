@@ -19,7 +19,7 @@ Sorry, can't think of any others that aren't matched by alternative tools.
 
 * Build failures generate error messages that are worse than useless. Often not even identifying the page that the build failed on.
 
-* Looks like there may be some issues when creating pages directly from the GitHub web interface. I've managed to create several pages that show inconsistent metadata - I suspect they were all created via the web interface first. See [Issue #6661](https://github.com/jekyll/jekyll/issues/6661) and [this test page](https://totallyinformation.github.io/github-pages/test).
+* Looks like there may be some issues when creating pages directly from the GitHub web interface. I've managed to create several pages that show inconsistent metadata - I suspect they were all created via the web interface first. See [Issue #6661](https://github.com/jekyll/jekyll/issues/6661) and [this test page](https://totallyinformation.github.io/github-pages/test). You can see that the test page is not able to reference its frontmatter metadata.
 
 * Jekyll uses Kramdown to render markdown files. This does not quite match the default GFM format. While this is improving, the version used is typically behind the current one, often by a fair margin.
 
@@ -29,9 +29,13 @@ While the Minima theme is pretty good, it has a few issues of its own.
 
 * The documentation states that all you need to do to enable Disqus is to add your shortcode to `_config.yml`. However, this is not quite correct as Disqus in only added to posts and not to pages or collection documents, nor to the home page.
 
+* The main menu does not work as documented. You are supposed to be able to overwrite the list of pages from `_config.yml` but this doesn't appear to work.
+
 ## Jekyll Issues
 
 This list is about Jekyll failings, not specific to GitHub Pages.
+
+* The sort filter does not work correctly. I have some code that includes {%raw%}`{% for item in collection | sort: "title" %}`{%endraw%} but several entries are incorrectly sorted - [example](/github-pages/).
 
 * Jekyll documentation is, in my opinion, poor. Information is badly spread between pages. For example, trying to find a comprehensive list of variable filters that actually work with Jekyll is difficult. Some documentation is left up to the core documentation of the Liquid templating engine. However, while that is comprehensive, it applies to the use of Liquid in its original environment, not everything works in Jekyll.
 

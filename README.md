@@ -15,7 +15,6 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 ## To Do
 
 - Add link to directly edit page on GitHub if logged in as TI
-- Include this README to the top index.md page
 - Fix site menu
 - Add link to license in footer
 - Add links to my other sites

@@ -11,6 +11,9 @@ email: gh@totallyinformation.com
 twitter_username: knightnet
 github_username:  TotallyInformation
 
+# Custom meta - if true, output some debug data
+ti_debug: true
+
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
