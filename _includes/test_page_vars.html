@@ -148,6 +148,12 @@
         var site = {{ site | jsonify | strip_html }};
         console.log('--SITE (jsonify)--', site)
 
+        var sitePages = {{ site.pages | jsonify | strip_html }};
+        console.log('--SITE.PAGES (jsonify)--', sitePages)
+
+        var siteDocuments = {{ site.documents | jsonify | strip_html }};
+        console.log('--SITE.DOCUMENTS (jsonify)--', siteDocuments)
+
         {% if page.collection %}
           var col = {{ col | jsonify | strip_html }};
           console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)
