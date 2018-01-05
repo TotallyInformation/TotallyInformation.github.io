@@ -1,26 +1,33 @@
 {% assign colName = include.collection %}
 {% assign col = site.collections | where: 'label',colName | first %}
 
-{% assign collection = site[col.label] %}
+{% if col %}
 
-{% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
+  {% assign collection = site[col.label] %}
+  {% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
 
-<h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
+  <h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
 
-{% if col.description %}<p>{{ col.description }}</p>{% endif %}
+  {% if col.description %}<p>{{ col.description }}</p>{% endif %}
 
-<div>
-  <ul>
-  {% for item in collection | sort: "title" %}
-    <li>
-      {% assign mytitle = item.title | default: item.url %}
-      <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a> {% if item.date %}({{ item.date | date: "%Y-%m-%d %H:%M" }}){% endif %}
-      <p>{% if item.description %}
-          {{ item.description }}
-      {% else %}
-          {{ item.excerpt | strip_html }}
-      {% endif %}</p>
-    </li>
-  {% endfor %}
-  </ul>
-</div>
+  <div>
+    <ul>
+    {% for item in collection | sort: "title" %}
+      <li>
+        {% assign mytitle = item.title | default: item.url %}
+        <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a> {% if item.date %}({{ item.date | date: "%Y-%m-%d %H:%M" }}){% endif %}
+        <p>{% if item.description %}
+            {{ item.description }}
+        {% else %}
+            {{ item.excerpt | strip_html }}
+        {% endif %}</p>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
+{% else %}
+
+  <p>There is no site collection called <code>{{ colName }}</code>.</p>
+
+{% endif %}

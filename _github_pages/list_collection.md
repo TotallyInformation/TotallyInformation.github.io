@@ -15,9 +15,9 @@ Create this as a file in your _includes folder
 
 {% raw %}
 ```html
-{% assign collection = include.collection %}
-{% assign colName = include.collection | replace: 'site.',''  %}
+{% assign colName = include.collection %}
 {% assign col = site.collections | where: 'label',colName | first %}
+{% assign collection = site[col.label] %}
 {% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
 
 <h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
@@ -48,8 +48,8 @@ To use, place the following code wherever you want a list of the output files - 
 
 {% raw %}
 ```markdown
-{% include collection_doc_lister.html collection=site.github_pages %}
+{% include collection_doc_lister.html collection='github_pages' %}
 ```
 {% endraw %}
 
-Note the reference to the `site.[collection_name]` variable which is passed to the include file.
+Note the reference to the collection name which is passed to the include file. Make sure this is correct or you will get a build failure.
