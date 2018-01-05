@@ -29,7 +29,7 @@ While the Minima theme is pretty good, it has a few issues of its own.
 
 * The documentation states that all you need to do to enable Disqus is to add your shortcode to `_config.yml`. However, this is not quite correct as Disqus in only added to posts and not to pages or collection documents, nor to the home page.
 
-* The main menu does not work as documented. You are supposed to be able to overwrite the list of pages from `_config.yml` but this doesn't appear to work.
+* The main menu does not work quite as expected. If a page doesn't have a title, it is ignored, not terribly safe an assumption since an xml document might have a title but shouldn't be shown or perhaps a page needed in the menu doesn't have/need a title.
 
 ## Jekyll Issues
 
