@@ -8,4 +8,15 @@ date: 2018-01-02 17:10:10
 
 <h1>This is a {% if page.collection %}COLLECTION DOCUMENT{% else %}JEKYLL PAGE{% endif %}</h1>
 
+----
+
+Try to access collection metadata in `_config.yml`:
+
+{% assign col = site.collections | where: 'label','github_pages' | first%}.
+TITLE: {{ col.title }}.
+
+DESCRIPTION: {{ col.description }}.
+
+----
+
 {% include test_page_vars.html %}
