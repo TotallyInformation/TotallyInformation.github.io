@@ -23,7 +23,7 @@
 
 {% if site.ti_debug == true %}
 <script>
-    console.log('v1.0', 'DIR: ', '{{ dir }}', {{mypages.length}})
+    console.log('_includes/page_lister.html v1.1', 'DIR: ', '{{ dir }}', {{mypages.length}})
     ;(function() {
         var mypages = {{ mypages | jsonify | strip_html }};
         console.log('--mypages (jsonify)--', mypages)

@@ -21,11 +21,11 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# Must include the index page for folders e.g. /blah/index.md, include leading slash.
+# Must include the index page for folders e.g. _collection-name/index.md, don't include leading slash.
 header_pages:
-  - /nr-qa/index.md
-  - /github-pages/index.md
-  - /vscode/index.md
+  - _nr-qa/index.md
+  - _github-pages/index.md
+  - vscode/index.md
 
 disqus:
   shortname: 'totally-information-development-hub'

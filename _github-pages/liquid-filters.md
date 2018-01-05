@@ -8,6 +8,8 @@ GitHub pages use Jekyll which in turn uses [Liquid](https://help.shopify.com/the
 Liquid provides the variable filters that can be used to amend/format the variable for output.
 This is a more comprehensive list than you will find in most places, it is combined from multiple lists including the [source documentation](http://www.rubydoc.info/gems/liquid/Liquid/StandardFilters). For more details on these filters, see the [official filter documentation](https://help.shopify.com/themes/liquid/filters).
 
+See also: [Filters]({% link _github-pages/liquid-filters.md %}), [Tags]({% link _github-pages/liquid-tags.md %}), [Attributes]({% link _github-pages/standard-attributes.md %}), [Test Page]({% link _github-pages/test2.md %})
+
 - abs - absolute value
 - absolute_url - Prepend the `url` and `baseurl` value to the input. e.g. {% raw %}`{{ "/assets/style.css" | absolute_url }} #=> http://example.com/my-baseurl/assets/style.css`{% endraw %}
 - append - append a string e.g. {% raw %}`{{ 'foo' | append:'bar' }} #=> 'foobar'`{% endraw %}

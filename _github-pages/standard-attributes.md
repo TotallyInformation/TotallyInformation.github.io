@@ -3,6 +3,8 @@ description: 'These are the default attributes (variables) that you get with eac
 comments: true
 ---
 
+See also: [Filters]({% link _github-pages/liquid-filters.md %}), [Tags]({% link _github-pages/liquid-tags.md %}), [Attributes]({% link _github-pages/standard-attributes.md %}), [Test Page]({% link _github-pages/test2.md %})
+
 ## Front Matter
 
 [Front matter](https://jekyllrb.com/docs/frontmatter/) is a simple YAML-based specification for adding metadata to Jekyll files. You can add it to pages, posts and collections. It goes at the top of the file between two lines containing `---`.

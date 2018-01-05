@@ -10,6 +10,8 @@ Matching end-tags are shown in brackets.
 GitHub pages use Jekyll which in turn uses [Liquid](https://help.shopify.com/themes/liquid).
 See also the [official tags reference](https://help.shopify.com/themes/liquid/tags).
 
+See also: [Filters]({% link _github-pages/liquid-filters.md %}), [Tags]({% link _github-pages/liquid-tags.md %}), [Attributes]({% link _github-pages/standard-attributes.md %}), [Test Page]({% link _github-pages/test2.md %})
+
 ### Control flow tags
 - [case](https://help.shopify.com/themes/liquid/tags/control-flow-tags#case-when) (when, else, endcase) - a switch statement
 - if (else, elsif, endif) - execute block only if the condition is met
