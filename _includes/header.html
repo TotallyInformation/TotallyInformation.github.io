@@ -29,9 +29,9 @@
         <div class="trigger capitalize">
           {% comment %} The nav menu ... {% endcomment %}
           {% for path in page_paths %}
+            {% assign my_page = all_pages | where: "path", path | first %}
+            {% comment %} Only include this entry if a URL is available ... {% endcomment %}
             {% if my_page.url %}
-              {% comment %} Only include this entry if a URL is available ... {% endcomment %}
-              {% assign my_page = all_pages | where: "path", path | first %}
               {% comment %} If no page.title available, use the path name ... {% endcomment %}
               {% assign dummy_title = path | replace: "index.md","" | replace: "index.html","" | append: "//" | prepend: "/" | replace: "///","" | replace: "//","" | replace: "/"," > " | replace: "_", " " | replace: "-", " " | capitalize %}
               <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | default: dummy_title | escape }}</a>
