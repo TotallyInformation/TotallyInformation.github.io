@@ -168,10 +168,6 @@ testFm: testing front matter variables
         console.log('--SITE.PAGES (jsonify)--', jk_pages)
         //var layout = {{ layout | jsonify }}
         //console.log('--LAYOUT (jsonify)--', layout)
-        var ghpages = {{ site.github_pages | jsonify | strip_html }}
-        console.log('--SITE.GITHUB_PAGES (jsonify)--', ghpages)
-        var github = '{{ site.github | jsonify }}'
-        console.log('--SITE.GITHUB (jsonify)--', github)
     })();
 </script>
 
