@@ -31,12 +31,11 @@
   </div>
 </header>
 
-{% if site.debug == true %}
 <script>
+    console.log('v1.0')
     (function() {
         var page_paths = {{ page_paths | jsonify | strip_html }};
         console.log('--PAGE_PATHS (jsonify)--', page_paths)
 
     })();
 </script>
-{% endif %}
