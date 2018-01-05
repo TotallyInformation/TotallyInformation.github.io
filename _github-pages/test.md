@@ -17,7 +17,7 @@ testFm: testing front matter variables
     &#10004; 'site.remote-theme': --{{ site.remote-theme }}--<br>
     &#10004; 'site.title': --{{ site.title }}--<br>
     &#10004; 'site.disqus.shortname': --{{ site.disqus.shortname }}--<br>
-    &times;  'site.collections.nr_qa.title': --{{ site.collections.nr_qa.title }}-- : Nothing from collections is directly accessible.<br>
+    &times;  'site.collections.nr-qa.title': --{{ site.collections.nr-qa.title }}-- : Nothing from collections is directly accessible.<br>
   </p>
 </div>
 

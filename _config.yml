@@ -19,7 +19,7 @@ minima:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:
-  - /nr_qa/
+  - /nr-qa/
   - /github_pages/
   - /vscode/
 
@@ -30,7 +30,7 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  nr_qa:
+  nr-qa:
     output: true
     permalink: /:collection/:name
     title: 'Node-RED Questions and Answers'
@@ -45,7 +45,7 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: nr_qa
+      type: nr-qa
     values:
       layout: page
       comments: true

@@ -28,7 +28,7 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 
 # Index
 
-{% include collection_doc_lister.html collection='nr_qa' %}
+{% include collection_doc_lister.html collection='nr-qa' %}
 
 {% include collection_doc_lister.html collection='github-pages' %}
 
