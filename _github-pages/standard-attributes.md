@@ -36,9 +36,19 @@ There are some standard front matter attributes:
 - `paginator` When the paginate configuration option is set, this variable becomes available for use. See [Pagination](https://jekyllrb.com/docs/pagination/) for details.
 
 ## site.xxxx Variables
-- `site.time` The current time (when you run the jekyll command).
+- `site.categories.[CATEGORY]` The list of all _Posts_ in category [CATEGORY].
 
-- `site.pages` A list of all _Pages_.
+- `site.collections` A list of all the _collections_.
+
+- `site.data` A list containing the data loaded from the YAML files located in the `_data` directory.
+
+- `site.documents` An array of all the _documents_ in every _collection_.  Each entry contains the `page.` properties for the document. To get a list of all collection documents **and** pages: {%raw%}`{{ site.pages | concat: site.documents }}`{%endraw%}
+
+- `site.html_files` A subset of `site.static_files` listing those which end in `.html`.
+
+- `site.html_pages` A subset of `site.pages` listing those which end in `.html`.
+
+- `site.pages` An array of all _Pages_. Each entry contains the `page.` properties for the page
 
 - `site.posts` A reverse chronological list of all _Posts_.
 
@@ -46,23 +56,21 @@ There are some standard front matter attributes:
 
 - `site.static_files` A list of all _static files_ (i.e. files not processed by Jekyll's converters or the Liquid renderer). Each file has three properties: path,  modified_time and extname.
 
-- `site.html_pages` A subset of `site.pages` listing those which end in `.html`.
-
-- `site.html_files` A subset of `site.static_files` listing those which end in `.html`.
-
-- `site.collections` A list of all the _collections_.
-
-- `site.data` A list containing the data loaded from the YAML files located in the `_data` directory.
-
-- `site.documents` A list of all the _documents_ in every _collection_.
-
-- `site.categories.[CATEGORY]` The list of all _Posts_ in category [CATEGORY].
-
 - `site.tags.[TAG]` The list of all _Posts_ with tag [TAG].
+
+- `site.time` The current time (when you run the jekyll command).
 
 - `site.url` Contains the url of your site as it is configured in the _config.yml. For example, if you have url: `http://mysite.com` in your configuration file, then it will be accessible in Liquid as  site.url. For the development environment there is an exception, if you are running jekyll serve in a development environment  site.url will be set to the value of host, port, and SSL-related options. This defaults to url: `http://localhost:4000`.
 
 - `site.[CONFIGURATION_DATA]` All the variables set via the command line and your _config.yml are available through the site variable. For example, if you have foo: bar in your configuration file, then it will be accessible in Liquid as site.foo. Jekyll does not parse changes to _config.yml in watch mode, you must restart Jekyll to see changes to variables.
+
+### site.documents and site.pages
+
+Both of these are arrays of objects. The objects contain the following properties.
+
+- categories
+- collection
+- comments
 
 ## page.xxxx Variables
 
