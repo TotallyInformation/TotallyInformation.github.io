@@ -1,8 +1,1 @@
 {% assign colName = include.collection %}
-{% assign collection = site[colName] %}
-{% assign col = site.collections | where: 'label',colName | first %}
-{% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
-
-<h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
-
-{% if col.description %}<p>{{ col.description }}</p>{% endif %}
