@@ -118,8 +118,12 @@
         console.log('--PAGE (jsonify)--', jk_page)
 
         {% if page.collection %}
-        var col = {{ col | jsonify | strip_html }};
-        console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)
+          var col = {{ col | jsonify | strip_html }};
+          console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)
+          {% if page.collection == 'github_pages' %}
+            var col1 = {{ site.github_pages | jsonify | strip_html }};
+            console.log('--SITE.GITHUB_PAGES (jsonify)--', col1)
+          {% endif %}
         {% endif %}
     })();
 </script>
