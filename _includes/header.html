@@ -29,3 +29,22 @@
     {% endif %}
   </div>
 </header>
+
+
+{% if site.ti_debug == true %}
+<script>
+    console.log('v1.0')
+    ;(function() {
+        var page_paths = {{ page_paths | jsonify | strip_html }};
+        console.log('--page_paths (jsonify)--', page_paths)
+
+        {% for path in page_paths %}
+          {% assign my_page = site.pages  | concat: site.documents | where: "path", path | first %}
+          {% assign dummy_title = path | replace: "index.md","" | replace: "index.html","" | append: "//" | prepend: "/" | replace: "///","" | replace: "//","" | replace: "/"," > " | replace: "_", " " | replace: "-", " " | capitalize %}
+          var my_page = {{ my_page | jsonify | strip_html }};
+          console.log('--my_page (jsonify)--', my_page)
+        {% endfor %}
+
+    })()
+</script>
+{% endif %}
