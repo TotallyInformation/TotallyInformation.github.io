@@ -1,5 +1,5 @@
 ---
-title: List of problems and issues when using Jekyll with GitHub Pages
+title: List of problems and issues with Jekyll and GitHub Pages
 description: >
   While sites generated using GitHub pages can use Jekyll to enhance them, there are some limitations
   and, it seems, a number of problems.
