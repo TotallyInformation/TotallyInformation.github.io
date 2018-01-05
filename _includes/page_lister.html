@@ -2,6 +2,7 @@
 <div class="page-list">
 {% assign mypages = site.pages | where:"dir", dir | where_exp:"item", "item.name != page.name" %}
 {% assign indexpage = mypages | where_exp:"item","item.name contains 'index.'"| first %}
+{ % if % }<h2></h2>
   {% if mypages.size > 0 %}
     <ul>
     {% for item in mypages | sort: "title" %}
@@ -19,7 +20,7 @@
   {% else %}
     <p>No pages found in folder <code>{{ dir }}</code>.</p>
   {% endif %}
-{% endif %}
+{ % endif % }
 </div>
 
 
