@@ -64,5 +64,6 @@ defaults:
     values:
       layout: page
       comments: true
+      title: Microsoft Visual Studio Code Hints and Information
 
 
