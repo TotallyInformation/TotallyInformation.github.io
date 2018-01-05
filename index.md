@@ -6,9 +6,9 @@ comments: false
 date: 2018-01-02 14:20:00
 ---
 
-{% include collection_doc_lister.html collection='nr_qa' %}
+{% include collection_doc_lister.html collection='nr-qa' %}
 
-{% include collection_doc_lister.html collection='github_pages' %}
+{% include collection_doc_lister.html collection='github-pages' %}
 
 ## Totally Information's Public Code Repositories
 
