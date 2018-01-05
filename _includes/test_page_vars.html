@@ -117,6 +117,9 @@
         var jk_page = {{ page | jsonify | strip_html }};
         console.log('--PAGE (jsonify)--', jk_page)
 
+        var site = {{ site | jsonify | strip_html }};
+        console.log('--SITE (jsonify)--', site)
+
         {% if page.collection %}
           var col = {{ col | jsonify | strip_html }};
           console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)
