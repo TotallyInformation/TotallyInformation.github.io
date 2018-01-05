@@ -4,4 +4,4 @@ description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
 comments: false
 ---
 
-{% include collection_doc_lister.html collection='github-pages' %}
+{% include collection_doc_lister.html collection='github_pages' %}

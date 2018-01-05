@@ -9,7 +9,7 @@ date: 2018-01-02 17:11:00
 Create `footer.html` in your site `_includes` folder or include this in the default layout in `_layouts`.
 
 {% raw %}
-```
+```html
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
@@ -29,11 +29,6 @@ Create `footer.html` in your site `_includes` folder or include this in the defa
 ```
 {% endraw %}
 
-<script>
-    (function() {
-        // Dump the page object to a JS variable - note we have to strip or escape the html
-        var jk_page = {{ page | jsonify | strip_html }};
-        console.log('--PAGE (jsonify)--', jk_page)
-    })();
-</script>
+Note that the default `minima` theme for Jekyll/GitHub pages includes a setting for this in _config.yml but currently does **not** include the appropriate include file to let you use it!
 
+Also note that you have very little control over the styling. In particular, the width is set to 100% so make sure that this code is wrapped in a div that is limited to your normal content width.
