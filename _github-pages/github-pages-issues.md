@@ -43,3 +43,5 @@ This list is about Jekyll failings, not specific to GitHub Pages.
 
 * In the `page` object, not all properties are set as one might expect. `page.date` for example is not set unless you create it manually in the frontmatter. Again, not all page properties actually apply to "Pages", some only apply to posts or collection documents. Highly confusing.
 
+* In variable filters, the `:` is an unnecessary source of bugs. It serves no real purpose, a simple space would be sufficient.
+
