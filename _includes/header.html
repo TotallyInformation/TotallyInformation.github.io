@@ -32,8 +32,11 @@
 </header>
 
 <script>
-    console.log('v1.1')
+    console.log('v1.2')
     ;(function() {
+        var default_paths = {{ default_paths | jsonify | strip_html }};
+        console.log('--DEFAULT_PATHS (jsonify)--', default_paths)
+
         var page_paths = {{ page_paths | jsonify | strip_html }};
         console.log('--PAGE_PATHS (jsonify)--', page_paths)
 
