@@ -1,7 +1,8 @@
 {% assign colName = include.collection %}
-{% assign collection = site['github_pages'] %}
-
 {% assign col = site.collections | where: 'label',colName | first %}
+
+{% assign collection = site[col.label] %}
+
 {% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' | capitalize %}
 
 <h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
