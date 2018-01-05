@@ -152,12 +152,7 @@
           var col = {{ col | jsonify | strip_html }};
           console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)
 
-          {% if page.collection == 'github_pages' %}
-            var col1 = {{ site.github_pages | jsonify | strip_html }};
-            console.log('--SITE.GITHUB_PAGES (jsonify)--', col1)
-          {% endif %}
-
-          var col2 = {{ site['github_pages'] | jsonify | strip_html }};
+          var col2 = {{ site[col.label] | jsonify | strip_html }};
           console.log('--SITE.[this collection] (jsonify)--', col2)
         {% endif %}
     })();
