@@ -29,17 +29,3 @@
     {% endif %}
   </div>
 </header>
-
-{% if site.ti_debug == true %}
-<script>
-    console.log('v1.3', 'DEBUG: ', '{{ site.ti_debug }}')
-    ;(function() {
-        var default_paths = {{ default_paths | jsonify | strip_html }};
-        console.log('--DEFAULT_PATHS (jsonify)--', default_paths)
-
-        var page_paths = {{ page_paths | jsonify | strip_html }};
-        console.log('--PAGE_PATHS (jsonify)--', page_paths)
-
-    })()
-</script>
-{% endif %}

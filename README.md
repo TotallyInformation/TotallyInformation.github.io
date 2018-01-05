@@ -1,5 +1,3 @@
-# [Development Information website for Totally Information](https://totallyinformation.github.io)
-
 This is a quick information website from Julian Knight @ Totally Information.
 It will be used for keeping track of various hints, tips and knowledge regarding development.
 
