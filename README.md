@@ -21,9 +21,12 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 - Add links to my other sites
 - Fix the feed
 - Extend and improve the repo list
+
   [ ] Move to an include
   [ ] Sort by recent changes if possible
   [ ] Include description if possible
+
+# Index
 
 {% include collection_doc_lister.html collection='nr_qa' %}
 
