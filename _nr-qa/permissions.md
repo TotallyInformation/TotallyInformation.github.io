@@ -92,6 +92,10 @@ npm install node-red-contrib-uibuilder --save
 
 See also the [official documentation](https://nodered.org/docs/platforms/windows).
 
+### Dependencies
+
+Many Node.JS modules including some nodes for Node-RED require a compile stage. While most Linux platforms will have the tools to do this already installed, typically Windows does not. The easiest way to fix this is to install the build tools with `npm install windows-build-tools -g`. Again, you don't have to do that from an admin console unless you want them available to all users on the PC. Even that may not always be enough so check out [this article](https://www.gatsbyjs.org/docs/gatsby-on-windows/#if-npm-install-still-fails) for more details if you still have build issues.
+
 ### Installation of Node-RED
 
 For modern versions of Windows, you should generally <b><u>not</u></b> use admin privileges to install Node-RED even when installing globally unless you really need to install it for **all** users. However, when you don't, you do not actually get a global installation in the same way as Linux. Instead it is installed to `%APPDATA%\npm` (or `$env:APPDATA\npm` for PowerShell users) for the installing user. This is more secure, you can give permissions to other users if you need to.
