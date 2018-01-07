@@ -12,7 +12,8 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 
 ## To Do
 
-- Remove index.xx from collection docs lister
+- Remove index.xx from folder and collection docs lister
+- Eliminate duplicate header for index pages - maybe use home layout (would need to change master menu to only choose pages/docs using home layout too, might be better actually)
 - Add link to directly edit page on GitHub if logged in as TI
 - Add link to license in footer
 - Add links to my other sites
