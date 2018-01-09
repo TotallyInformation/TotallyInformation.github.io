@@ -154,6 +154,9 @@
         var siteDocuments = {{ site.documents | jsonify | strip_html }};
         console.log('--SITE.DOCUMENTS (jsonify)--', siteDocuments)
 
+        var sitePosts = {{ site.posts | jsonify | strip_html }};
+        console.log('--SITE.POSTS (jsonify)--', sitePosts)
+
         {% if page.collection %}
           var col = {{ col | jsonify | strip_html }};
           console.log('--SITE.COLLECTIONS.[this collection] (jsonify)--', col)

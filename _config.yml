@@ -53,17 +53,27 @@ defaults:
     values:
       layout: page
       comments: true
+      category: Node-RED
+      tags:
+        - Node.JS
+        - JavaScript
   - scope:
       path: ""
-      type: github-pages
+      type: GitHub-Pages
     values:
       layout: page
       comments: true
+      category: github-pages
+      tags:
+        - Jekyll
+        - HTML
   - scope:
       path: "vscode"
     values:
       layout: page
       comments: true
+      category: VSCode
       title: Microsoft Visual Studio Code Hints and Information
+
 
 
