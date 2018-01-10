@@ -6,6 +6,7 @@ description: >
     Not all features of Angular are accessible via the Dashboard.
 comments: true
 date: 2018-01-08 22:00:00
+updated: 2018-01-08 22:00:00
 ---
 
 ## Accessing the msg object
@@ -75,6 +76,41 @@ This shows you how to set up some buttons and a slider widget that send data bac
     }.bind(scope);
 </script>
 ```
+
+## Ways to update the UI
+
+Using Anglular and a Dashboard Template, we can update the UI direct from an incoming msg, by doing a calculation after receiving a message or by calling a function.
+
+```html
+<h1>Msg Topic: {{msg.topic}}</h1>
+<h2>msg.payload.a</h2>
+<div ng-bind-html="msg.payload.a"></div>
+<h2>Calculated after receiving a msg</h2>
+<div>{{myCalc}}</div>
+<h2>Call a function on click</h2>
+<div ng-click="click(b)">Click me to change the number</div>
+<div>{{myNum}}</div>
+
+<script>
+    // Lambda function to access the Angular Scope
+    ;(function(scope) {
+        //Have to use $watch so we pick up new, incoming msg's
+        scope.$watch('msg.payload', function(newVal, oldVal) {
+            console.log('- Scope.msg -')
+            console.dir(scope.msg)
+            
+            scope.myCalc = scope.msg.payload.b * 2
+        })
+
+        // Function triggered by clicking on a div
+        scope.click = function(b) {
+            if ( ! scope.myNum ) scope.myNum = 0
+            scope.myNum++
+        }
+    })(scope)
+</script>
+```
+
 
 ## Date Picker Example
 
