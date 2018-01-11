@@ -1,5 +1,5 @@
 ---
-title: File and folder permissions
+title: Installation and running permissions
 description: >
     People seem to get very confused about file permissions when installing Node-RED and associated nodes.
 
