@@ -10,9 +10,11 @@ date: 2018-01-06 22:00:00
 
 It is easy to get confused about the correct permissions but the rules are really quite simple.
 
-## Quick summary
+## Summary
 
 For standard installations, <b><u>do</u></b> install Node-RED itself globally with admin rights (`sudo`, except on Windows where you use standard user rights unless really needing to install for all users) but <b><u>do not</u></b> install nodes globally.
+
+When you _run_ Node-RED, it should always be run **without** admin privalages. The exception is where you need to use a `port` less than 1024 as these normally require admin to run them (Node-RED defaults to port 1880).
 
 If you make a mistake and install a node with admin rights, uninstall it and reinstall without. You may, however, need to check your `userDir` folder (normally `~/.node-red`) to make sure that the access control privileges for all folder are correct.
 
@@ -43,7 +45,7 @@ In this case, you can run Node-RED from anywhere with a command that is globally
 node-red
 ```
 
-The resulting process runs with the permissions of the logged in user, <b><u>not</u></b> with admin or root permissions.
+The resulting process runs with the permissions of the **logged in user**, <b><u>not</u></b> with admin or root permissions.
 
 Commonly though, you may well want to run Node-RED as a system process, a "daemon" in UNIX terminology. Generally, you should make sure that the resulting process does not start until after networking and any other dependent processes (such as databases) are active. You should also ensure that the process runs with the privalages of a specific, non-admin user.
 
@@ -86,6 +88,24 @@ Alternatively, you can install from the command line but must make sure you are 
 ```bash
 cd ~/.node-red
 npm install node-red-contrib-uibuilder --save
+```
+
+### Node permission issues
+
+If you hit any privalage problems when _running_ Node-RED, they typically come from either an incorrectly installed node (e.g. installed with sudo) or the node needs to access hardware that has limited access. The hardware issue generally only shows up on Linux.
+
+To resolve such issues, all you need to normally do is to add the user to the appropriate group that has access to the hardware.
+
+To check the group required, you will need to list the "file" that represents the hardware
+
+```bash
+ls -la /dev
+```
+
+You will likely see that the ports for serial and USB (which also includes Bluetooth) have group ownership set to group `dialout`. So you can add the user to the dialout group to get permission to the port.
+
+```bash
+sudo usermod -a -G dialout <username>
 ```
 
 ## Windows
