@@ -10,6 +10,12 @@ Otherwise, feel free to raise a [GitHub issue](https://github.com/TotallyInforma
 
 Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com).
 
+{% include collection_doc_lister.html collection='nr-qa' %}
+
+{% include collection_doc_lister.html collection='github-pages' %}
+
+{% include page_lister.html dir="/vscode/" %}
+
 ## To Do
 
 - Remove index.xx from folder and collection docs lister
@@ -23,14 +29,6 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
   * Move to an include
   * Sort by recent changes if possible
   * Include description if possible
-
-# Index
-
-{% include collection_doc_lister.html collection='nr-qa' %}
-
-{% include collection_doc_lister.html collection='github-pages' %}
-
-{% include page_lister.html dir="/vscode/" %}
 
 ## Totally Information's Public Code Repositories
 
