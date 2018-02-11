@@ -65,11 +65,11 @@ first of the two flows.
 
 ## Flow
 
-![Startup flow](images/telegrambot-setup.PNG)
+![Startup flow](/images/telegrambot-setup.PNG)
 
-![Get status flow](images/telegrambot-getStatus.PNG)
+![Get status flow](/images/telegrambot-getStatus.PNG)
 
-![Process commands flow](images/telegrambot-processCmds.PNG)
+![Process commands flow](/images/telegrambot-processCmds.PNG)
 
 Import this flow to Node-RED.
 
