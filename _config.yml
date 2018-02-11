@@ -9,8 +9,8 @@ description: 'Development Information website for Totally Information'
 author: Julian Knight
 email: gh@totallyinformation.com
 twitter_username: knightnet
-github_username:  TotallyInformation
-linkedin_username:  julianknight2
+github_username: TotallyInformation
+linkedin_username: julianknight2
 google_analytics: UA-113864195-1
 
 # Custom meta - if true, output some debug data
@@ -26,8 +26,8 @@ minima:
 # Must include the index page for folders e.g. _collection-name/index.md, don't include leading slash.
 header_pages:
   - _nr-qa/index.md
-  - _github-pages/index.md
   - vscode/index.md
+  - _github-pages/index.md
 
 disqus:
   shortname: 'totally-information-development-hub'
