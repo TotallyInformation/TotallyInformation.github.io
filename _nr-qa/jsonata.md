@@ -3,12 +3,17 @@ title: Using JSONata to transform msg data
 description: >
     JSONata is a syntax designed by IBM to help reformat and restructure JSON data in a similar vein to the way that XLST is used to transform XML data.
 comments: true
-date: 2018-01-02 22:00:00
+date: 2018-02-26 22:00:00
 ---
 
 JSONata is available in Node-RED via the _change_ node. It is available where you see the &Integral; symbol.
 
 See the [JSONata home page](http://jsonata.org/) for details of the standard. There is also a useful [exerciser page](http://try.jsonata.org/HJfrIhQEf) that lets you paste in some source JSON data, a JSONata formula and see the output. Note, however, that the exerciser page tends to be using a newer version of the library than Node-RED uses.
+
+# Updates
+
+* 2018-02-26: Since Node-RED v0.18, JSONata has been updated and is also available in the Change node not just the switch node. Some of the examples below
+  may have easier alternatives with the move to JSONata v1.5
 
 # Examples
 
@@ -166,3 +171,23 @@ Produces:
 ]
 ```
 See https://groups.google.com/forum/#!topic/node-red/J0020rPetAY for more information.
+
+## Switch Node Recipes (Node-RED v0.18+)
+
+### Block/Unblock a flow
+
+The following uses a global variable to block or release a flow.
+
+Set the Switch node's "Property" to something like:
+
+```
+$globalContext('myBlockingVarName')
+```
+
+then use a single rule of "is true" or "is false" as needed.
+
+Example flow:
+
+```json
+[{"id":"79612da1.a87f14","type":"switch","z":"fc7dbb1a.619c18","name":"","property":"$globalContext('blockme')","propertyType":"jsonata","rules":[{"t":"false"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":610,"y":360,"wires":[["d7ecac3d.087e8"],["24348e06.690802"]],"outputLabels":["blockme = false so let msg through","blockme = true so divert msg"]},{"id":"344a17cb.6b29a8","type":"inject","z":"fc7dbb1a.619c18","name":"","topic":"","payload":"I'm free!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":210,"y":360,"wires":[["c6c56c95.5b904"]]},{"id":"d7ecac3d.087e8","type":"debug","z":"fc7dbb1a.619c18","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":770,"y":360,"wires":[]},{"id":"c6c56c95.5b904","type":"change","z":"fc7dbb1a.619c18","name":"","rules":[{"t":"set","p":"blockme","pt":"global","to":"false","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":430,"y":360,"wires":[["79612da1.a87f14"]]},{"id":"77f7b642.176db8","type":"inject","z":"fc7dbb1a.619c18","name":"","topic":"","payload":"I'm Blocked!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":400,"wires":[["4ff8b82e.511858"]]},{"id":"4ff8b82e.511858","type":"change","z":"fc7dbb1a.619c18","name":"","rules":[{"t":"set","p":"blockme","pt":"global","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":430,"y":400,"wires":[["79612da1.a87f14"]]},{"id":"24348e06.690802","type":"debug","z":"fc7dbb1a.619c18","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":770,"y":400,"wires":[]}]
+```
