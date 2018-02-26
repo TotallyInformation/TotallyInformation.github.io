@@ -108,6 +108,22 @@ You will likely see that the ports for serial and USB (which also includes Bluet
 sudo usermod -a -G dialout <username>
 ```
 
+#### i2c permissions
+
+i2c is a standard for 1-wire GPIO communications. It provides an efficient way to multiplex sensors to simple microprocessors. Such sensors are commonly used with the Pi. Unlike the serial and USB ports, i2c ports belong to a different group.
+
+This will list all of the i2c recognised devices on your Pi:
+
+```bash
+ls -la /dev/i2c*
+```
+
+You should find that all of the devices belong to the group `i2c`. So you should add the user that runs Node-RED to that group with:
+
+```bash
+sudo usermod -a -G i2c <username>
+```
+
 ## Windows
 
 See also the [official documentation](https://nodered.org/docs/platforms/windows).
