@@ -124,6 +124,11 @@ You should find that all of the devices belong to the group `i2c`. So you should
 sudo usermod -a -G i2c <username>
 ```
 
+##### Additional information on using i2c on the Pi
+
+* [Using the I2C Interface](http://www.raspberry-projects.com/pi/programming-in-python/i2c-programming-in-python/using-the-i2c-interface-2)
+* [How to allow I2C access for non-root users?](https://raspberrypi.stackexchange.com/questions/51375/how-to-allow-i2c-access-for-non-root-users)
+
 ## Windows
 
 See also the [official documentation](https://nodered.org/docs/platforms/windows).
