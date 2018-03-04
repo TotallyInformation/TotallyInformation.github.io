@@ -5,7 +5,7 @@
 {% if col %}
 
   {% assign collection = site[col.label] %}
-  {% assign colTitle = col.title | default: colName | replace: '_',' ' | replace: '-', ' ' %}
+  {% assign colTitle = col.title | default: colName | replace: '_',' ' %}
 
   <h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
 
