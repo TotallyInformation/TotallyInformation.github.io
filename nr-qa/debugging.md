@@ -14,7 +14,7 @@ If you are writing nodes, you will have access to and will need richer tools tha
 
 * Inside a function that is giving an error, you might need additional debugging output in order to identify where in the function code the error occurs. You can use <code>node.log('position 1')</code>, <code>node.warn('position 1')</code> or similar statements throughout the code.
 
-* Remember that msg's are passed by <i>reference</i> much of the time, see the article on how `node.send()` works [here]({% link _nr-qa/how-node-send-works.md %}) for more details.
+* Remember that msg's are passed by <i>reference</i> much of the time, see the article on how `node.send()` works [here]({% link nr-qa/how-node-send-works.md %}) for more details.
 
 * Consider changing the [logging level](https://nodered.org/docs/user-guide/logging) in your `settings.js`. Turning on the audit messages can also help with some issues. It is worth doing this when things are working normally as well so that you get a feel for what is normal and what isn't. You have to restart Node-RED after making changes to `settings.js`.
 
@@ -38,6 +38,6 @@ For browser (client, front-end) issues, the following hints may be helpful:
 
 * [Logging events in Node-RED function nodes](https://nodered.org/docs/writing-functions#logging-events) from the official Node-RED documentation.
 * [Controlling console logging output levels](https://nodered.org/docs/user-guide/logging) again from the official Node-RED documentation.
-* [Using the Visual Studio Code debugger to debug Node-RED issues]({% link _nr-qa/vscode-debugger.md %}) from this web site. This is much more serious stuff!
+* [Using the Visual Studio Code debugger to debug Node-RED issues]({% link nr-qa/vscode-debugger.md %}) from this web site. This is much more serious stuff!
 
 Anything I've missed, got wrong or isn't clear? Please leave comments below.

@@ -11,4 +11,4 @@ sending routines. This is true of nodes further downstream as well.
 
 Also see [Issue 833 on GitHub](https://github.com/node-red/node-red/issues/833)
 
-Another impact of this is that, because [msg's may be passed by reference]({{ site.baseurl }}{% link _nr-qa/msg-cloning.md %}) to downstream nodes, a subsequent node may alter the msg. This means that any processing after a `node.send(msg)` may be getting a msg object that has been altered.
+Another impact of this is that, because [msg's may be passed by reference]({{ site.baseurl }}{% link nr-qa/msg-cloning.md %}) to downstream nodes, a subsequent node may alter the msg. This means that any processing after a `node.send(msg)` may be getting a msg object that has been altered.

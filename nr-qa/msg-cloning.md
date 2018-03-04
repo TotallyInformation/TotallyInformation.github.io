@@ -55,7 +55,7 @@ In some cases, you might also consider the [node-red-contrib-diode](https://www.
 
 Also note that cloning a large msg object can take a few hundred milliseconds, not inconsiderable if you are handling large volumes of messages.
 
-See also the [page on how `node.send()` works]({{ site.baseurl }}{% link _nr-qa/how-node-send-works.md %}) as that is also impacted by this issue.
+See also the [page on how `node.send()` works]({{ site.baseurl }}{% link nr-qa/how-node-send-works.md %}) as that is also impacted by this issue.
 
 Finally, here are some words on the subject by Node-RED author Nick O'Leary in [GitHub Issue 1214](https://github.com/node-red/node-red/issues/1214):
 
