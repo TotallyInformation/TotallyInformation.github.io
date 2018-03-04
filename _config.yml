@@ -40,8 +40,11 @@ collections:
   nr-qa:
     output: true
     permalink: /:collection/:name
-    title: 'Node-RED Questions and Answers'
-    descriptions: 'Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.'
+    title: 'Node-RED QA'
+    descriptions: >
+        Node-RED Questions and Answers
+
+        Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
   github-pages:
     title: 'GitHub Pages and Jekyll/Liquid'
     description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
