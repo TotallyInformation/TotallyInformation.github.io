@@ -26,9 +26,9 @@ minima:
 # this and add the path to the pages in order as they should show up
 # Must include the index page for folders e.g. _collection-name/index.md, don't include leading slash.
 header_pages:
-  - github-jekyll/index.md
-  - vscode/index.md
   - _nr-qa/index.md
+  - vscode/index.md
+  - github-jekyll/index.md
 
 disqus:
   shortname: 'totally-information-development-hub'
@@ -42,8 +42,7 @@ collections:
     permalink: /:collection/:name
     title: 'Node-RED Q & A'
     descriptions: >
-        Node-RED Questions and Answers
-
+        Node-RED Questions and Answers.
         Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
 
 #  github-pages:
