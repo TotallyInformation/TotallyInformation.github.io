@@ -28,7 +28,7 @@ minima:
 header_pages:
   - _nr-qa/index.md
   - vscode/index.md
-  - _github-pages/index.md
+  - github-pages/index.md
 
 disqus:
   shortname: 'totally-information-development-hub'
@@ -45,13 +45,14 @@ collections:
         Node-RED Questions and Answers
 
         Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
-  github-pages:
-    output: true
-    permalink: /:collection/:name
-    title: 'GitHub Pages - Jekyll - Liquid'
-    description: >
-        Hints and tips on using Jekyll for publishing to GitHub Pages.
-    ymlMeta: This is some metadata from the config file
+
+#  github-pages:
+#    output: true
+#    permalink: /:collection/:name
+#    title: 'GitHub Pages - Jekyll - Liquid'
+#    description: >
+#        Hints and tips on using Jekyll for publishing to GitHub Pages.
+#    ymlMeta: This is some metadata from the config file
 
 defaults:
   - scope:
@@ -65,8 +66,7 @@ defaults:
         - Node.JS
         - JavaScript
   - scope:
-      path: ""
-      type: gitHub-pages
+      path: "gitHub-pages"
     values:
       layout: page
       comments: true
