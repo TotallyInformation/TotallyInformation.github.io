@@ -1,11 +1,12 @@
 {% assign colName = include.collection %}
+{% assign colNameLabel = colName | replace: '_',' ' | replace: '-',' ' %}
 {% assign col = site.collections | where: 'label',colName | first %}
 
 <div class="collection-list">
 {% if col %}
 
   {% assign collection = site[col.label] %}
-  {% assign colTitle = col.title | default: colName | replace: '_',' ' %}
+  {% assign colTitle = col.title | default: colNameLabel %}
 
   <h2><a href="{{ colName | prefix: '/' | append: '/' }}">{{ colTitle }}</a></h2>
 
@@ -14,9 +15,10 @@
   <div>
     <ul>
     {% for item in collection | sort: "title" %}
+      {% assign urlLabel = item.url | replace:'_',' ' | replace:'-',' ' %}
+      {% assign mytitle = item.title | default: urlLabel %}
       <li>
-        {% assign mytitle = item.title | default: item.url %}
-        <a href="{{ item.url }}">{{ mytitle | replace:'_',' ' | replace:'-',' ' }}</a> {% if item.date %}({{ item.date | date: "%Y-%m-%d %H:%M" }}){% endif %}
+        <a href="{{ item.url }}">{{ mytitle }}</a> {% if item.date %}({{ item.date | date: "%Y-%m-%d %H:%M" }}){% endif %}
         <p>{% if item.description %}
             {{ item.description }}
         {% else %}
