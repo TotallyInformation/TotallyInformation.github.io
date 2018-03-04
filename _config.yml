@@ -12,7 +12,7 @@ linkedin_username: julianknight2
 twitter_username: knightnet
 github_username: TotallyInformation
 google_analytics: UA-113864195-1
-rss: true
+rss: false
 
 # Custom meta - if true, output some debug data
 ti_debug: true
@@ -33,7 +33,7 @@ header_pages:
 disqus:
   shortname: 'totally-information-development-hub'
 
-plugins:
+plugins_dir:
   - jekyll-sitemap
 
 #collections:

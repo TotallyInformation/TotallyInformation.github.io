@@ -1,9 +1,9 @@
 ---
-title: 'A Page to test things'
-description: 'GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t'
+title: A Page to test things
+description: GitHub pages use Jekyll but not all features are available. This page is for testing what works and what doesn\'t
 comments: false
 layout: home
-borderColor2: 'silver'
+borderColor2: silver
 category: test
 date: 2018-01-02 14:20:00
 testFm: testing front matter variables
