@@ -26,9 +26,9 @@ minima:
 # this and add the path to the pages in order as they should show up
 # Must include the index page for folders e.g. _collection-name/index.md, don't include leading slash.
 header_pages:
-  - _nr-qa/index.md
+  - github-jekyll/index.md
   - vscode/index.md
-  - github-pages/index.md
+  - _nr-qa/index.md
 
 disqus:
   shortname: 'totally-information-development-hub'
@@ -66,7 +66,7 @@ defaults:
         - Node.JS
         - JavaScript
   - scope:
-      path: "gitHub-pages"
+      path: "gitHub-jekyll"
     values:
       layout: page
       comments: true
