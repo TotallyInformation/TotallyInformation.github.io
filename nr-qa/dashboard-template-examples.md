@@ -15,6 +15,7 @@ When using Dashboard, the Node-RED server (the back end) sends data via Socket.I
 
 To access the `msg` object from within a client Angular script. Put this into a Dashboard Template node:
 
+{% raw %}
 ```javascript
 <div ng-bind-html="msg.payload"></div>
 <script>
@@ -36,11 +37,13 @@ To access the `msg` object from within a client Angular script. Put this into a 
     })(scope)
 </script>
 ```
+{% endraw %}
 
 ## A couple of ways to send a msg back to Node-RED
 
 This shows you how to set up some buttons and a slider widget that send data back to Node-RED. As always, add this code to a Dashboard Template node.
 
+{% raw %}
 ```javascript
 <div>{{msg.payload}}</div>
 
@@ -76,11 +79,13 @@ This shows you how to set up some buttons and a slider widget that send data bac
     }.bind(scope);
 </script>
 ```
+{% endraw %}
 
 ## Ways to update the UI
 
 Using Anglular and a Dashboard Template, we can update the UI direct from an incoming msg, by doing a calculation after receiving a message or by calling a function.
 
+{% raw %}
 ```html
 <h1>Msg Topic: {{msg.topic}}</h1>
 <h2>msg.payload.a</h2>
@@ -98,7 +103,7 @@ Using Anglular and a Dashboard Template, we can update the UI direct from an inc
         scope.$watch('msg.payload', function(newVal, oldVal) {
             console.log('- Scope.msg -')
             console.dir(scope.msg)
-            
+
             scope.myCalc = scope.msg.payload.b * 2
         })
 
@@ -110,15 +115,17 @@ Using Anglular and a Dashboard Template, we can update the UI direct from an inc
     })(scope)
 </script>
 ```
-
+{% endraw %}
 
 ## Date Picker Example
 
+{% raw %}
 ```javascript
 <div>
    <md-datepicker ng-model="myDate" md-placeholder="Enter date" ng-change="send({payload: myDate})"></md-datepicker>
 </div>
 ```
+{% endraw %}
 
 ## Dynamically inject HTML
 
@@ -132,6 +139,7 @@ Use this code in a Dashboard Template to render a msg.payload containing HMTL.
 
 If you want to send data through a Node-RED Template node before sending it to a Dashboard Template node, you will find that, since both use the same delimiters (double curly brackets). So you need to change the delimiters in the Dashboard Template.
 
+{% raw %}
 ```javascript
 <!DOCTYPE html>
 <html ng-app="ngApp">
@@ -168,3 +176,4 @@ If you want to send data through a Node-RED Template node before sending it to a
 </body>
 </html>
 ```
+{% endraw %}
