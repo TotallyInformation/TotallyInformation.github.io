@@ -76,6 +76,7 @@ Import this flow to Node-RED.
 Make sure that The 'Save Switch Metadata' is on the first tab of your flows so that it is executed early. Alternatively,
 add it to your `settings.js` file.
 
+{% raw %}
 ```json
 [
     {
@@ -1012,3 +1013,4 @@ add it to your `settings.js` file.
     }
 ]
 ```
+{% endraw %}

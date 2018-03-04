@@ -6,7 +6,9 @@ comments: true
 
 If you want to generate an in-page table of contents using markdown headings, you can do so with the following code.
 
+{% raw %}
 ```markdown
 * This list entry is required but will not be shown, it is replaced by the toc
 {:toc}
 ```
+{% endraw %}

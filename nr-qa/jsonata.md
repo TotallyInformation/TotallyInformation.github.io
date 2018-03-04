@@ -45,6 +45,7 @@ would return the unique message id. If you end up using functions or other enclo
 
 Extracts the keys and values from the original msg, copies the original msg.payload, adds some extra object data and a timestamp. Illustrates the use of functions and variables.
 
+{% raw %}
 ```
 (
     $lookupVals := function($i) { $lookup($$, $i) };
@@ -58,6 +59,7 @@ Extracts the keys and values from the original msg, copies the original msg.payl
     }
 )
 ```
+{% endraw %}
 
 ## Change Node Recipes
 
@@ -70,47 +72,56 @@ Use Set against msg.topic and use the following JSONata expression:
 
 The previous examples are now outdated as of Jan 2018 with the introduction of Node-RED v0.18. This saw an ugrade to JSONata v1.5 which brings a few other possibilities.
 
+{% raw %}
     {
       "topic": topic,
       "payload": $,
       "_msgid": _msgid
     }
+{% endraw %}
 
 The above will work just fine. However, if the original message originates from an http-in node or similar, it will contain circular references and a LOT of data and will cause issues.
 To avoid this, use the new `$clone()` function. Node-RED overloads this with a safe version that avoids the issues at least with http-in messages.
 
+{% raw %}
     {
       "topic": topic,
       "payload": $clone($),
       "_msgid": _msgid
     }
+{% endraw %}
 
 For reference, here is the previous suggestion:
 
 Sometimes you might want to move the content of the msg to msg.payload. For example, if you wanted to send the msg as a debug to MQTT. You cannot do this directly (setting msg.payload to $) as the system thinks this is a circular reference and blocks it. So you have to recreate the msg manually. I include a list of the msg's keys so that you can know if you missed anything.
 
+{% raw %}
     {
       "topic": topic,
       "payload": payload,
       "_msgid": _msgid,
       "msgKeys": $keys($),
     }
+{% endraw %}
 
 There are undoubtedly other ways to do this in a more automated way.
 
 Taking this slightly further, you can also get the keys and values of the original msg in an array:
 
+{% raw %}
 ```
 (
     $spread($)
 )
 ```
+{% endraw %}
 
 ## Reprocess a payload containing an array
 
 How to process an array/object combination plus calculate a true/false flag from 2 properties in the array.
 
 Example input msg:
+{% raw %}
 ```json
 {
     "payload": [
@@ -141,8 +152,10 @@ Example input msg:
     ]
 }
 ```
+{% endraw %}
 
 Example JSONata to reformat the output
+{% raw %}
 ```
 payload.(
 	{
@@ -153,7 +166,9 @@ payload.(
     }
 )
 ```
+{% endraw %}
 Produces:
+{% raw %}
 ```json
 [
   {
@@ -170,6 +185,7 @@ Produces:
   }
 ]
 ```
+{% endraw %}
 See https://groups.google.com/forum/#!topic/node-red/J0020rPetAY for more information.
 
 ## Switch Node Recipes (Node-RED v0.18+)
@@ -188,6 +204,8 @@ then use a single rule of "is true" or "is false" as needed.
 
 Example flow:
 
+{% raw %}
 ```json
 [{"id":"79612da1.a87f14","type":"switch","z":"fc7dbb1a.619c18","name":"","property":"$globalContext('blockme')","propertyType":"jsonata","rules":[{"t":"false"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":610,"y":360,"wires":[["d7ecac3d.087e8"],["24348e06.690802"]],"outputLabels":["blockme = false so let msg through","blockme = true so divert msg"]},{"id":"344a17cb.6b29a8","type":"inject","z":"fc7dbb1a.619c18","name":"","topic":"","payload":"I'm free!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":210,"y":360,"wires":[["c6c56c95.5b904"]]},{"id":"d7ecac3d.087e8","type":"debug","z":"fc7dbb1a.619c18","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":770,"y":360,"wires":[]},{"id":"c6c56c95.5b904","type":"change","z":"fc7dbb1a.619c18","name":"","rules":[{"t":"set","p":"blockme","pt":"global","to":"false","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":430,"y":360,"wires":[["79612da1.a87f14"]]},{"id":"77f7b642.176db8","type":"inject","z":"fc7dbb1a.619c18","name":"","topic":"","payload":"I'm Blocked!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":400,"wires":[["4ff8b82e.511858"]]},{"id":"4ff8b82e.511858","type":"change","z":"fc7dbb1a.619c18","name":"","rules":[{"t":"set","p":"blockme","pt":"global","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":430,"y":400,"wires":[["79612da1.a87f14"]]},{"id":"24348e06.690802","type":"debug","z":"fc7dbb1a.619c18","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":770,"y":400,"wires":[]}]
 ```
+{% endraw %}
