@@ -46,11 +46,12 @@ collections:
 
         Node-RED is a flow-based (visual) programming tool. These pages have some information that may be currently missing from the documentation.
   github-pages:
-    title: 'GitHub Pages - Jekyll - Liquid'
-    description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
-    ymlMeta: This is some metadata from the config file
     output: true
     permalink: /:collection/:name
+    title: 'GitHub Pages - Jekyll - Liquid'
+    description: >
+        Hints and tips on using Jekyll for publishing to GitHub Pages.
+    ymlMeta: This is some metadata from the config file
 
 defaults:
   - scope:
@@ -65,7 +66,7 @@ defaults:
         - JavaScript
   - scope:
       path: ""
-      type: GitHub-Pages
+      type: gitHub-pages
     values:
       layout: page
       comments: true
@@ -73,6 +74,7 @@ defaults:
       tags:
         - Jekyll
         - HTML
+        - Liquid
   - scope:
       path: "vscode"
     values:
