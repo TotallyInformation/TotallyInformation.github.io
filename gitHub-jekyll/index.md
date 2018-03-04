@@ -1,5 +1,5 @@
 ---
-title: 'GitHub Pages, Jekyll and Liquid'
+title: 'GitHub Pages Jekyll and Liquid'
 description: 'Hints and tips on using Jekyll for publishing to GitHub Pages.'
 comments: false
 date: 2018-01-11 22:00:00
