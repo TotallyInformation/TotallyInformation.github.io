@@ -69,6 +69,7 @@ defaults:
       layout: page
       comments: true
       category: github-pages
+      title: Hints and tips on using Jekyll for publishing to GitHub Pages
       tags:
         - GitHub
         - Jekyll

@@ -12,7 +12,7 @@ Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com
 
 {% include page_lister.html dir='/nr-qa/' %}
 
-{% include page_lister.html dir='/github-pages/' %}
+{% include page_lister.html dir='/github-jekyll/' %}
 
 {% include page_lister.html dir="/vscode/" %}
 
