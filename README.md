@@ -10,9 +10,9 @@ Otherwise, feel free to raise a [GitHub issue](https://github.com/TotallyInforma
 
 Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com).
 
-{% include collection_doc_lister.html collection='nr-qa' %}
+{% include page_lister.html dir='/nr-qa/' %}
 
-{% include collection_doc_lister.html collection='github-pages' %}
+{% include page_lister.html dir='/github-pages/' %}
 
 {% include page_lister.html dir="/vscode/" %}
 
