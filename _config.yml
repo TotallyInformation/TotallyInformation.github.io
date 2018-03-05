@@ -28,7 +28,7 @@ minima:
 header_pages:
   - nr-qa/index.md
   - vscode/index.md
-  - gitHub-jekyll/index.md
+  - ghjekyll/index.md
 
 disqus:
   shortname: 'totally-information-development-hub'
@@ -64,11 +64,11 @@ defaults:
         - Node.JS
         - JavaScript
   - scope:
-      path: gitHub-jekyll
+      path: ghjekyll
     values:
       layout: page
       comments: true
-      category: github-pages
+      category: GitHub-Jekyll
       title: Hints and tips on using Jekyll for publishing to GitHub Pages
       tags:
         - GitHub

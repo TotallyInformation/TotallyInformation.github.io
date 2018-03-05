@@ -10,9 +10,9 @@ Otherwise, feel free to raise a [GitHub issue](https://github.com/TotallyInforma
 
 Regards, Julian Knight, [Totally Information](https://www.totallyinformation.com).
 
-{% include page_lister.html dir='/nr-qa/' %}
+{% include page_lister.html dir="/nr-qa/" %}
 
-{% include page_lister.html dir='/github-jekyll/' %}
+{% include page_lister.html dir="/ghjekyll/" %}
 
 {% include page_lister.html dir="/vscode/" %}
 
