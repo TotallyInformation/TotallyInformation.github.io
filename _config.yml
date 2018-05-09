@@ -30,8 +30,8 @@ header_pages:
   - vscode/index.md
   - ghjekyll/index.md
 
-disqus:
-  shortname: 'totally-information-development-hub'
+#disqus:
+#  shortname: 'totally-information-development-hub'
 
 #plugins_dir:
 #  - jekyll-sitemap
